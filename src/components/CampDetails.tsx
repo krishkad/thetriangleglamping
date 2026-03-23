@@ -10,7 +10,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import { useState } from "react";
 
 const defaultCamp = {
   name: "Triangle Tent",
