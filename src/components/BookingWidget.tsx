@@ -1,8 +1,8 @@
 "use client";
 
 import { format } from "date-fns";
-import { CalendarDays, CheckCircle2, Users } from "lucide-react";
-import { useEffect, useState } from "react";
+import { CalendarDays, Users } from "lucide-react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
