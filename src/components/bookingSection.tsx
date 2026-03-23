@@ -21,7 +21,7 @@ const BookingSection = ({ camps }) => {
   const [checkOut, setCheckOut] = useState<Date>();
 
   const [guests, setGuests] = useState(2);
-  const [kids, setKids] = useState(0);
+//   const [kids, setKids] = useState(0);
 
   return (
     <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max py-0">
@@ -41,11 +41,13 @@ const BookingSection = ({ camps }) => {
           <input
             placeholder="First Name"
             className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             placeholder="Last Name"
             className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
+            value={lname}
             onChange={(e) => setLname(e.target.value)}
           />
         </div>
@@ -56,12 +58,14 @@ const BookingSection = ({ camps }) => {
             placeholder="Email"
             type="email"
             className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             placeholder="Phone"
             type="tel"
             className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
+            value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
         </div>

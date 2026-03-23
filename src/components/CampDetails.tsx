@@ -1,18 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import BookingSection from "@/components/bookingSection";
+import { Badge } from "@/components/ui/badge";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
+import Image from "next/image";
+import { useState } from "react";
 
 const defaultCamp = {
   name: "Triangle Tent",
@@ -34,7 +32,7 @@ const defaultCamp = {
 };
 
 export default function CampDetail({ camp = defaultCamp }) {
-  const [activeImage, setActiveImage] = useState(0);
+//   const [activeImage, setActiveImage] = useState(0);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10 space-y-12 mt-16">

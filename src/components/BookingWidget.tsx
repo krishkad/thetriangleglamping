@@ -1,15 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { format } from "date-fns";
-import {
-  CheckCircle2,
-  Mail,
-  Phone,
-  User,
-  CalendarDays,
-  Users,
-} from "lucide-react";
+import { CalendarDays, CheckCircle2, Users } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -157,6 +150,7 @@ const BookingWidget = () => {
     packages[0].camps[0],
   );
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [bookingExists, setBookingExists] = useState<any>(null);
   const [sending, setSending] = useState(false);
 
