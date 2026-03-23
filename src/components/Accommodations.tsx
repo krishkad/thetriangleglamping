@@ -1,0 +1,1068 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { Badge } from "./ui/badge";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
+import Link from "next/link";
+
+const accommodations = [
+  {
+    id: 1,
+    name: "Triangle Tent",
+    category: "cabin",
+    slug: "triangle-tent",
+    images: [
+      {
+        url: "/triangle-tent/triangle-tent-16.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-tent/triangle-tent-11.webp",
+        imageClassName: "object-[68%_78%]",
+      },
+      {
+        url: "/triangle-tent/triangle-tent-10.webp",
+        imageClassName: "object-cover object-[60%_70%]",
+      },
+      {
+        url: "/triangle-tent/triangle-tent-9.webp",
+        imageClassName: "object-[68%_78%]",
+      },
+    ],
+    price: 3500,
+    beforePrice: 4250,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="font-semibold text-forest-700 text-sm">
+            🏕 Stay Includes
+          </h4>
+
+          <div className="text-xs text-slate-600 space-y-1 leading-relaxed">
+            <p className="text-xs text-slate-600">
+              Bedding Included • Separate Washrooms (AC Rooms have Attached
+              Washrooms) • Luxury Stay • Private Lawn • Riverside Seating •
+              25-Acre Farm Experience
+            </p>
+          </div>
+        </div>
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate Basis) • Unlimited Dinner • Starters /
+            Barbeque (Limited) 🍱🍢 • Morning Tea 🍵 & Breakfast 🥗
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 text-sm mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹3500{" "}
+            <span className="text-slate-400">(₹2500 w/o meals)</span> <br />
+            Saturday ₹4250{" "}
+            <span className="text-slate-400">(₹3250 w/o meals)</span> <br />
+            Sunday ₹4000{" "}
+            <span className="text-slate-400">(₹3000 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 text-sm mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–3 Guests (+₹1750)</span>
+          <span>🕒 4 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description:
+      "Affordable and cozy triangle tents with private outdoor setup.",
+  },
+
+  {
+    id: 2,
+    name: "Triangle Tent with Mini Pool",
+    category: "cabin",
+    slug: "triangle-tent-with-mini-pool",
+    images: [
+      {
+        url: "/triangle-tent-with-mini-pool/triangle-tent-1.webp",
+        imageClassName: "object-cover",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/triangle-tent-2.webp",
+        imageClassName: "object-cover",
+      },
+    ],
+    price: 4000,
+    beforePrice: 4750,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Private Mini Pool • Private Bonfire • Dining Area • BBQ Setup • Lawn
+            • Bench • Fan • Shared Washroom
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹4000{" "}
+            <span className="text-slate-400">(₹3000 w/o meals)</span> <br />
+            Saturday ₹4750{" "}
+            <span className="text-slate-400">(₹3750 w/o meals)</span> <br />
+            Sunday ₹4500{" "}
+            <span className="text-slate-400">(₹3500 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–3 Guests (+₹1750)</span>
+          <span>🕒 4 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description: "Triangle tents upgraded with a private mini pool.",
+  },
+  {
+    id: 9,
+    name: "Triangle Cooler Cabin",
+    category: "cabin",
+    slug: "triangle-cooler-cabin",
+    images: [
+      {
+        url: "/triangle-cooler-cabin/triangle-cooler-cabin-4.webp",
+        imageClassName: "object-[20%_30%]",
+      },
+      {
+        url: "/triangle-cooler-cabin/triangle-cooler-cabin-5.webp",
+        imageClassName: "object-[20%_30%]",
+      },
+      {
+        url: "/triangle-cooler-cabin/triangle-cooler-cabin-1.webp",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-cooler-cabin/triangle-cooler-cabin-2.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-cooler-cabin/triangle-cooler-cabin-3.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-cooler-cabin/triangle-cooler-cabin-6.webp",
+        imageClassName: "object-center",
+      },
+    ],
+    price: 4500,
+    beforePrice: 5500,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Triangle Cabin • Air Cooler • Private Washroom • Hammock • Bonfire •
+            Dining Area • BBQ Setup • Lawn • Bench
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹4500{" "}
+            <span className="text-slate-400">(₹3500 w/o meals)</span> <br />
+            Saturday ₹5500{" "}
+            <span className="text-slate-400">(₹4500 w/o meals)</span> <br />
+            Sunday ₹5000{" "}
+            <span className="text-slate-400">(₹4000 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–3 Guests (+₹1750)</span>
+          <span>🕒 4 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description:
+      "Cozy triangle cabin with a private setup, perfect for a comfortable and budget-friendly nature stay.",
+  },
+
+  {
+    id: 3,
+    name: "Triangle AC Cabin",
+    category: "cabin",
+    slug: "triangle-ac-cabin",
+    images: [
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-1.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-2.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-6.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-7.webp",
+        imageClassName: "object-center",
+      },
+    ],
+    price: 4750,
+    beforePrice: 5750,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            AC Cabin • Private Washroom • Hammock • Bonfire • Dining Area • BBQ
+            Setup • Lawn • Bench
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹4750{" "}
+            <span className="text-slate-400">(₹3750 w/o meals)</span> <br />
+            Saturday ₹5750{" "}
+            <span className="text-slate-400">(₹4750 w/o meals)</span> <br />
+            Sunday ₹5250{" "}
+            <span className="text-slate-400">(₹4250 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–3 Guests (+₹1750)</span>
+          <span>🕒 4 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description: "AC cabin for a comfortable premium stay.",
+  },
+
+  {
+    id: 4,
+    name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
+    category: "tent",
+    slug: "cocoon-ac-tent-with-jacuzzi-and-mini-pool",
+    images: [
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-6.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-8.webp",
+        imageClassName: "object-[10%_30%]",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-7.webp",
+        imageClassName: "object-[20%_40%]",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-2.webp",
+        imageClassName: "object-[60%_70%]",
+      },
+    ],
+    price: 8000,
+    beforePrice: 9000,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            AC Cabin • Private Mini Pool • Private Washroom • Hammock • Bonfire
+            • Dining Area • BBQ Setup • Lawn • Wooden Fencing
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹6000{" "}
+            <span className="text-slate-400">(₹5000 w/o meals)</span> <br />
+            Saturday ₹6750{" "}
+            <span className="text-slate-400">(₹5750 w/o meals)</span> <br />
+            Sunday ₹6500{" "}
+            <span className="text-slate-400">(₹5500 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–3 Guests (+₹2000)</span>
+          <span>🕒 3 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description:
+      "Ultra luxury stay with jacuzzi + mini pool + premium privacy.",
+  },
+  {
+    id: 5,
+    name: "Cocoon AC Tent",
+    category: "tent",
+    slug: "cocoon-ac-tent",
+    images: [
+      {
+        url: "/cocoon-ac-tent/cocoon-ac-tent-1.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent/cocoon-ac-tent-2.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent/cocoon-ac-tent-4.webp",
+        imageClassName: "object-[20%_30%]",
+      },
+      {
+        url: "/cocoon-ac-tent/cocoon-ac-tent-5.webp",
+        imageClassName: "object-[30%_40%]",
+      },
+      {
+        url: "/cocoon-ac-tent/cocoon-ac-tent-6.webp",
+        imageClassName: "object-[30%_40%]",
+      },
+      {
+        url: "/cocoon-ac-tent/cocoon-ac-tent-7.webp",
+        imageClassName: "object-contain",
+      },
+    ],
+    price: 6000,
+    beforePrice: 7000,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Cocoon AC Tent • Private Washroom • Hammock • Bonfire • Dining Area
+            • BBQ Setup • Lawn • Wooden Fencing
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹6000{" "}
+            <span className="text-slate-400">(₹5000 w/o meals)</span> <br />
+            Saturday ₹7000{" "}
+            <span className="text-slate-400">(₹6000 w/o meals)</span> <br />
+            Sunday ₹6500{" "}
+            <span className="text-slate-400">(₹5500 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–4 Guests (+₹2000)</span>
+          <span>🕒 3 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description:
+      "Premium cocoon-style AC tent with private setup, perfect for a comfortable and stylish nature stay.",
+  },
+  {
+    id: 6,
+    name: "Cocoon AC Tent with Mini Pool",
+    category: "tent",
+    slug: "cocoon-ac-tent-with-mini-pool",
+    images: [
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-9.webp",
+        imageClassName: "object-center",
+      },
+      // {
+      //   url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-2.webp",
+      //   imageClassName: "object-center",
+      // },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-4.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-5.webp",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-6.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp",
+        imageClassName: "object-[10%_20%]",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-8.webp",
+        imageClassName: "object-contain",
+      },
+    ],
+    price: 6500,
+    beforePrice: 7500,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Cocoon AC Tent • Private Mini Pool • Private Washroom • Hammock •
+            Bonfire • Dining Area • BBQ Setup • Garden • Wooden Fencing
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹6500{" "}
+            <span className="text-slate-400">(₹5500 w/o meals)</span> <br />
+            Saturday ₹7500{" "}
+            <span className="text-slate-400">(₹6500 w/o meals)</span> <br />
+            Sunday ₹7000{" "}
+            <span className="text-slate-400">(₹6000 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–3 Guests (+₹2000)</span>
+          <span>🕒 3 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description:
+      "Premium cocoon AC tent with a private mini pool, offering a perfect balance of comfort, privacy, and nature.",
+  },
+  {
+    id: 7,
+    name: "AC Pod with Outdoor Jacuzzi",
+    category: "pod",
+    slug: "ac-pod-with-outdoor-jacuzzi",
+    images: [
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-1.webp",
+        imageClassName: "object-[0%_10%]",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-2.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-3.webp",
+        imageClassName: "object-[10%_20%]",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-5.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-4.webp",
+        imageClassName: "object-[60%_70%]",
+      },
+    ],
+    price: 7000,
+    beforePrice: 8000,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            AC Pod • Private Outdoor Jacuzzi • Private Washroom • Hammock •
+            Bonfire • Dining Area • BBQ Setup • Garden • Wooden Fencing
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹7000{" "}
+            <span className="text-slate-400">(₹6000 w/o meals)</span> <br />
+            Saturday ₹8000{" "}
+            <span className="text-slate-400">(₹7000 w/o meals)</span> <br />
+            Sunday ₹7500{" "}
+            <span className="text-slate-400">(₹6500 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–4 Guests (+₹2000)</span>
+          <span>🕒 3 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description:
+      "Luxury AC pod featuring a private outdoor jacuzzi, designed for a premium and relaxing getaway experience.",
+  },
+  {
+    id: 8,
+    name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
+    category: "tent",
+    slug: "cocoon-ac-tent-with-jacuzzi-and-mini-pool",
+    images: [
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-6.webp",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-8.webp",
+        imageClassName: "object-[10%_30%]",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-7.webp",
+        imageClassName: "object-[20%_40%]",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-2.webp",
+        imageClassName: "object-[60%_70%]",
+      },
+    ],
+    price: 8000,
+    beforePrice: 9000,
+    guests: 2,
+
+    amenitiesHtml: (
+      <div className="mb-6 space-y-3">
+        {/* Stay Includes */}
+        <div className="bg-emerald-50/60 p-3 rounded-xl space-y-2">
+          <h4 className="text-sm font-semibold text-forest-700">
+            🏕 Stay Includes
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Cocoon AC Tent • Private Jacuzzi • Private Mini Pool • Private
+            Washroom • Swing • Remote Curtains • Bonfire • Dining Area • BBQ
+            Setup • Bigger Garden • Wooden Fencing
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="bg-amber-50/60 p-3 rounded-xl">
+          <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+            🍽 Food Options
+          </h4>
+          <p className="text-xs text-slate-600">
+            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
+            • Morning Tea & Breakfast
+          </p>
+        </div>
+
+        {/* Pricing */}
+        <div className="bg-purple-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            💰 Pricing
+          </h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Weekdays ₹8000{" "}
+            <span className="text-slate-400">(₹7000 w/o meals)</span> <br />
+            Saturday ₹9000{" "}
+            <span className="text-slate-400">(₹8000 w/o meals)</span> <br />
+            Sunday ₹8500{" "}
+            <span className="text-slate-400">(₹7500 w/o meals)</span>
+          </p>
+        </div>
+
+        {/* Activities */}
+        <div className="bg-blue-50/60 p-3 rounded-xl">
+          <h4 className="text-sm font-semibold text-forest-700 mb-1">
+            🎉 Activities
+          </h4>
+          <p className="text-xs text-slate-600">
+            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges)
+          </p>
+        </div>
+
+        {/* Meta */}
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
+          <span>👥 2–4 Guests (+₹2000)</span>
+          <span>🕒 3 PM – 11 AM</span>
+        </div>
+      </div>
+    ),
+
+    description:
+      "Ultra-luxury cocoon AC tent featuring a private jacuzzi, mini pool, and premium amenities for the most exclusive stay experience.",
+  },
+];
+
+const Accommodations = () => {
+  return (
+    <section id="accommodations" className="py-16 sm:py-20 lg:py-24 bg-white">
+      <div className="max-w-[1444px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-4xl lg:text-6xl font-playfair font-bold text-stone mb-4 sm:mb-6">
+            Find Your Escape <br className="sm:hidden" />
+            {/* <span className="text-moss">Pawna</span> */}
+          </h2>
+          <p className="text-lg sm:text-xl text-stone/80 max-w-3xl mx-auto font-poppins">
+            Choose from our handpicked collection of luxury accommodations, each
+            designed to blend comfort with nature&apos;s beauty.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {accommodations.map((accommodation, index) => (
+            <div
+              key={accommodation.id}
+              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Image Carousel */}
+              <div className="relative overflow-hidden h-64">
+                <Carousel
+                  className="w-full h-full"
+                  opts={{ align: "start", loop: true }}
+                >
+                  <CarouselContent className="h-full">
+                    {accommodation.images.map((image, imageIndex) => (
+                      <CarouselItem key={imageIndex} className="h-full">
+                        <div className="relative w-full h-full">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <Image
+                            src={image.url}
+                            width={0}
+                            height={0}
+                            unoptimized
+                            loading="lazy"
+                            alt={`${accommodation.name} - Image ${
+                              imageIndex + 1
+                            }`}
+                            className={cn(
+                              "w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700",
+                              image.imageClassName,
+                            )}
+                          />
+
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+
+                  {/* Carousel Navigation */}
+                  <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30  transition-all duration-300 w-8 h-8" />
+                  <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30  transition-all duration-300 w-8 h-8" />
+
+                  {/* Dot Indicators */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1  transition-opacity duration-300">
+                    {accommodation.images.map((_, dotIndex) => (
+                      <div
+                        key={dotIndex}
+                        className="w-2 h-2 rounded-full bg-white/60 backdrop-blur-sm"
+                      />
+                    ))}
+                  </div>
+                </Carousel>
+
+                {/* Price Badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  {index !== 2 ? (
+                    <Badge className="bg-moss text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
+                      <>
+                        ₹{accommodation.price}/person{" "}
+                        <span className="text-xs text-white line-through">
+                          ₹{accommodation.beforePrice}/per
+                        </span>
+                      </>
+                    </Badge>
+                  ) : (
+                    <Badge>Booked</Badge>
+                  )}
+                </div>
+
+                {/* Guests Badge */}
+                <div className="absolute top-4 left-4 z-10">
+                  <Badge
+                    variant="outline"
+                    className="bg-white/90 text-[var(--forest-600)] border-[var(--forest-300)] backdrop-blur-sm"
+                  >
+                    {accommodation.guests} guests
+                  </Badge>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="font-playfair text-2xl font-semibold text-[var(--forest-700)] mb-2">
+                  <Link href={`/accommodations/${accommodation.slug}`}>
+                    {accommodation.name}
+                  </Link>
+                </h3>
+                <p className="text-[var(--forest-600)] mb-4 text-sm">
+                  {accommodation.description}
+                </p>
+
+                {/* Amenities */}
+                {/* <div className="mb-6">
+                  <div className="flex flex-wrap gap-2">
+                    {accommodation.amenities.slice(0, 3).map((amenity) => (
+                      <Badge
+                        key={amenity}
+                        variant="secondary"
+                        className="text-xs "
+                      >
+                        {amenity}
+                      </Badge>
+                    ))}
+                    {accommodation.amenities.length > 3 && (
+                      <Badge variant="secondary" className="text-xs ">
+                        +{accommodation.amenities.length - 3} more
+                      </Badge>
+                    )}
+                  </div>
+                </div> */}
+                {/* <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                  {accommodation.amenities.map((amenity, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center space-x-2 text-sm text-slate-600"
+                    >
+                      <amenity.icon className="w-4 h-4 text-emerald-600" />
+                      <span>{amenity.label}</span>
+                    </div>
+                  ))}
+                </div> */}
+
+                {/* <div className="mb-6 space-y-3">
+                  <div className="bg-emerald-50/60 p-3 rounded-xl">
+                    <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+                      🏕 Stay Includes
+                    </h4>
+                    <p className="text-xs text-slate-600">
+                      Cozy Dome Tent • Foam Mattress • Blanket
+                    </p>
+                  </div>
+
+                  <div className="bg-amber-50/60 p-3 rounded-xl">
+                    <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+                      🍽 Food Menu
+                    </h4>
+                    <p className="text-xs text-slate-600">
+                      Tea & Pakoda/Misal • BBQ (Paneer/Chicken) • Dinner
+                      (Veg/Non-Veg) • Breakfast • Mineral Water
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50/60 p-3 rounded-xl">
+                    <h4 className="font-semibold text-forest-700 mb-1 text-sm">
+                      🎉 Activities
+                    </h4>
+                    <p className="text-xs text-slate-600">
+                      DJ Music • Indoor & Outdoor Games • Bonfire •
+                      Boating/Kayaking (Extra) • Live Music (Sat) • Free Parking
+                    </p>
+                  </div>
+
+                  <div className="text-xs text-slate-700 space-y-1 pl-1">
+                    <p>✅ Tasty Homely Food</p>
+                    <p>✅ Peaceful Lakeside Vibes</p>
+                  </div>
+                </div> */}
+
+                <>{accommodation.amenitiesHtml}</>
+
+                {/* CTA Button */}
+                <Button
+                  className="w-full bg-moss hover:bg-moss/80 text-white py-3 rounded-xl transition-all duration-300 hover:shadow-lg cursor-pointer"
+                  onClick={() =>
+                    document
+                      .getElementById("bookings")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Book This Experience
+                  <svg
+                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        {/* <div className="text-center mt-12 sm:mt-16">
+          <Button
+            size="lg"
+            className="bg-coral hover:bg-coral/90 text-white px-8 py-4 text-lg rounded-2xl font-semibold shadow-lg hover-lift"
+          >
+            See All Accommodations
+          </Button>
+        </div> */}
+      </div>
+    </section>
+  );
+};
+
+export default Accommodations;
