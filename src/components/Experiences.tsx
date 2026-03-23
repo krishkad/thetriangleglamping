@@ -16,7 +16,7 @@ const experiences = [
   {
     title: "Private Theatre",
     description:
-      "Paddle through the serene waters of Pawana Lake and explore hidden coves",
+      "An intimate, luxurious space for a private cinematic experience with comfort and immersive sound.",
     icon: "🎬",
     duration: "Daytime Activity",
     category: "Entertainment",

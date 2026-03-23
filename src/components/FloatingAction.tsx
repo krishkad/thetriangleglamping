@@ -13,7 +13,7 @@ const FloatingActions = () => {
 
   const handleWhatsApp = () => {
     const message =
-      "Hi! I'm interested in Pawna Lake Camping. Could you please help me with booking?";
+      "Hi! I'm interested in Triangle Glamping. Could you please help me with booking?";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"

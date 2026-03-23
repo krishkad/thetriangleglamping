@@ -42,56 +42,56 @@ const testimonials = [
 ];
 
 export const images = [
-  { src: "/images/new_images/image-1.webp", alt: "Image 1" },
-  { src: "/images/new_images/image-2.webp", alt: "Image 2" },
-  { src: "/images/new_images/image-3.webp", alt: "Image 3" },
-  { src: "/images/new_images/image-4.webp", alt: "Image 4" },
-  { src: "/images/new_images/image-5.webp", alt: "Image 5" },
-  { src: "/images/new_images/image-6.webp", alt: "Image 6" },
-  { src: "/images/new_images/image-7.webp", alt: "Image 7" },
-  { src: "/images/new_images/image-8.webp", alt: "Image 8" },
-  { src: "/images/new_images/image-9.webp", alt: "Image 9" },
-  { src: "/images/new_images/image-10.webp", alt: "Image 10" },
-  { src: "/images/new_images/image-11.webp", alt: "Image 11" },
-  { src: "/images/new_images/image-12.webp", alt: "Image 12" },
-  { src: "/images/new_images/image-13.webp", alt: "Image 13" },
-  { src: "/images/new_images/image-14.webp", alt: "Image 14" },
-  { src: "/images/new_images/image-15.webp", alt: "Image 15" },
-  { src: "/images/new_images/image-16.webp", alt: "Image 16" },
-  { src: "/images/new_images/image-17.webp", alt: "Image 17" },
-  { src: "/images/new_images/image-18.webp", alt: "Image 18" },
-  { src: "/images/new_images/image-19.webp", alt: "Image 19" },
-  { src: "/images/new_images/image-20.webp", alt: "Image 20" },
-  { src: "/images/new_images/image-21.webp", alt: "Image 21" },
-  { src: "/images/new_images/image-22.webp", alt: "Image 22" },
-  { src: "/images/new_images/image-23.webp", alt: "Image 23" },
-  { src: "/images/new_images/image-24.webp", alt: "Image 24" },
-  { src: "/images/new_images/image-25.webp", alt: "Image 25" },
-  { src: "/images/new_images/image-26.webp", alt: "Image 26" },
-  { src: "/images/new_images/image-27.webp", alt: "Image 27" },
-  { src: "/images/new_images/image-28.webp", alt: "Image 28" },
-  { src: "/images/new_images/image-29.webp", alt: "Image 29" },
-  { src: "/images/new_images/image-30.webp", alt: "Image 30" },
-  { src: "/images/new_images/image-31.webp", alt: "Image 31" },
-  { src: "/images/new_images/image-32.webp", alt: "Image 32" },
-  { src: "/images/new_images/image-33.webp", alt: "Image 33" },
-  { src: "/images/new_images/image-34.webp", alt: "Image 34" },
-  { src: "/images/new_images/image-35.webp", alt: "Image 35" },
-  { src: "/images/new_images/image-36.webp", alt: "Image 36" },
-  { src: "/images/new_images/image-37.webp", alt: "Image 37" },
-  { src: "/images/new_images/image-38.webp", alt: "Image 38" },
-  { src: "/images/new_images/image-39.webp", alt: "Image 39" },
-  { src: "/images/new_images/image-40.webp", alt: "Image 40" },
-  { src: "/images/new_images/image-41.webp", alt: "Image 41" },
-  { src: "/images/new_images/image-42.webp", alt: "Image 42" },
-  { src: "/images/new_images/image-43.webp", alt: "Image 43" },
-  { src: "/images/new_images/image-44.webp", alt: "Image 44" },
-  { src: "/images/new_images/image-45.webp", alt: "Image 45" },
-  { src: "/images/new_images/image-46.webp", alt: "Image 46" },
-  { src: "/images/new_images/image-47.webp", alt: "Image 47" },
-  { src: "/images/new_images/image-48.webp", alt: "Image 48" },
-  { src: "/images/new_images/image-49.webp", alt: "Image 49" },
-  { src: "/images/new_images/image-50.webp", alt: "Image 50" },
+  { src: "/gallery/gallery-1.webp", alt: "Image 1" },
+  { src: "/gallery/gallery-2.webp", alt: "Image 2" },
+  { src: "/gallery/gallery-3.webp", alt: "Image 3" },
+  { src: "/gallery/gallery-4.webp", alt: "Image 4" },
+  { src: "/gallery/gallery-5.webp", alt: "Image 5" },
+  { src: "/gallery/gallery-6.webp", alt: "Image 6" },
+  { src: "/gallery/gallery-7.webp", alt: "Image 7" },
+  { src: "/gallery/gallery-8.webp", alt: "Image 8" },
+  { src: "/gallery/gallery-9.webp", alt: "Image 9" },
+  { src: "/gallery/gallery-10.webp", alt: "Image 10" },
+  { src: "/gallery/gallery-11.webp", alt: "Image 11" },
+  { src: "/gallery/gallery-12.webp", alt: "Image 12" },
+  { src: "/gallery/gallery-13.webp", alt: "Image 13" },
+  { src: "/gallery/gallery-14.webp", alt: "Image 14" },
+  { src: "/gallery/gallery-15.webp", alt: "Image 15" },
+  { src: "/gallery/gallery-16.webp", alt: "Image 16" },
+  { src: "/gallery/gallery-17.webp", alt: "Image 17" },
+  { src: "/gallery/gallery-18.webp", alt: "Image 18" },
+  { src: "/gallery/gallery-19.webp", alt: "Image 19" },
+  { src: "/gallery/gallery-20.webp", alt: "Image 20" },
+  { src: "/gallery/gallery-21.webp", alt: "Image 21" },
+  { src: "/gallery/gallery-22.webp", alt: "Image 22" },
+  { src: "/gallery/gallery-23.webp", alt: "Image 23" },
+  { src: "/gallery/gallery-24.webp", alt: "Image 24" },
+  { src: "/gallery/gallery-25.webp", alt: "Image 25" },
+  { src: "/gallery/gallery-26.webp", alt: "Image 26" },
+  { src: "/gallery/gallery-27.webp", alt: "Image 27" },
+  { src: "/gallery/gallery-28.webp", alt: "Image 28" },
+  { src: "/gallery/gallery-29.webp", alt: "Image 29" },
+  { src: "/gallery/gallery-30.webp", alt: "Image 30" },
+  { src: "/gallery/gallery-31.webp", alt: "Image 31" },
+  { src: "/gallery/gallery-32.webp", alt: "Image 32" },
+  { src: "/gallery/gallery-33.webp", alt: "Image 33" },
+  { src: "/gallery/gallery-34.webp", alt: "Image 34" },
+  { src: "/gallery/gallery-35.webp", alt: "Image 35" },
+  { src: "/gallery/gallery-36.webp", alt: "Image 36" },
+  // { src: "/gallery/gallery-37.webp", alt: "Image 37" },
+  // { src: "/gallery/gallery-38.webp", alt: "Image 38" },
+  // { src: "/gallery/gallery-39.webp", alt: "Image 39" },
+  // { src: "/gallery/gallery-40.webp", alt: "Image 40" },
+  // { src: "/gallery/gallery-41.webp", alt: "Image 41" },
+  // { src: "/gallery/gallery-42.webp", alt: "Image 42" },
+  // { src: "/gallery/gallery-43.webp", alt: "Image 43" },
+  // { src: "/gallery/gallery-44.webp", alt: "Image 44" },
+  // { src: "/gallery/gallery-45.webp", alt: "Image 45" },
+  // { src: "/gallery/gallery-46.webp", alt: "Image 46" },
+  // { src: "/gallery/gallery-47.webp", alt: "Image 47" },
+  // { src: "/gallery/gallery-48.webp", alt: "Image 48" },
+  // { src: "/gallery/gallery-49.webp", alt: "Image 49" },
+  // { src: "/gallery/gallery-50.webp", alt: "Image 50" },
 ];
 
 const Testimonials = () => {
@@ -131,7 +131,7 @@ const Testimonials = () => {
             </h2>
             <p className="text-lg sm:text-xl text-stone/80 max-w-3xl mx-auto font-poppins">
               Real experiences from couples, families, and solo travelers who
-              found their perfect escape at Pawna Camps.
+              found their perfect escape at Triangle Glamping.
             </p>
           </div>
 
@@ -201,7 +201,7 @@ const Testimonials = () => {
           {/* Instagram Feed */}
           <div id="gallery" className="text-center mb-8 sm:mb-12">
             <h3 className="text-xl sm:text-3xl md:text-4xl font-playfair font-bold text-stone mb-4 sm:mb-6">
-              #MyPawnaLakeCamping
+              #TheTriangleGlamping
             </h3>
             <p className="text-base sm:text-lg text-stone/80 mb-6 sm:mb-8 font-poppins">
               Follow our journey and share your own magical moments with fellow
@@ -239,11 +239,11 @@ const Testimonials = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4">
               <span className="w-max bg-gradient-to-r from-[#4caf50] to-green-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
-                #MyPawnaLakeCamping
+                #TheTriangleGlamping
               </span>
-              {/* <span className="w-max bg-gradient-to-r from-[#ff6b6b] to-pink-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
-              @Pawna Camps_official
-            </span> */}
+              <span className="w-max bg-gradient-to-r from-[#ff6b6b] to-pink-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
+              @thetriangleglamping
+            </span>
             </div>
           </div>
         </div>

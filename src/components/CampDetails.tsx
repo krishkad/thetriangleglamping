@@ -119,10 +119,10 @@ export default function CampDetail({ camp = defaultCamp }) {
             <h2 className="text-xl font-semibold mb-4">🍽 Meals & Food</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Evening Snacks + Tea/Coffee",
+                "Evening Snacks (Tea/Coffee + Gobi Manchurian)",
                 "BBQ (Paneer / Chicken)",
-                "Dinner (Veg & Non-Veg)",
-                "Breakfast Options",
+                "Dinner (Veg & Non-Veg Options)",
+                "Morning Breakfast (Idli Sambar/Poha/Bread Omelette",
                 "Mineral Water",
               ].map((item, i) => (
                 <div

@@ -73,7 +73,7 @@ const Navbar = () => {
                       ? "/images/triangle-glamping-logo.png"
                       : "/images/triangle-glamping-logo.png"
                   }
-                  alt="pawna-logo"
+                  alt="triangle-glamping-logo"
                   className="w-full h-full object-cover "
                 />
               </Link>
@@ -140,10 +140,10 @@ const Navbar = () => {
                 {/* Mobile Menu Content */}
                 <div className="flex flex-col h-full justify-center items-center space-y-8 px-8">
                   <div className="text-stone font-playfair text-3xl font-bold mb-4">
-                    <div className="w-[160px] h-[90px] overflow-hidden">
+                    <div className="w-[120px] overflow-hidden">
                       <img
-                        src="/images/pawna-lake-campings.webp"
-                        alt="pawna-logo"
+                        src="/images/triangle-glamping-logo.png"
+                        alt="triangle-glamping-logo"
                         onClick={() => {
                           router.push("#hero");
                           setIsOpen(false);

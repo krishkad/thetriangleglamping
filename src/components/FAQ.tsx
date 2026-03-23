@@ -10,68 +10,6 @@ import { WhatsAppIcon } from "./FloatingAction";
 
 const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
 
-// const faqs = [
-//   {
-//     question: "What's included in my camping stay?",
-//     answer:
-//       "Your stay includes comfortable tent accommodation, evening tea with pakoras upon arrival, dinner with local delicacies, breakfast, and access to activities like badminton, carrom, cricket, bonfire nights, and lake kayaking. Barbeque with sound system is available until 9:30 PM.",
-//     category: "Stay Details",
-//   },
-//   {
-//     question: "Are pets welcome at Pawana Lake Camping?",
-//     answer:
-//       "Yes! We welcome well-behaved pets with prior notice. Please inform us during booking to ensure we can accommodate your furry friend.",
-//     category: "Policies",
-//   },
-//   {
-//     question: "What should I pack for my camping trip?",
-//     answer:
-//       "Pack comfortable clothes for outdoor activities, hiking shoes for nearby fort treks, sunscreen, insect repellent, and personal toiletries. Bring layers for cool evenings by the lake. We provide all bedding and camping essentials.",
-//     category: "Preparation",
-//   },
-//   {
-//     question: "What are your check-in and check-out times?",
-//     answer:
-//       "Check-in is between 4:00 PM and 8:00 PM. Check-out is by 11:00 AM after breakfast. Please plan your arrival accordingly to enjoy the complete camping experience.",
-//     category: "Stay Details",
-//   },
-//   {
-//     question: "What's your cancellation policy?",
-//     answer:
-//       "Bookings once confirmed are non-refundable. The advance amount paid is strictly non-refundable in case of cancellation.",
-//     category: "Policies",
-//   },
-//   {
-//     question: "How do I reach Pawana Lake Camping?",
-//     answer:
-//       "We're located at Thakursai Pavananagar Road Near Vaishnavi Hotel, Pawna Lake, Pune - 410 406. The campsite is approximately 2 hours from Pune city. Detailed driving directions will be provided upon booking confirmation.",
-//     category: "Travel",
-//   },
-//   {
-//     question: "Is Pawana Lake Camping suitable for families and children?",
-//     answer:
-//       "Absolutely! We offer family-friendly cottages with attached washrooms and lake views. Children can enjoy various activities like cricket, badminton, kayaking, and bonfire sessions in a safe outdoor environment.",
-//     category: "Family",
-//   },
-//   {
-//     question: "What dining and meal options are available?",
-//     answer:
-//       "We provide delicious meals including evening tea with pakoras, barbeque dinner, traditional dinner with local delicacies (served until 10:00 PM), and hearty breakfast (served until 9:30 AM). Vegetarian and special dietary requirements can be accommodated with advance notice.",
-//     category: "Dining",
-//   },
-//   {
-//     question: "What adventure activities can we enjoy?",
-//     answer:
-//       "Enjoy lake kayaking, bonfire nights with music and stories (until 11:30 PM), nature hiking, stargazing, and outdoor games like badminton, carrom, and cricket. Nearby attractions include Lohagad Fort, Bhaja Caves, Karla Caves, and trekking to Rajmachi Fort.",
-//     category: "Activities",
-//   },
-//   {
-//     question: "What types of accommodation do you offer?",
-//     answer:
-//       "We offer Regular Tents (2-3 person capacity with essential facilities), Triangle Tents (stylish with lake views and added comfort), and Deluxe Cottages (family-friendly with attached washrooms and lake touch views).",
-//     category: "Accommodation",
-//   },
-// ];
 
 const faqs = [
   {
@@ -114,7 +52,7 @@ const faqs = [
 const FAQ = () => {
   const handleWhatsApp = () => {
     const message =
-      "Hi! I'm interested in Pawna Lake Camping. Could you please help me with booking?";
+      "Hi! I'm interested in Triangle Glamping. Could you please help me with booking?";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank",

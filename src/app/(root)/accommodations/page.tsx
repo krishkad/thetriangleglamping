@@ -3,7 +3,7 @@ import React from "react";
 
 const AllStaysPage = () => {
   return (
-    <div>
+    <div className="py-10">
       <Accommodations />
     </div>
   );

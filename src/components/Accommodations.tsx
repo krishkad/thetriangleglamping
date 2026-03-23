@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
@@ -853,7 +853,7 @@ const Accommodations = () => {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-4xl lg:text-6xl font-playfair font-bold text-stone mb-4 sm:mb-6">
             Find Your Escape <br className="sm:hidden" />
-            {/* <span className="text-moss">Pawna</span> */}
+            {/* <span className="text-moss"></span> */}
           </h2>
           <p className="text-lg sm:text-xl text-stone/80 max-w-3xl mx-auto font-poppins">
             Choose from our handpicked collection of luxury accommodations, each
@@ -945,7 +945,7 @@ const Accommodations = () => {
               {/* Content */}
               <div className="p-6">
                 <h3 className="font-playfair text-2xl font-semibold text-[var(--forest-700)] mb-2">
-                  <Link href={`/accommodations/${accommodation.slug}`}>
+                  <Link href={`/accommodations/${accommodation.slug}`} className="hover:underline transition-all">
                     {accommodation.name}
                   </Link>
                 </h3>
@@ -1023,6 +1023,28 @@ const Accommodations = () => {
                 <>{accommodation.amenitiesHtml}</>
 
                 {/* CTA Button */}
+                <Link
+                  className={cn(
+                    buttonVariants({variant: "outline"}),
+                    "w-full  py-3 rounded-xl transition-all duration-300 hover:shadow-lg cursor-pointer mb-2",
+                  )}
+                  href={`/accommodations/${accommodation.slug}`}
+                >
+                  More Details
+                  <svg
+                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Link>
                 <Button
                   className="w-full bg-moss hover:bg-moss/80 text-white py-3 rounded-xl transition-all duration-300 hover:shadow-lg cursor-pointer"
                   onClick={() =>

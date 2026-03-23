@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/popover";
 import { Badge } from "./ui/badge";
 
+const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
+
 /* ================= TYPES ================= */
 
 type Camp = {
@@ -40,40 +42,40 @@ const packages: PackageGroup[] = [
     camps: [
       {
         name: "Triangle Tent",
-        price: "₹1200",
+        price: "₹3500",
         amount: 3500,
         saturday_amount: 4250,
-        sunday_amount: 4250,
+        sunday_amount: 4000,
         savings: "₹200",
         capacity: 2,
         tag: "Popular",
       },
       {
         name: "Triangle Tent with Mini Pool",
-        price: "₹1599",
-        amount: 1599,
-        saturday_amount: 4250,
-        sunday_amount: 4250,
-        savings: "₹301",
+        price: "₹4000",
+        amount: 4000,
+        saturday_amount: 4750,
+        sunday_amount: 4500,
+        savings: "₹801",
         capacity: 4,
         tag: "Best Seller",
       },
       {
         name: "Triangle Cooler Cabin",
-        price: "₹999",
-        saturday_amount: 4250,
-        sunday_amount: 4250,
-        amount: 999,
-        savings: "₹100",
+        price: "₹4500",
+        amount: 4500,
+        saturday_amount: 5500,
+        sunday_amount: 5000,
+        savings: "₹1000",
         capacity: 2,
       },
       {
         name: "Triangle AC Cabin",
-        price: "₹999",
-        saturday_amount: 4250,
-        sunday_amount: 4250,
-        amount: 999,
-        savings: "₹100",
+        price: "₹4750",
+        amount: 4750,
+        saturday_amount: 5750,
+        sunday_amount: 5250,
+        savings: "₹1000",
         capacity: 2,
       },
     ],
@@ -83,27 +85,27 @@ const packages: PackageGroup[] = [
     camps: [
       {
         name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
-        price: "₹2999",
-        amount: 2999,
-        saturday_amount: 4250,
-        sunday_amount: 4250,
+        price: "₹6000",
+        amount: 6000,
+        saturday_amount: 6750,
+        sunday_amount: 6500,
         capacity: 2,
         tag: "Luxury",
       },
       {
         name: "Cocoon AC Tent",
-        price: "₹3499",
-        amount: 3499,
-        saturday_amount: 4250,
-        sunday_amount: 4250,
+        price: "₹6000",
+        amount: 6000,
+        saturday_amount: 7000,
+        sunday_amount: 6500,
         capacity: 3,
       },
       {
         name: "Cocoon AC Tent with Mini Pool",
-        price: "₹3999",
-        saturday_amount: 4250,
-        sunday_amount: 4250,
-        amount: 3999,
+        price: "₹6500",
+        amount: 6500,
+        saturday_amount: 7500,
+        sunday_amount: 7000,
         capacity: 4,
       },
     ],
@@ -113,18 +115,18 @@ const packages: PackageGroup[] = [
     camps: [
       {
         name: "AC Pod with Outdoor Jacuzzi",
-        price: "₹2499",
-        amount: 2499,
-        saturday_amount: 4250,
-        sunday_amount: 4250,
+        price: "₹7000",
+        amount: 7000,
+        saturday_amount: 8000,
+        sunday_amount: 7500,
         capacity: 2,
       },
       {
         name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
-        price: "₹2999",
-        amount: 2999,
-        saturday_amount: 4250,
-        sunday_amount: 4250,
+        price: "₹8000",
+        amount: 8000,
+        saturday_amount: 9000,
+        sunday_amount: 8500,
         capacity: 2,
         tag: "Romantic",
       },
@@ -150,39 +152,42 @@ const BookingWidget = () => {
     packages[0].camps[0],
   );
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [bookingExists, setBookingExists] = useState<any>(null);
-  const [sending, setSending] = useState(false);
-
-  const calculatedAmount = selectedPackage.amount * guests;
+  const calculatedAmount = selectedPackage.amount;
 
   /* ================= SUBMIT ================= */
 
   const send_whatsapp = async () => {
-    setSending(true);
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        body: JSON.stringify({
-          email,
-          name,
-          lname,
-          phone,
-          checkIn,
-          checkOut,
-          guests,
-          kids,
-          selectedPackage,
-          calculatedAmount,
-        }),
-      });
+      const message_text = `
+🌿 New Booking Request - The Triangle Glamping
 
-      const res = await response.json();
+👤 Guest Details
+Name: ${name} ${lname}
+Phone: ${phone}
+Email: ${email}
 
-      if (!res.success) return;
+📅 Stay Details
+Check-in: ${checkIn}
+Check-out: ${checkOut}
 
-      localStorage.setItem("bookings", JSON.stringify(res.user_info));
-      setBookingExists(res.user_info);
+👨‍👩‍👧 Guests
+Adults: ${guests}
+Kids: ${kids}
+
+🏕️ Selected Package
+Camp: ${selectedPackage.name}
+Capacity: ${selectedPackage.capacity}
+
+💰 Total Amount
+₹${calculatedAmount}
+
+✨ Looking forward to hosting you!
+`;
+
+      window.open(
+        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message_text)}`,
+        "_blank",
+      );
 
       // reset
       setName("");
@@ -194,20 +199,24 @@ const BookingWidget = () => {
       setSelectedPackage(packages[0].camps[0]);
     } catch (err) {
       console.log(err);
-    } finally {
-      setSending(false);
     }
   };
 
-  useEffect(() => {
-    const data = localStorage.getItem("bookings");
-    if (data) setBookingExists(JSON.parse(data));
-  }, []);
-
   /* ================= UI ================= */
 
+  const day = checkIn ? format(checkIn, "EEEE") : null;
+
+  const price = !day
+    ? selectedPackage.price
+    : day === "Sunday"
+      ? selectedPackage.sunday_amount
+      : day === "Saturday"
+        ? selectedPackage.saturday_amount
+        : selectedPackage.amount;
+
+  const disabled = !name || !lname || !email || !phone || !checkIn || !checkOut;
   return (
-    <section className="py-20 px-6 bg-secondary">
+    <section className="py-20 px-6 bg-secondary" id="bookings">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">
         {/* LEFT - CAMPS */}
         <div className="space-y-8">
@@ -325,7 +334,8 @@ const BookingWidget = () => {
               Reserve Your Escape
             </CardTitle>
             <p className="text-sm text-stone/70">
-              Book now & we’ll confirm within minutes
+              Book now & we’ll confirm within minutes, select your preferred
+              stay
             </p>
           </CardHeader>
 
@@ -438,32 +448,28 @@ const BookingWidget = () => {
             <div className="bg-gradient-to-r from-moss/10 to-skyblue/10 rounded-2xl p-5 space-y-3">
               <div className="flex justify-between">
                 <span className="font-medium">{selectedPackage.name}</span>
-                <span className="font-semibold text-moss">
-                  {selectedPackage.price}/person
-                </span>
+                <span className="font-semibold text-moss">₹{price}</span>
               </div>
 
               {selectedPackage.savings && (
                 <div className="flex justify-between text-sm">
                   <span>You Save</span>
                   <span className="text-green-600 font-semibold">
-                    {selectedPackage.savings} / person
+                    {selectedPackage.savings}
                   </span>
                 </div>
               )}
 
               <div className="border-t pt-3 flex justify-between items-center">
                 <span className="font-semibold">Total</span>
-                <span className="text-2xl font-bold text-moss">
-                  ₹{calculatedAmount}
-                </span>
+                <span className="text-2xl font-bold text-moss">₹{price}</span>
               </div>
 
               {/* SAVINGS BANNER */}
               {selectedPackage.savings && (
                 <div className="bg-green-100 text-green-700 text-xs text-center p-2 rounded-md font-semibold">
                   🎉 You saved ₹
-                  {parseInt(selectedPackage.savings.replace("₹", "")) * guests}
+                  {parseInt(selectedPackage.savings.replace("₹", ""))}
                 </div>
               )}
             </div>
@@ -472,25 +478,22 @@ const BookingWidget = () => {
             <Button
               className="w-full bg-moss hover:bg-moss/90 text-white text-lg py-4 rounded-2xl shadow-lg font-bold"
               onClick={send_whatsapp}
-              disabled={sending}
+              disabled={disabled}
             >
-              {sending ? "Processing..." : `Book Now – ₹${calculatedAmount}`}
+              {`Book Now – ₹${price}`}
             </Button>
 
-            <p className="text-xs text-center text-stone/60">
-              We’ll contact you within 15 minutes
-            </p>
+            <div className="w-full space-y-2">
+              <p className="text-xs text-center text-stone/60">
+                We’ll contact you within 15 minutes or
+              </p>
+              <p className="text-xs text-center text-stone/60">
+                Call Directly and book
+              </p>
+            </div>
           </CardContent>
         </Card>
       </div>
-
-      {/* SUCCESS */}
-      {bookingExists?.name && (
-        <div className="mt-10 text-center">
-          <CheckCircle2 className="mx-auto text-green-600 w-10 h-10" />
-          <p className="mt-2">Booking Sent Successfully!</p>
-        </div>
-      )}
     </section>
   );
 };

@@ -1,5 +1,12 @@
 "use client";
-import { Instagram, Mail, MapPin, ShieldIcon, UserIcon } from "lucide-react";
+import {
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  ShieldIcon,
+  UserIcon,
+} from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -30,11 +37,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            {/* <h4 className="text-3xl font-playfair font-bold mb-4">Pawna Camps</h4> */}
             <div className="w-[100px] h-[100px] overflow-hidden">
               <img
                 src="/images/triangle-glamping-logo.png"
-                alt="pawna-logo"
+                alt="triangle-glamping-logo"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -44,11 +50,10 @@ const Footer = () => {
               up to wilderness.
             </p>
             <div className="flex items-center space-x-3 text-white/80 mb-4">
-              <MapPin className="w-5 h-5 text-coral self-start" />
+              <MapPin className="w-5 h-5 text-coral self-start shrink-0" />
               <span className="font-poppins">
-                Thakursai Pavananagar Road Near Vaishnavi Hotel,
-                <br /> Swami Samarth Road Pawna Lake Camping, <br />{" "}
-                Maharashtra, Pune- 410 406
+                A: Solu, Alandi-Markal Rd, behind Dosti Hotel, Pimpri-Chinchwad,
+                Maharashtra 412105
               </span>
             </div>
 
@@ -77,7 +82,7 @@ const Footer = () => {
             <ul className="space-y-3 text-white/80">
               <li>
                 <a
-                  href="#accommodations"
+                  href="/accommodations"
                   className="hover:text-coral transition-colors font-poppins hover:underline"
                 >
                   Accommodations
@@ -143,7 +148,7 @@ const Footer = () => {
             <div className="space-y-6 text-white/80">
               {/* Email */}
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-moss" />
+                <Mail className="w-5 h-5 text-moss shrink-0" />
                 <div>
                   <p className="font-semibold font-poppins">Email Us</p>
                   <a
@@ -156,20 +161,42 @@ const Footer = () => {
               </div>
 
               {/* Instagram */}
-              <div className="flex items-center space-x-3">
-                <Instagram className="w-5 h-5 text-moss" />
+              <Link
+                href={"https://www.instagram.com/thetriangleglamping/"}
+                target="__blank"
+                className="flex items-center space-x-3"
+              >
+                <Instagram className="w-5 h-5 text-pink-700" />
                 <div>
                   <p className="font-semibold font-poppins">
                     Follow on Instagram
                   </p>
-                  <a
-                    href="#"
-                    target="_blank"
+                  <p
                     rel="noopener noreferrer"
                     className="font-poppins hover:text-coral transition-colors duration-300"
                   >
-                    @yourhandle
-                  </a>
+                    @thetriangleglamping
+                  </p>
+                </div>
+              </Link>
+
+              <div className="flex items-start space-x-3">
+                <Phone className="w-5 h-5 text-blue-500 mt-1" />
+
+                <div>
+                  <p className="font-semibold font-poppins">Call Us</p>
+
+                  <Link href="tel:+917507507546">
+                    <p className="font-poppins hover:text-coral transition-colors duration-300">
+                      +91 75075 07546
+                    </p>
+                  </Link>
+
+                  <Link href="tel:+919284800759">
+                    <p className="font-poppins hover:text-coral transition-colors duration-300">
+                      +91 92848 00759
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -180,8 +207,8 @@ const Footer = () => {
         <div className="text-center mt-16 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm font-poppins">
-              © {currentYear} Pawna Lake Camping. All rights reserved. | Crafted
-              by Krrish
+              © {currentYear} The Triangle Glamping. All rights reserved. |
+              Crafted by Krrish
             </p>
             <div className="flex space-x-6 text-sm text-white/60"></div>
           </div>
