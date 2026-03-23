@@ -3,11 +3,11 @@
 import BookingSection from "@/components/bookingSection";
 import { Badge } from "@/components/ui/badge";
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
@@ -31,7 +31,7 @@ const defaultCamp = {
 };
 
 export default function CampDetail({ camp = defaultCamp }) {
-//   const [activeImage, setActiveImage] = useState(0);
+  //   const [activeImage, setActiveImage] = useState(0);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10 space-y-12 mt-16">
@@ -318,7 +318,8 @@ export default function CampDetail({ camp = defaultCamp }) {
   );
 }
 
-function CampGallery({ camp }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function CampGallery({ camp }: any) {
   return (
     <div className="w-full space-y-4">
       {/* MAIN CAROUSEL */}

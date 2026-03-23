@@ -11,7 +11,8 @@ import {
 import { CalendarDays, Users } from "lucide-react";
 import { format } from "date-fns";
 
-const BookingSection = ({ camps }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const BookingSection = ({ camps }: any) => {
   const [name, setName] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
