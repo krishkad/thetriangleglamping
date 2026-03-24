@@ -48,7 +48,7 @@ const Hero = () => {
 
         <p className="text-lg sm:text-xl md:text-2xl text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
           Discover premium glamping at luxury tents, private bonfire, Private
-          Dinning & unmatched privacy for couples.
+          Dining & unmatched privacy for couples.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
