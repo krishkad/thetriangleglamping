@@ -10,9 +10,18 @@ import {
 } from "@/components/ui/popover";
 import { CalendarDays, Users } from "lucide-react";
 import { format } from "date-fns";
+import { cn } from "@/lib/utils";
+
+const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const BookingSection = ({ camps }: any) => {
+const BookingSection = ({
+  camps,
+  className,
+}: {
+  camps: any;
+  className?: string;
+}) => {
   const [name, setName] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -22,10 +31,61 @@ const BookingSection = ({ camps }: any) => {
   const [checkOut, setCheckOut] = useState<Date>();
 
   const [guests, setGuests] = useState(2);
-//   const [kids, setKids] = useState(0);
+  const [kids, setKids] = useState(0);
 
+  const send_whatsapp = async () => {
+    try {
+      const message_text = `
+🌿 Availability Request - The Triangle Glamping
+
+👤 Guest Details
+Name: ${name} ${lname}
+Phone: ${phone}
+Email: ${email}
+
+📅 Stay Details
+Check-in: ${checkIn}
+Check-out: ${checkOut}
+
+👨‍👩‍👧 Guests
+Adults: ${guests}
+Kids: ${kids}
+
+🏕️ Selected Package
+Camp: ${camps.name}
+Capacity: ${camps.capacity}
+
+💰 Total Amount
+₹${camps.price}
+
+✨ Looking forward to hosting you!
+`;
+
+      window.open(
+        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message_text)}`,
+        "_blank",
+      );
+
+      // reset
+      setName("");
+      setLname("");
+      setEmail("");
+      setPhone("");
+      setGuests(2);
+      setKids(0);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const disabled = !name || !lname || !email || !phone || !checkIn || !checkOut;
   return (
-    <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max py-0">
+    <Card
+      className={cn(
+        "rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max py-0",
+        className,
+      )}
+    >
       {/* HEADER */}
       <CardHeader className="text-center pb-4 pt-6">
         <CardTitle className="text-lg sm:text-2xl font-playfair font-bold text-stone">
@@ -118,7 +178,7 @@ const BookingSection = ({ camps }: any) => {
         <div className="space-y-3">
           <label className="text-sm font-semibold text-stone">Guests</label>
 
-          <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-3">
+          <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-2">
             <div className="flex items-center gap-2">
               <Users className="h-4 w-4 text-moss" />
               <span className="font-medium">{guests} Guests</span>
@@ -142,6 +202,90 @@ const BookingSection = ({ camps }: any) => {
                 +
               </Button>
             </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-2">
+          <div className="flex items-center gap-2">
+            <Users className="h-4 w-4 text-moss shrink-0" />
+            <span className="font-medium">
+              {kids} Kids{" "}
+              <span className="text-xs text-gray-500">bellow 5 yrs</span>
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full w-10 h-10"
+              onClick={() => setKids(Math.max(0, kids - 1))}
+            >
+              -
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full w-10 h-10"
+              onClick={() => setKids(kids + 1)}
+            >
+              +
+            </Button>
+          </div>
+        </div>
+        <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-2">
+          <div className="flex items-center gap-2">
+            <Users className="h-4 w-4 text-moss shrink-0" />
+            <span className="font-medium">
+              {kids} Kids{" "}
+              <span className="text-xs text-gray-500">5 - 12 yrs</span>
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full w-10 h-10"
+              onClick={() => setKids(Math.max(0, kids - 1))}
+            >
+              -
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full w-10 h-10"
+              onClick={() => setKids(kids + 1)}
+            >
+              +
+            </Button>
+          </div>
+        </div>
+        <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-2">
+          <div className="flex items-center gap-2">
+            <Users className="h-4 w-4 text-moss shrink-0" />
+            <span className="font-medium">
+              {kids} Kids{" "}
+              <span className="text-xs text-gray-500">above 12 yrs</span>
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full w-10 h-10"
+              onClick={() => setKids(Math.max(0, kids - 1))}
+            >
+              -
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full w-10 h-10"
+              onClick={() => setKids(kids + 1)}
+            >
+              +
+            </Button>
           </div>
         </div>
 
@@ -184,8 +328,8 @@ const BookingSection = ({ camps }: any) => {
         {/* CTA */}
         <Button
           className="w-full bg-moss hover:bg-moss/90 text-white text-lg py-4 rounded-2xl shadow-lg font-bold"
-          //   onClick={send_whatsapp}
-          //   disabled={sending}
+          onClick={send_whatsapp}
+          disabled={disabled}
         >
           {/* {sending ? "Processing..." : `Book Now – ₹${calculatedAmount}`} */}
           Check Availability

@@ -58,6 +58,23 @@ Every tent undergoes a rigorous inspection post-cleaning before it is assigned t
       "Being a camping site, we do not provide toiletries. Guests are requested to carry their own towel, shower gel, conditioner, shampoo, toothpaste, and toothbrush.",
     category: "Preparation",
   },
+  {
+    question: "What things should I carry?",
+    answer:
+      "Please carry a valid government ID proof, booking confirmation, personal essentials, necessary medications, and mosquito repellent such as Odomos, as this is an outdoor stay.",
+    category: "Preparation",
+  },
+  {
+    question: "Is early check-in or early check-out available?",
+    answer:
+      "Early check-in is not available before 3 PM. Early check-out is subject to availability.",
+    category: "Booking",
+  },
+  {
+    question: "Minimum age for couples to book a tent",
+    answer: "The minimum age is 18.",
+    category: "Policies",
+  },
 ];
 
 const FAQ = () => {

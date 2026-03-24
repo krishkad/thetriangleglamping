@@ -198,6 +198,8 @@ export default function CampDetail({ camp = defaultCamp }) {
                 ))}
               </div>
             </section>
+
+            {/* ❌ Cancellation Policy */}
           </div>
 
           {/* STICKY BOOKING CARD */}
@@ -231,6 +233,13 @@ export default function CampDetail({ camp = defaultCamp }) {
                 <li>🎉 Decorations ₹500–₹1500</li>
                 <li>🍽 Candle Light Dinner ₹300</li>
               </ul>
+            </div>
+
+            <div className="max-sm:hidden pt-4">
+              <BookingSection
+                camps={camp}
+                className="shadow-sm border rounded-2xl"
+              />
             </div>
           </div>
         </div>
@@ -315,6 +324,22 @@ export default function CampDetail({ camp = defaultCamp }) {
                 key={i}
                 className="p-4 rounded-xl border bg-white shadow-sm text-sm text-gray-600"
               >
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold mb-4">
+            ❌ Cancellation Policy for
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              "More than 72 hours before check-in: 90% refund",
+              "Within 72 hours of check-in: No refund or postponement",
+            ].map((item, i) => (
+              <div key={i} className="p-4 border rounded-xl bg-white shadow-sm">
                 {item}
               </div>
             ))}
