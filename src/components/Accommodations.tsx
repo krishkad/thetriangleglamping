@@ -48,10 +48,10 @@ const accommodations = [
           </h4>
 
           <div className="text-xs text-slate-600 space-y-1 leading-relaxed">
-            <p className="text-xs text-slate-600">
-              Bedding Included • Separate Washrooms (AC Rooms have Attached
-              Washrooms) • Luxury Stay • Private Lawn • Riverside Seating •
-              25-Acre Farm Experience
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Triangle Tent • Private bonfire 🔥 • Private dining area 🍽️ •
+              Private BBQ setup 🍖 • Private lawn 🌿 • Private bench 🪑 • Shared
+              washroom 🚿 ✨
             </p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="font-semibold text-forest-700 text-sm mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹3500{" "}
@@ -132,8 +132,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Private Mini Pool • Private Bonfire • Dining Area • BBQ Setup • Lawn
-            • Bench • Fan • Shared Washroom
+            Private mini pool 🏊‍♂️ • Private bonfire 🔥 • Private dining area 🍽️ •
+            Private BBQ setup 🍖 • Fan 🌀 • Private lawn 🌿 • Private bench 🪑 •
+            Shared washroom 🚿 ✨
           </p>
         </div>
 
@@ -151,7 +152,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹4000{" "}
@@ -183,7 +184,8 @@ const accommodations = [
       </div>
     ),
 
-    description: "Triangle tents upgraded with a private mini pool.",
+    description:
+      "Triangle tents upgraded with a private mini pool, offering a cozy and exclusive stay surrounded by nature.",
   },
   {
     id: 9,
@@ -228,8 +230,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Triangle Cabin • Air Cooler • Private Washroom • Hammock • Bonfire •
-            Dining Area • BBQ Setup • Lawn • Bench
+            Triangle Cabin • Air cooler ❄️ • Private washroom 🚿 • Private
+            hammock 🪢 • Private bonfire 🔥 • Private dining area 🍽️ • Private
+            BBQ setup 🍖 • Private lawn 🌿 • Private bench 🪑 ✨
           </p>
         </div>
 
@@ -247,7 +250,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹4500{" "}
@@ -280,7 +283,7 @@ const accommodations = [
     ),
 
     description:
-      "Cozy triangle cabin with a private setup, perfect for a comfortable and budget-friendly nature stay.",
+      "⭐ Most Comfortable Non-AC Stay Option. Cozy triangle cabin with a private setup, for a comfortable escape.",
   },
 
   {
@@ -318,8 +321,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            AC Cabin • Private Washroom • Hammock • Bonfire • Dining Area • BBQ
-            Setup • Lawn • Bench
+            AC Cabin ❄️ • Private washroom 🚿 • Private hammock 🪢 • Private
+            bonfire 🔥 • Private dining area 🍽️ • Private BBQ setup 🍖 • Private
+            lawn 🌿 • Private bench 🪑 ✨
           </p>
         </div>
 
@@ -337,7 +341,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹4750{" "}
@@ -364,12 +368,13 @@ const accommodations = [
         {/* Meta */}
         <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-700">
           <span>👥 2–3 Guests (+₹1750)</span>
-          <span>🕒 4 PM – 11 AM</span>
+          <span>🕒 3 PM – 11 AM</span>
         </div>
       </div>
     ),
 
-    description: "AC cabin for a comfortable premium stay.",
+    description:
+      "AC cabin designed for a comfortable and premium stay, offering modern amenities and a cozy retreat amidst nature.",
   },
 
   {
@@ -407,8 +412,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            AC Cabin • Private Mini Pool • Private Washroom • Hammock • Bonfire
-            • Dining Area • BBQ Setup • Lawn • Wooden Fencing
+            AC Cabin •Private washroom 🚿 • Private mini pool 🏊‍♂️ • Wooden wall
+            fencing • Private hammock • Private bonfire 🔥 • Private dining area
+            🍽️ • Private BBQ setup 🍖 • Private lawn 🌿 • AC ❄️ ✨
           </p>
         </div>
 
@@ -426,7 +432,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹6000{" "}
@@ -459,7 +465,7 @@ const accommodations = [
     ),
 
     description:
-      "Ultra luxury stay with jacuzzi + mini pool + premium privacy.",
+      "Ultra-luxury stay with a private jacuzzi, mini pool, and full premium privacy, and indulgent getaway.",
   },
   {
     id: 5,
@@ -504,8 +510,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Cocoon AC Tent • Private Washroom • Hammock • Bonfire • Dining Area
-            • BBQ Setup • Lawn • Wooden Fencing
+            Cocoon AC Tent • Private washroom 🚿 • Wooden wall fencing 🪵 •
+            Private hammock 🪢 • Private bonfire 🔥 • Private dining area 🍽️ •
+            Private BBQ setup 🍖 • Private space 🌿 • AC ❄️ ✨
           </p>
         </div>
 
@@ -523,7 +530,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹6000{" "}
@@ -556,7 +563,7 @@ const accommodations = [
     ),
 
     description:
-      "Premium cocoon-style AC tent with private setup, perfect for a comfortable and stylish nature stay.",
+      "Premium cocoon-style AC tent with private setup for a stylish, comfortable nature stay.",
   },
   {
     id: 6,
@@ -605,8 +612,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Cocoon AC Tent • Private Mini Pool • Private Washroom • Hammock •
-            Bonfire • Dining Area • BBQ Setup • Garden • Wooden Fencing
+            Cocoon AC Tent • Private washroom • Private mini pool • Wooden wall
+            fencing • Private hammock • Private bonfire 🔥 • Private dining area
+            • Private BBQ setup • Private garden • AC
           </p>
         </div>
 
@@ -624,7 +632,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹6500{" "}
@@ -657,7 +665,7 @@ const accommodations = [
     ),
 
     description:
-      "Premium cocoon AC tent with a private mini pool, offering a perfect balance of comfort, privacy, and nature.",
+      "Premium cocoon AC tent with a private mini pool, thoughtfully designed to offer the perfect blend of comfort, privacy, and a serene nature experience.",
   },
   {
     id: 7,
@@ -698,8 +706,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            AC Pod • Private Outdoor Jacuzzi • Private Washroom • Hammock •
-            Bonfire • Dining Area • BBQ Setup • Garden • Wooden Fencing
+            AC Pod • Private washroom 🚿 • Private 2-seater outdoor jacuzzi •
+            Wooden wall fencing • Private hammock • Private bonfire • Private
+            dining area • Private BBQ setup • Private garden • AC
           </p>
         </div>
 
@@ -717,7 +726,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹7000{" "}
@@ -750,7 +759,7 @@ const accommodations = [
     ),
 
     description:
-      "Luxury AC pod featuring a private outdoor jacuzzi, designed for a premium and relaxing getaway experience.",
+      "Luxury AC pod featuring a private outdoor jacuzzi, thoughtfully designed with premium amenities for a comfortable and relaxing getaway experience.",
   },
   {
     id: 8,
@@ -787,9 +796,8 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Cocoon AC Tent • Private Jacuzzi • Private Mini Pool • Private
-            Washroom • Swing • Remote Curtains • Bonfire • Dining Area • BBQ
-            Setup • Bigger Garden • Wooden Fencing
+            Cocoon AC Tent • Cocoon AC Tent • Private washroom • Jacuzzi & mini
+            pool • Swing • Bonfire • Dining & BBQ • Large garden • AC
           </p>
         </div>
 
@@ -807,7 +815,7 @@ const accommodations = [
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing
+            💰 Pricing for 2
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹8000{" "}
@@ -840,7 +848,7 @@ const accommodations = [
     ),
 
     description:
-      "Ultra-luxury cocoon AC tent featuring a private jacuzzi, mini pool, and premium amenities for the most exclusive stay experience.",
+      "Ultra-luxury cocoon AC tent with private jacuzzi, mini pool, and premium amenities for an exclusive stay.",
   },
 ];
 

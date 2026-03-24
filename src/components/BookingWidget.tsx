@@ -338,8 +338,8 @@ Capacity: ${selectedPackage.capacity}
               Reserve Your Escape
             </CardTitle>
             <p className="text-sm text-stone/70">
-              Check Availality & we’ll confirm within minutes, select your preferred
-              stay
+              Check Availality & we’ll confirm within minutes, select your
+              preferred stay
             </p>
           </CardHeader>
 
@@ -441,6 +441,90 @@ Capacity: ${selectedPackage.capacity}
                     variant="outline"
                     className="rounded-full w-10 h-10"
                     onClick={() => setGuests(guests + 1)}
+                  >
+                    +
+                  </Button>
+                </div>
+              </div>
+              <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <Users className="h-4 w-4 text-moss shrink-0" />
+                  <span className="font-medium">
+                    {kids} Kids{" "}
+                    <span className="text-xs text-gray-500">bellow 5 yrs</span>
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="rounded-full w-10 h-10"
+                    onClick={() => setKids(Math.max(0, kids - 1))}
+                  >
+                    -
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="rounded-full w-10 h-10"
+                    onClick={() => setKids(kids + 1)}
+                  >
+                    +
+                  </Button>
+                </div>
+              </div>
+              <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <Users className="h-4 w-4 text-moss shrink-0" />
+                  <span className="font-medium">
+                    {kids} Kids {" "}
+                    <span className="text-xs text-gray-500">5 - 12 yrs</span>
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="rounded-full w-10 h-10"
+                    onClick={() => setKids(Math.max(0, kids - 1))}
+                  >
+                    -
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="rounded-full w-10 h-10"
+                    onClick={() => setKids(kids + 1)}
+                  >
+                    +
+                  </Button>
+                </div>
+              </div>
+              <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <Users className="h-4 w-4 text-moss shrink-0" />
+                  <span className="font-medium">
+                    {kids} Kids {" "}
+                    <span className="text-xs text-gray-500">above 12 yrs</span>
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="rounded-full w-10 h-10"
+                    onClick={() => setKids(Math.max(0, kids - 1))}
+                  >
+                    -
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="rounded-full w-10 h-10"
+                    onClick={() => setKids(kids + 1)}
                   >
                     +
                   </Button>

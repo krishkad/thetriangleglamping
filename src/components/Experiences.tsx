@@ -65,14 +65,7 @@ const experiences = [
   },
 ];
 
-const categories = [
-  "All",
-  "Relaxation",
-  "Experience",
-  "Entertainment",
-  "Fun",
-  "Leisure",
-];
+const categories = ["All", "Relaxation", "Experience", "Entertainment", "Fun"];
 
 const Experiences = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -199,7 +192,7 @@ const Experiences = () => {
             {/* Indrayani River */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold text-coral mb-2">
-                5–10 min
+                2–5 min
               </div>
               <div className="font-poppins text-sm sm:text-base">
                 Indrayani River Riverside Walk

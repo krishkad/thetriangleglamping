@@ -26,14 +26,13 @@ Every tent undergoes a rigorous inspection post-cleaning before it is assigned t
   },
   {
     question: "Is Private washroom available?",
-    answer:
-      "Yes, we have private washrooms for all accommodations. For Triangle AC Cabin, AC Pod, and Cocoon Tents, private washrooms are available.",
+    answer: "Yes, we have private washrooms for all accommodations.",
     category: "Facilities",
   },
   {
     question: "What is the age group criteria?",
     answer:
-      "Any age group can enjoy the riverside campsite as it is fully safe. We host college groups, reunions, corporate team outings, family picnics, birthday parties, and more.",
+      "Any age group can enjoy the riverside campsite as it is fully safe. We host reunions, family picnics, birthday parties, and more.",
     category: "General",
   },
   {
