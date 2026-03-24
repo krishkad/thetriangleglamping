@@ -1,7 +1,6 @@
 "use client";
 import ArticleCard from "@/components/ArticleCard";
-import { articles, getFeaturedArticles } from "@/constant/data";
-import React from "react";
+import { articles } from "@/constant/data";
 
 const AllBlogsPage = () => {
   const featured = articles;
