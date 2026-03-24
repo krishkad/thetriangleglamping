@@ -207,7 +207,7 @@ Capacity: ${selectedPackage.capacity}
   const day = checkIn ? format(checkIn, "EEEE") : null;
 
   const price = !day
-    ? selectedPackage.price
+    ? selectedPackage.amount
     : day === "Sunday"
       ? selectedPackage.sunday_amount
       : day === "Saturday"
