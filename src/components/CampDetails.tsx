@@ -320,7 +320,7 @@ function CampGallery({ camp }: any) {
                     src={img.url}
                     alt={camp.name}
                     fill
-                    className={`object-cover transition duration-500 hover:scale-105 ${img.imageClassName || ""}`}
+                    className={`object-contain transition duration-500 hover:scale-105 object-center ${img.imageClassName || ""}`}
                   />
                 </div>
               </CarouselItem>
