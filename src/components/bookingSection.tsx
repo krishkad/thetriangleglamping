@@ -19,6 +19,7 @@ const BookingSection = ({
   camps,
   className,
 }: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   camps: any;
   className?: string;
 }) => {
