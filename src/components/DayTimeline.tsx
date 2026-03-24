@@ -142,7 +142,7 @@ const timelineEvents = [
   },
   {
     time: "07:30 PM",
-    title: "Bonfire",
+    title: "Private Bonfire",
     description:
       "Relax around a warm bonfire, share stories, and enjoy a peaceful night under the stars.",
     icon: Flame,
@@ -152,7 +152,7 @@ const timelineEvents = [
   },
   {
     time: "8:00 PM",
-    title: "Barbeque / Starters",
+    title: "Private Barbeque / Starters",
     description:
       "Enjoy limited barbeque or starters. Guests can make their own BBQ with marinated items provided (subject to weather conditions).",
     icon: Flame,
@@ -171,7 +171,7 @@ const timelineEvents = [
   },
   {
     time: "9:30 PM",
-    title: "Dinner",
+    title: "Private Dinner",
     description:
       "Enjoy a delicious dinner with freshly prepared dishes in a cozy outdoor private setting.",
     icon: UtensilsCrossed,
@@ -199,7 +199,7 @@ const timelineEvents = [
   },
   {
     time: "8:30 AM",
-    title: "Breakfast",
+    title: "Private Breakfast",
     description:
       "Enjoy tea or coffee and a hearty breakfast before wrapping up your stay.",
     icon: Coffee,

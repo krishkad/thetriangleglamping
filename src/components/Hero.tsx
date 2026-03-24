@@ -73,7 +73,7 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            View Camps
+            View Tents
           </Button>
         </div>
 

@@ -51,7 +51,7 @@ const experiences = [
     icon: "🥾",
     duration: "2-3 hours",
     category: "Experience",
-    price: "Included",
+    price: "Self Guided",
     color: "from-green-500 to-emerald-600",
   },
   {

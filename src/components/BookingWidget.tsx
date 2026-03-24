@@ -212,13 +212,15 @@ Capacity: ${selectedPackage.capacity}
 
   const day = checkIn ? format(checkIn, "EEEE") : null;
 
-  const price = !day
+  const adults_amount = !day
     ? selectedPackage.amount
     : day === "Sunday"
       ? selectedPackage.sunday_amount
       : day === "Saturday"
         ? selectedPackage.saturday_amount
         : selectedPackage.amount;
+
+  const price = adults_amount + kids5To12 * 1000 + kidsAbove12 * 1750;
 
   const disabled = !name || !lname || !email || !phone || !checkIn || !checkOut;
   return (
@@ -333,7 +335,7 @@ Capacity: ${selectedPackage.capacity}
         </div>
 
         {/* RIGHT - FORM */}
-        <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max sm:sticky sm:top-24">
+        <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max sm:sticky sm:top-24 py-0">
           {/* HEADER */}
           <CardHeader className="text-center pb-4 pt-6">
             <CardTitle className="text-2xl font-playfair font-bold text-stone">
@@ -480,7 +482,7 @@ Capacity: ${selectedPackage.capacity}
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4 text-moss shrink-0" />
                   <span className="font-medium">
-                    {kids5To12} Kids {" "}
+                    {kids5To12} Kids{" "}
                     <span className="text-xs text-gray-500">5 - 12 yrs</span>
                   </span>
                 </div>
@@ -508,7 +510,7 @@ Capacity: ${selectedPackage.capacity}
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4 text-moss shrink-0" />
                   <span className="font-medium">
-                    {kidsAbove12} Kids {" "}
+                    {kidsAbove12} Kids{" "}
                     <span className="text-xs text-gray-500">above 12 yrs</span>
                   </span>
                 </div>
@@ -540,6 +542,28 @@ Capacity: ${selectedPackage.capacity}
                 <span className="font-medium">{selectedPackage.name}</span>
                 <span className="font-semibold text-moss">₹{price}</span>
               </div>
+
+              {!!kids5To12 && (
+                <div className="flex justify-between">
+                  <span className="font-medium">
+                    {kids5To12} - Kids (5 - 12 yrs)
+                  </span>
+                  <span className="font-semibold text-moss">
+                    ₹{kids5To12 * 1000}
+                  </span>
+                </div>
+              )}
+
+              {!!kidsAbove12 && (
+                <div className="flex justify-between">
+                  <span className="font-medium">
+                    {kidsAbove12} - Kids (above 12 yrs)
+                  </span>
+                  <span className="font-semibold text-moss">
+                    ₹{kidsAbove12 * 1750}
+                  </span>
+                </div>
+              )}
 
               {selectedPackage.savings && (
                 <div className="flex justify-between text-sm">
@@ -576,9 +600,6 @@ Capacity: ${selectedPackage.capacity}
             <div className="w-full space-y-2">
               <p className="text-xs text-center text-stone/60">
                 We’ll respond you within 30 minutes or
-              </p>
-              <p className="text-xs text-center text-stone/60">
-                Call Directly and book
               </p>
             </div>
           </CardContent>

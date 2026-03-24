@@ -81,6 +81,18 @@ Capacity: ${camps.capacity}
     }
   };
 
+  const day = checkIn ? format(checkIn, "EEEE") : null;
+
+  const adults_amount = !day
+    ? camps.price.weekdays
+    : day === "Sunday"
+      ? camps.price.sunday
+      : day === "Saturday"
+        ? camps.price.saturday
+        : camps.price.weekdays;
+
+  const price = adults_amount + kids5To12 * 1000 + kidsAbove12 * 1750;
+
   const disabled = !name || !lname || !email || !phone || !checkIn || !checkOut;
   return (
     <Card
@@ -299,10 +311,31 @@ Capacity: ${camps.capacity}
               {camps?.name ? camps.name : "Tent"}
             </span>
             <span className="font-semibold text-moss">
-              {camps?.price?.weekdays ? camps.price.weekdays : "3000"}
+              {price ? price : "3000"}
             </span>
           </div>
 
+          {!!kids5To12 && (
+            <div className="flex justify-between">
+              <span className="font-medium">
+                {kids5To12} - Kids (5 - 12 yrs)
+              </span>
+              <span className="font-semibold text-moss">
+                ₹{kids5To12 * 1000}
+              </span>
+            </div>
+          )}
+
+          {!!kidsAbove12 && (
+            <div className="flex justify-between">
+              <span className="font-medium">
+                {kidsAbove12} - Kids (above 12 yrs)
+              </span>
+              <span className="font-semibold text-moss">
+                ₹{kidsAbove12 * 1750}
+              </span>
+            </div>
+          )}
           {/* {selectedPackage.savings && (
                 <div className="flex justify-between text-sm">
                   <span>You Save</span>
@@ -315,7 +348,7 @@ Capacity: ${camps.capacity}
           <div className="border-t pt-3 flex justify-between items-center">
             <span className="font-semibold">Total</span>
             <span className="text-2xl font-bold text-moss">
-              ₹{camps?.price?.weekdays ? camps.price.weekdays : "3000"}
+              ₹{price ? price : "3000"}
             </span>
           </div>
 
@@ -339,7 +372,7 @@ Capacity: ${camps.capacity}
         </Button>
 
         <p className="text-xs text-center text-stone/60">
-          We’ll contact you within 30 minutes
+          We’ll respond you within 30 minutes
         </p>
       </CardContent>
     </Card>

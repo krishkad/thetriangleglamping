@@ -49,7 +49,7 @@ export default function CampDetail({ camp = defaultCamp }) {
             <p className="text-gray-500 mt-1">👥 2–3 Guests • Riverside Stay</p>
           </div>
 
-          <div className="text-right">
+          <div className="text-right md:mr-48">
             <p className="text-sm text-gray-500">Starting from</p>
             <p className="text-2xl font-bold text-moss">₹3500</p>
           </div>
@@ -198,33 +198,10 @@ export default function CampDetail({ camp = defaultCamp }) {
                 ))}
               </div>
             </section>
-
-            {/* ❌ Cancellation Policy */}
           </div>
 
           {/* STICKY BOOKING CARD */}
           <div className="sticky top-24 h-fit">
-            {/* <Card className="rounded-2xl shadow-xl border">
-            <CardContent className="p-6 space-y-4">
-              <div className="flex justify-between items-center">
-                <p className="text-lg font-bold">₹3500</p>
-                <span className="text-sm text-gray-500">/ night</span>
-              </div>
-
-              <div className="border rounded-xl p-3 text-sm text-gray-500">
-                Select dates to see final price
-              </div>
-
-              <Button className="w-full bg-moss text-white text-base py-2 rounded-xl hover:scale-[1.02] transition">
-                Reserve Now
-              </Button>
-
-              <p className="text-xs text-gray-400 text-center">
-                You won’t be charged yet
-              </p>
-            </CardContent>
-          </Card> */}
-
             {/* ADD-ONS */}
             <div className="mt-6 p-5 border rounded-2xl bg-white shadow-sm">
               <h3 className="font-semibold mb-3">✨ Add-ons</h3>
@@ -279,7 +256,7 @@ export default function CampDetail({ camp = defaultCamp }) {
                 ₹400 / hour (2 people)
               </div>
               <p className="text-xs text-gray-500">
-                Extra: ₹200/person • Max 4
+                Extra: ₹100/person • Max 4
               </p>
             </div>
 
@@ -304,36 +281,9 @@ export default function CampDetail({ camp = defaultCamp }) {
           </div>
         </section>
 
-        {/* FULL INCLUSIONS */}
+        {/* ❌ Cancellation Policy */}
         <section>
-          <h2 className="text-xl font-semibold mb-4">
-            📦 Complete Stay Inclusions
-          </h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {[
-              "Luxury Tent + Bonfire + BBQ",
-              "Indoor & Outdoor Games",
-              "Tea & Snacks",
-              "Unlimited Dinner + BBQ",
-              "Breakfast",
-              "Mattress, Blanket & Pillows",
-              "Separate Washrooms",
-              "25 Acre Farm Access",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-4 rounded-xl border bg-white shadow-sm text-sm text-gray-600"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold mb-4">
-            ❌ Cancellation Policy for
-          </h2>
+          <h2 className="text-xl font-semibold mb-4">❌ Cancellation Policy</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               "More than 72 hours before check-in: 90% refund",

@@ -11,6 +11,9 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 
+const food =
+  "Tea/coffee & Goni Manchurian (Per Plate Basis) • BBQ (Paneer / Chicken – Limited) 🍢 • Unlimited Dinner (Veg & Non-Veg Buffet) 🍱 • Morning Tea 🍵 & Breakfast 🥗 • Mineral Water 💧";
+
 const accommodations = [
   {
     id: 1,
@@ -50,8 +53,8 @@ const accommodations = [
           <div className="text-xs text-slate-600 space-y-1 leading-relaxed">
             <p className="text-xs text-slate-600 leading-relaxed">
               Triangle Tent • Private bonfire 🔥 • Private dining area 🍽️ •
-              Private BBQ setup 🍖 • Private lawn 🌿 • Private bench 🪑 • Shared
-              washroom 🚿 ✨
+              Private BBQ setup 🍖 • Private lawn 🌿 • Private bench 🪑 •
+              Private washroom 🚿 ✨
             </p>
           </div>
         </div>
@@ -60,16 +63,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate Basis) • Unlimited Dinner • Starters /
-            Barbeque (Limited) 🍱🍢 • Morning Tea 🍵 & Breakfast 🥗
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="font-semibold text-forest-700 text-sm mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹3500{" "}
@@ -134,7 +134,7 @@ const accommodations = [
           <p className="text-xs text-slate-600 leading-relaxed">
             Private mini pool 🏊‍♂️ • Private bonfire 🔥 • Private dining area 🍽️ •
             Private BBQ setup 🍖 • Fan 🌀 • Private lawn 🌿 • Private bench 🪑 •
-            Shared washroom 🚿 ✨
+            Private washroom 🚿 ✨
           </p>
         </div>
 
@@ -143,16 +143,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹4000{" "}
@@ -241,16 +238,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹4500{" "}
@@ -332,16 +326,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹4750{" "}
@@ -423,16 +414,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹6000{" "}
@@ -521,16 +509,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹6000{" "}
@@ -623,16 +608,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹6500{" "}
@@ -717,16 +699,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹7000{" "}
@@ -806,16 +785,13 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 mb-1 text-sm">
             🍽 Food Options
           </h4>
-          <p className="text-xs text-slate-600">
-            Tea & Snacks (Per Plate) • Unlimited Dinner • BBQ/Starters (Limited)
-            • Morning Tea & Breakfast
-          </p>
+          <p className="text-xs text-slate-600">{food}</p>
         </div>
 
         {/* Pricing */}
         <div className="bg-purple-50/60 p-3 rounded-xl">
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
-            💰 Pricing for 2
+            💰 Pricing for 2 Person
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹8000{" "}
