@@ -84,6 +84,20 @@ const Hero = () => {
           </div>
         </div> */}
       </div>
+      <div className="absolute bottom-0 w-full overflow-hidden">
+        <div className="flex w-max animate-marquee">
+          <p className="text-xs md:text-sm text-gray-200 px-4 whitespace-nowrap">
+            Only 12 Private Luxury Units • 100% Exclusive Experience • Just 1
+            Hour from Pune • 3 Hours from Mumbai • A Favorite for Couples •
+            Perfect Romantic Getaway
+          </p>
+          <p className="text-xs md:text-sm text-gray-200 px-4 whitespace-nowrap">
+            Only 12 Private Luxury Units • 100% Exclusive Experience • Just 1
+            Hour from Pune • 3 Hours from Mumbai • A Favorite for Couples •
+            Perfect Romantic Getaway
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

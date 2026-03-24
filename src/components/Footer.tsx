@@ -1,5 +1,6 @@
 "use client";
 import {
+  Facebook,
   Instagram,
   Mail,
   MapPin,
@@ -45,9 +46,9 @@ const Footer = () => {
               />
             </div>
             <p className="text-white/80 mb-6 font-poppins leading-relaxed text-lg">
-              Where camping meets comfort, creating unforgettable experiences
-              in nature&apos;s embrace. Escape ordinary, sleep under stars, wake
-              up to wilderness.
+              Where camping meets comfort, creating unforgettable experiences in
+              nature&apos;s embrace. Escape ordinary, sleep under stars, wake up
+              to wilderness.
             </p>
             <div className="flex items-center space-x-3 text-white/80 mb-4">
               <MapPin className="w-5 h-5 text-coral self-start shrink-0" />
@@ -170,6 +171,24 @@ const Footer = () => {
                 <div>
                   <p className="font-semibold font-poppins">
                     Follow on Instagram
+                  </p>
+                  <p
+                    rel="noopener noreferrer"
+                    className="font-poppins hover:text-coral transition-colors duration-300"
+                  >
+                    @thetriangleglamping
+                  </p>
+                </div>
+              </Link>
+              <Link
+                href={"https://www.facebook.com/thetriangleglamping/"}
+                target="__blank"
+                className="flex items-center space-x-3"
+              >
+                <Facebook className="w-5 h-5 text-blue-600" />
+                <div>
+                  <p className="font-semibold font-poppins">
+                    Follow on Facebook
                   </p>
                   <p
                     rel="noopener noreferrer"
