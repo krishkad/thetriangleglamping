@@ -10,9 +10,11 @@ const Hero = () => {
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat bg-[35%_45%]"
+        className="absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-[15%_25%]"
         style={{
-          backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
+          backgroundImage:
+            "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
+          // backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 sm:via-transparent to-black/30 sm:to-black/50"></div>
@@ -76,9 +78,8 @@ const Hero = () => {
             View Tents
           </Button>
         </div>
-
       </div>
-        {/* Indicator */}
+      {/* Indicator */}
       <div className="absolute bottom-0 w-full overflow-hidden">
         <div className="flex w-max animate-marquee">
           <p className="text-xs md:text-sm text-gray-200 px-4 whitespace-nowrap">
