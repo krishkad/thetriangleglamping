@@ -77,15 +77,15 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
-        {/* <div className="absolute bottom-6 sm:-bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce-gentle hidden sm:block">
-          <div className="w-6 sm:w-8 h-10 sm:h-12 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 sm:h-4 bg-white rounded-full mt-2 sm:mt-3 animate-bounce"></div>
-          </div>
-        </div> */}
       </div>
+        {/* Indicator */}
       <div className="absolute bottom-0 w-full overflow-hidden">
         <div className="flex w-max animate-marquee">
+          <p className="text-xs md:text-sm text-gray-200 px-4 whitespace-nowrap">
+            Only 12 Private Luxury Units • 100% Exclusive Experience • Just 1
+            Hour from Pune • 3 Hours from Mumbai • A Favorite for Couples •
+            Perfect Romantic Getaway
+          </p>
           <p className="text-xs md:text-sm text-gray-200 px-4 whitespace-nowrap">
             Only 12 Private Luxury Units • 100% Exclusive Experience • Just 1
             Hour from Pune • 3 Hours from Mumbai • A Favorite for Couples •
