@@ -375,24 +375,24 @@ const accommodations = [
 
   {
     id: 4,
-    name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
+    name: "Triangle AC Cabin with Mini Pool",
     category: "tent",
-    slug: "cocoon-ac-tent-with-jacuzzi-and-mini-pool",
+    slug: "triangle-ac-cabin-with-mini-pool",
     images: [
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-6.webp",
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-6.webp",
         imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-8.webp",
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-5.webp",
         imageClassName: "object-[10%_30%]",
       },
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-7.webp",
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-7.webp",
         imageClassName: "object-[20%_40%]",
       },
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-2.webp",
+        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-2.webp",
         imageClassName: "object-[60%_70%]",
       },
     ],
@@ -431,11 +431,11 @@ const accommodations = [
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Weekdays ₹6000{" "}
-            <span className="text-slate-400">(₹5000 w/o meals)</span> <br />
+            <span className="text-slate-400">(₹5000 without meals)</span> <br />
             Saturday ₹6750{" "}
-            <span className="text-slate-400">(₹5750 w/o meals)</span> <br />
+            <span className="text-slate-400">(₹5750 without meals)</span> <br />
             Sunday ₹6500{" "}
-            <span className="text-slate-400">(₹5500 w/o meals)</span>
+            <span className="text-slate-400">(₹5500 without meals)</span>
           </p>
         </div>
 
@@ -916,7 +916,7 @@ const Accommodations = () => {
                 </Carousel>
 
                 {/* Price Badge */}
-                <div className="absolute top-4 right-4 z-10">
+                {/* <div className="absolute top-4 right-4 z-10">
                   {index !== 2 ? (
                     <Badge className="bg-moss text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
                       <>
@@ -929,23 +929,26 @@ const Accommodations = () => {
                   ) : (
                     <Badge>Booked</Badge>
                   )}
-                </div>
+                </div> */}
 
                 {/* Guests Badge */}
-                <div className="absolute top-4 left-4 z-10">
+                {/* <div className="absolute top-4 left-4 z-10">
                   <Badge
                     variant="outline"
                     className="bg-white/90 text-[var(--forest-600)] border-[var(--forest-300)] backdrop-blur-sm"
                   >
                     {accommodation.guests} guests
                   </Badge>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
               <div className="p-6">
                 <h3 className="font-playfair text-2xl font-semibold text-[var(--forest-700)] mb-2">
-                  <Link href={`/accommodations/${accommodation.slug}`} className="hover:underline transition-all">
+                  <Link
+                    href={`/accommodations/${accommodation.slug}`}
+                    className="hover:underline transition-all"
+                  >
                     {accommodation.name}
                   </Link>
                 </h3>
@@ -1025,7 +1028,7 @@ const Accommodations = () => {
                 {/* CTA Button */}
                 <Link
                   className={cn(
-                    buttonVariants({variant: "outline"}),
+                    buttonVariants({ variant: "outline" }),
                     "w-full  py-3 rounded-xl transition-all duration-300 hover:shadow-lg cursor-pointer mb-2",
                   )}
                   href={`/accommodations/${accommodation.slug}`}
@@ -1053,7 +1056,7 @@ const Accommodations = () => {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Book This Experience
+                  Check Availability
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
                     fill="none"

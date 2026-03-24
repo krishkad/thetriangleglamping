@@ -125,10 +125,10 @@ const Testimonials = () => {
           {/* Testimonials */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
             <h2 className="text-4xl lg:text-6xl font-playfair font-bold text-stone mb-4 sm:mb-6">
-              Stories from Fellow Adventurers
+              Stories from Fellow Glampers
             </h2>
             <p className="text-lg sm:text-xl text-stone/80 max-w-3xl mx-auto font-poppins">
-              Real experiences from couples, families, and solo travelers who
+              Real experiences from couples, families, and glampers who
               found their perfect escape at Triangle Glamping.
             </p>
           </div>
@@ -160,7 +160,7 @@ const Testimonials = () => {
                     <Camera className="w-4 sm:w-5 h-4 sm:h-5 inline mr-2" />
                   )}
                   <span className="text-sm sm:text-base">
-                    {testimonial.category} Adventure
+                    {testimonial.category} 
                   </span>
                 </div>
 
@@ -240,7 +240,7 @@ const Testimonials = () => {
 
           <div className="text-center mt-8 sm:mt-12">
             <p className="text-stone/60 font-poppins mb-3 sm:mb-4 text-sm sm:text-base">
-              Share your adventure moments and get featured!
+              Share your glamping moments and get featured!
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4">
               <span className="w-max bg-gradient-to-r from-[#4caf50] to-green-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">

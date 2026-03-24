@@ -45,14 +45,14 @@ const Footer = () => {
               />
             </div>
             <p className="text-white/80 mb-6 font-poppins leading-relaxed text-lg">
-              Where adventure meets comfort, creating unforgettable experiences
+              Where camping meets comfort, creating unforgettable experiences
               in nature&apos;s embrace. Escape ordinary, sleep under stars, wake
               up to wilderness.
             </p>
             <div className="flex items-center space-x-3 text-white/80 mb-4">
               <MapPin className="w-5 h-5 text-coral self-start shrink-0" />
               <span className="font-poppins">
-                A: Solu, Alandi-Markal Rd, behind Dosti Hotel, Pimpri-Chinchwad,
+                A: Solu, Alandi-Markal Rd, near Sukanta Hotel, Pimpri-Chinchwad,
                 Maharashtra 412105
               </span>
             </div>
@@ -62,7 +62,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 text-white">
                 <UserIcon className="w-4 sm:w-5 h-4 sm:h-5 text-blue-300 fill-blue-400" />
                 <span className="font-medium text-xs sm:text-sm">
-                  5,000+ Happy Campers
+                  3,000+ Happy Glampers
                 </span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 text-white">
@@ -93,7 +93,7 @@ const Footer = () => {
                   href="#experiences"
                   className="hover:text-coral transition-colors font-poppins hover:underline"
                 >
-                  Adventures
+                  Activities
                 </a>
               </li>
               <li>

@@ -24,12 +24,12 @@ const Hero = () => {
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-6 sm:mb-8">
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 text-white">
             <Star className="w-4 sm:w-5 h-4 sm:h-5 fill-yellow-500 text-yellow-600" />
-            <span className="font-medium text-xs sm:text-sm">4.8 Review</span>
+            <span className="font-medium text-xs sm:text-sm">4.4 Review</span>
           </div>
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 text-white">
             <UserIcon className="w-4 sm:w-5 h-4 sm:h-5 text-blue-300 fill-blue-400" />
             <span className="font-medium text-xs sm:text-sm">
-              5,000+ Happy Couples
+              3,000+ Happy Couples
             </span>
           </div>
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 text-white">
@@ -47,8 +47,8 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
-          Discover premium glamping at luxury tents, calm waters,
-          starry nights & unmatched privacy for couples.
+          Discover premium glamping at luxury tents, private bonfire, starry
+          nights & unmatched privacy for couples.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
@@ -61,7 +61,7 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Book Your Escape
+            Check Availability
           </Button>
           <Button
             size="lg"
@@ -86,7 +86,6 @@ const Hero = () => {
       </div>
     </section>
   );
-  
 };
 
 export default Hero;

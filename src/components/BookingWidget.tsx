@@ -38,7 +38,7 @@ type PackageGroup = {
 
 const packages: PackageGroup[] = [
   {
-    category: "Triangle Tent Options",
+    category: "Triangle Stay Options",
     camps: [
       {
         name: "Triangle Tent",
@@ -48,7 +48,6 @@ const packages: PackageGroup[] = [
         sunday_amount: 4000,
         savings: "₹200",
         capacity: 2,
-        tag: "Popular",
       },
       {
         name: "Triangle Tent with Mini Pool",
@@ -77,6 +76,17 @@ const packages: PackageGroup[] = [
         sunday_amount: 5250,
         savings: "₹1000",
         capacity: 2,
+        tag: "Popular",
+      },
+      {
+        name: "Triangle AC Cabin with Mini Pool",
+        price: "₹6000",
+        amount: 6000,
+        saturday_amount: 6750,
+        sunday_amount: 6500,
+        savings: "₹1000",
+        capacity: 2,
+        tag: "Best Seller",
       },
     ],
   },
@@ -84,21 +94,13 @@ const packages: PackageGroup[] = [
     category: "Cocoon Stays",
     camps: [
       {
-        name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
-        price: "₹6000",
-        amount: 6000,
-        saturday_amount: 6750,
-        sunday_amount: 6500,
-        capacity: 2,
-        tag: "Luxury",
-      },
-      {
         name: "Cocoon AC Tent",
         price: "₹6000",
         amount: 6000,
         saturday_amount: 7000,
         sunday_amount: 6500,
         capacity: 3,
+        tag: "Luxury",
       },
       {
         name: "Cocoon AC Tent with Mini Pool",
@@ -107,19 +109,7 @@ const packages: PackageGroup[] = [
         saturday_amount: 7500,
         sunday_amount: 7000,
         capacity: 4,
-      },
-    ],
-  },
-  {
-    category: "Private Experiences",
-    camps: [
-      {
-        name: "AC Pod with Outdoor Jacuzzi",
-        price: "₹7000",
-        amount: 7000,
-        saturday_amount: 8000,
-        sunday_amount: 7500,
-        capacity: 2,
+        tag: "Luxury",
       },
       {
         name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
@@ -128,7 +118,21 @@ const packages: PackageGroup[] = [
         saturday_amount: 9000,
         sunday_amount: 8500,
         capacity: 2,
-        tag: "Romantic",
+        tag: "Luxury",
+      },
+    ],
+  },
+  {
+    category: "Pod Stay",
+    camps: [
+      {
+        name: "AC Pod with Outdoor Jacuzzi",
+        price: "₹7000",
+        amount: 7000,
+        saturday_amount: 8000,
+        sunday_amount: 7500,
+        capacity: 2,
+        tag: "Luxury",
       },
     ],
   },
@@ -159,7 +163,7 @@ const BookingWidget = () => {
   const send_whatsapp = async () => {
     try {
       const message_text = `
-🌿 New Booking Request - The Triangle Glamping
+🌿 Availability Request - The Triangle Glamping
 
 👤 Guest Details
 Name: ${name} ${lname}
@@ -327,14 +331,14 @@ Capacity: ${selectedPackage.capacity}
         </div>
 
         {/* RIGHT - FORM */}
-        <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max">
+        <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max sm:sticky sm:top-24">
           {/* HEADER */}
           <CardHeader className="text-center pb-4 pt-6">
             <CardTitle className="text-2xl font-playfair font-bold text-stone">
               Reserve Your Escape
             </CardTitle>
             <p className="text-sm text-stone/70">
-              Book now & we’ll confirm within minutes, select your preferred
+              Check Availality & we’ll confirm within minutes, select your preferred
               stay
             </p>
           </CardHeader>
@@ -480,12 +484,12 @@ Capacity: ${selectedPackage.capacity}
               onClick={send_whatsapp}
               disabled={disabled}
             >
-              {`Book Now – ₹${price}`}
+              {`Check Availability – ₹${price}`}
             </Button>
 
             <div className="w-full space-y-2">
               <p className="text-xs text-center text-stone/60">
-                We’ll contact you within 15 minutes or
+                We’ll respond you within 30 minutes or
               </p>
               <p className="text-xs text-center text-stone/60">
                 Call Directly and book

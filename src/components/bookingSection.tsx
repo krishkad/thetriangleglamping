@@ -32,7 +32,7 @@ const BookingSection = ({ camps }: any) => {
           Reserve Your {camps.name}
         </CardTitle>
         <p className="text-sm text-stone/70">
-          Book now & we’ll confirm within minutes
+          Check Availability & we’ll confirm within minutes
         </p>
       </CardHeader>
 
@@ -188,11 +188,11 @@ const BookingSection = ({ camps }: any) => {
           //   disabled={sending}
         >
           {/* {sending ? "Processing..." : `Book Now – ₹${calculatedAmount}`} */}
-          Booking now
+          Check Availability
         </Button>
 
         <p className="text-xs text-center text-stone/60">
-          We’ll contact you within 15 minutes
+          We’ll contact you within 30 minutes
         </p>
       </CardContent>
     </Card>

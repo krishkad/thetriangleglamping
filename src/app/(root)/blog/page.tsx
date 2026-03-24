@@ -11,7 +11,7 @@ const AllBlogsPage = () => {
           All Blogs
         </h2>
         <p className="text-lg sm:text-xl text-stone/80 font-poppins">
-          Camping tips, outdoor inspiration, and guides for your next adventure.
+          Camping tips, outdoor inspiration, and guides for your next experience.
           🏕️
         </p>
       </div>

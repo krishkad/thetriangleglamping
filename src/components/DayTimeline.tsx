@@ -94,7 +94,7 @@ import { useState } from "react";
 const timelineEvents = [
   {
     time: "3:00 / 4:00 PM",
-    title: "Check-in at Campsite",
+    title: "Check-in at Glampsite",
     description:
       "Arrive at Solu Village campsite (AC tents check-in at 3:00 PM, Non-AC tents at 4:00 PM) via your own car, bike, or cab. Settle into your stay surrounded by nature.",
     icon: Sun,
@@ -109,7 +109,7 @@ const timelineEvents = [
     icon: Sun,
     image: "/images/nature-walk.jpg",
     color: "bg-gradient-to-r from-emerald-400 to-emerald-600",
-    className: "object-[30%_40%]"
+    className: "object-[30%_40%]",
   },
   {
     time: "5:30 PM",
@@ -117,10 +117,9 @@ const timelineEvents = [
     description:
       "Enjoy refreshing tea along with delicious snacks while relaxing and soaking in the calm riverside vibes.",
     icon: Coffee,
-    image:
-      "/images/tea-snacks.webp",
+
+    image: "/images/breakfast.webp",
     color: "bg-gradient-to-r from-yellow-400 to-amber-500",
-    className: "object-[52%_62%]"
   },
   {
     time: "5:45 PM",
@@ -130,7 +129,7 @@ const timelineEvents = [
     icon: Drum,
     image: "/images/games.webp",
     color: "bg-gradient-to-r from-orange-400 to-orange-600",
-    className: "object-[90%_100%]"
+    className: "object-[90%_100%]",
   },
   {
     time: "6:00 PM",
@@ -140,6 +139,16 @@ const timelineEvents = [
     icon: Sunset,
     image: "/images/riverside-view.webp",
     color: "bg-gradient-to-r from-pink-400 to-orange-500",
+  },
+  {
+    time: "07:30 PM",
+    title: "Bonfire",
+    description:
+      "Relax around a warm bonfire, share stories, and enjoy a peaceful night under the stars.",
+    icon: Flame,
+    image:
+      "https://images.unsplash.com/photo-1608654682720-f94b3368e6a3?q=80&w=870&auto=format&fit=crop",
+    color: "bg-gradient-to-r from-orange-300 to-orange-600",
   },
   {
     time: "8:00 PM",
@@ -154,29 +163,22 @@ const timelineEvents = [
     time: "8:30 PM",
     title: "Music & Vibes",
     description:
-      "Unwind with music and good vibes as the campsite comes alive with energy and fun.",
+      "Unwind with music and good vibes as the glampsite comes alive with energy and fun.",
     icon: Drum,
-    image: "https://images.unsplash.com/photo-1619982998302-752bc70afcff?q=80&w=1035&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1619982998302-752bc70afcff?q=80&w=1035&auto=format&fit=crop",
     color: "bg-gradient-to-r from-purple-400 to-purple-600",
   },
   {
     time: "9:30 PM",
     title: "Dinner",
     description:
-      "Enjoy a delicious dinner with freshly prepared dishes in a cozy outdoor setting.",
+      "Enjoy a delicious dinner with freshly prepared dishes in a cozy outdoor private setting.",
     icon: UtensilsCrossed,
     image: "/images/dinner.webp",
     color: "bg-gradient-to-r from-blue-400 to-blue-600",
   },
-  {
-    time: "10:00 PM",
-    title: "Bonfire",
-    description:
-      "Relax around a warm bonfire, share stories, and enjoy a peaceful night under the stars.",
-    icon: Flame,
-    image: "https://images.unsplash.com/photo-1608654682720-f94b3368e6a3?q=80&w=870&auto=format&fit=crop",
-    color: "bg-gradient-to-r from-orange-300 to-orange-600",
-  },
+
   {
     time: "12:00 AM",
     title: "Overnight Stay",
@@ -190,7 +192,7 @@ const timelineEvents = [
     time: "7:00 AM",
     title: "Sunrise Experience",
     description:
-      "Wake up early and witness a refreshing sunrise—perfect start to your morning in nature.",
+      "Wake up early and witness a refreshing sunrise, perfect start to your morning in nature.",
     icon: Sunrise,
     image: "/images/sunrise-view.webp",
     color: "bg-gradient-to-r from-yellow-300 to-orange-400",
@@ -199,18 +201,20 @@ const timelineEvents = [
     time: "8:30 AM",
     title: "Breakfast",
     description:
-      "Enjoy tea and a hearty breakfast before wrapping up your stay.",
+      "Enjoy tea or coffee and a hearty breakfast before wrapping up your stay.",
     icon: Coffee,
-    image: "/images/breakfast.webp",
+    image: "/images/tea-snacks.webp",
     color: "bg-gradient-to-r from-yellow-400 to-amber-500",
+    className: "object-[52%_62%]",
   },
   {
     time: "11:00 AM",
     title: "Check-out",
     description:
-      "Check out from the campsite and begin your journey back home with great memories.",
+      "Check out from the glamp and begin your journey back home with great memories.",
     icon: Sun,
-    image: "https://images.unsplash.com/photo-1490999227831-419689580f92?q=80&w=1832&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1490999227831-419689580f92?q=80&w=1832&auto=format&fit=crop",
     color: "bg-gradient-to-r from-green-400 to-green-700",
   },
 ];
@@ -223,7 +227,7 @@ export default function DayTimeline() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-playfair font-bold text-stone mb-6">
-            Your Adventure Timeline
+            Your Activities Timeline
           </h2>
           <p className="text-xl text-stone/80 max-w-3xl mx-auto">
             Every moment crafted for unforgettable memories.
@@ -281,7 +285,10 @@ export default function DayTimeline() {
                       alt={event.title}
                       fill
                       sizes="(min-width: 1024px) 40vw, 100vw"
-                      className={cn("object-cover transition-[filter] duration-500 hover:brightness-110", event.className)}
+                      className={cn(
+                        "object-cover transition-[filter] duration-500 hover:brightness-110",
+                        event.className,
+                      )}
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>

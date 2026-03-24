@@ -37,10 +37,9 @@ const Navbar = () => {
   const navItems = [
     { href: "/accommodations", label: "Stays" },
     { href: "/#timeline", label: "Your Day" },
-    { href: "/#experiences", label: "Adventures" },
+    { href: "/#experiences", label: "Activities" },
     { href: "/#contact", label: "Contact" },
     { href: "/#blogs", label: "Blogs" },
-    { href: "/#footer", label: "Terms" },
   ];
 
   const isScroll = isScrolled || pathname !== "/";
@@ -171,7 +170,7 @@ const Navbar = () => {
                       router.push("#bookings");
                     }}
                   >
-                    Book Your Escape
+                    Check Availability
                   </Button>
                 </div>
               </SheetContent>
@@ -185,7 +184,7 @@ const Navbar = () => {
               router.push("/#bookings");
             }}
           >
-            Book Your Escape
+             Check Availability
           </Button>
         </div>
       </nav>

@@ -10,12 +10,24 @@ import { WhatsAppIcon } from "./FloatingAction";
 
 const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
 
-
 const faqs = [
   {
-    question: "Is the washroom available?",
+    question: "Cancellation Policy",
     answer:
-      "Yes, we have separate western washrooms for men and women. For Triangle AC Cabin, AC Pod, and Cocoon Tents, private washrooms are available.",
+      "More than 72 hours before check-in: 90% refund, Within 72 hours of check-in: No refund or postponement",
+    category: "Policies",
+  },
+  {
+    question: "How do you ensure cleanliness and hygiene for each guest?",
+    answer: `Cleanliness and hygiene are our highest priorities. To ensure a spotless experience, all our washrooms are maintained by professional cleaners, and our rooms are serviced by well-trained caretakers.
+
+Every tent undergoes a rigorous inspection post-cleaning before it is assigned to you. Additionally, we use an in-house dedicated laundry to ensure all linen is washed daily and remains fresh. For your peace of mind, a dedicated caretaker is assigned to your tent to handle any specific requests or hygiene needs during your stay.`,
+    category: "General",
+  },
+  {
+    question: "Is Private washroom available?",
+    answer:
+      "Yes, we have private washrooms for all accommodations. For Triangle AC Cabin, AC Pod, and Cocoon Tents, private washrooms are available.",
     category: "Facilities",
   },
   {
@@ -27,12 +39,12 @@ const faqs = [
   {
     question: "How is the tent arrangement?",
     answer:
-      "Each tent accommodates up to 3 people. You won’t have to share a tent with unknown guests. Mattresses, bedsheets, pillows, and blankets are provided. Sleeping bags are not provided for hygiene reasons.",
+      "Our tent accommodates up to 4 people. You won’t have to share a tent with unknown guests. Mattresses, Fresh bedsheets, pillows, and blankets are provided. Sleeping bags are not provided for hygiene reasons.",
     category: "Accommodation",
   },
   {
     question: "Do you provide alcohol?",
-    answer: "No, we do not sell or provide alcohol at the campsite.",
+    answer: "No, we do not sell, provide or store alcohol at the glampsite.",
     category: "Policies",
   },
   {
@@ -71,7 +83,7 @@ const FAQ = () => {
           </h2>
           <p className="text-lg sm:text-xl text-stone/80 font-poppins">
             We&apos;ve got answers to all your questions for a seamless glamping
-            adventure
+            experience
           </p>
         </div>
 
@@ -90,7 +102,7 @@ const FAQ = () => {
                   <span className="flex-1 text-left">{faq.question}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-stone/80 pb-4 sm:pb-6 font-poppins leading-relaxed text-sm sm:text-base pl-0 sm:pl-16">
+              <AccordionContent className="text-stone/80 pb-4 sm:pb-6 font-poppins leading-relaxed text-sm sm:text-base pl-0 sm:pl-16 whitespace-pre-line">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -104,8 +116,8 @@ const FAQ = () => {
               Have questions? Let&apos;s make your trip stress-free.
             </h3>
             <p className="text-stone/80 mb-4 sm:mb-6 font-poppins text-sm sm:text-base">
-              Our friendly team is available 24/7 to assist with your booking
-              and travel planning
+              Our friendly team is available 10 am - 7 pm to assist with your
+              booking and travel planning
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a

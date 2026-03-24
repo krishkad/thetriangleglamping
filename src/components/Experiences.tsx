@@ -5,10 +5,10 @@ import { useState } from "react";
 
 const experiences = [
   {
-    title: "Bonfire Nights",
+    title: "Private Bonfire Nights",
     description: "Relax around the campfire and share stories under the stars",
     icon: "🔥",
-    duration: "Until 11:30 PM",
+    duration: "Until 11:00 PM",
     category: "Relaxation",
     price: "Included",
     color: "from-red-400 to-orange-500",
@@ -23,15 +23,7 @@ const experiences = [
     price: "Extra Charges",
     color: "from-blue-500 to-sky-500",
   },
-  {
-    title: "Stargazing",
-    description: "Marvel at the brilliant night sky away from city lights",
-    icon: "✨",
-    duration: "Night Activity",
-    category: "Relaxation",
-    price: "Included",
-    color: "from-indigo-500 to-purple-600",
-  },
+
   {
     title: "Barbeque & Romantic Music",
     description:
@@ -43,9 +35,9 @@ const experiences = [
     color: "from-pink-500 to-purple-500",
   },
   {
-    title: "Outdoor Games",
+    title: "Games",
     description:
-      "Enjoy badminton, carrom, cricket, and more fun activities at the campsite",
+      "Enjoy badminton, carrom, cricket, and more fun activities at the glampsite",
     icon: "🎯",
     duration: "Afternoon Activity",
     category: "Fun",
@@ -53,21 +45,30 @@ const experiences = [
     color: "from-yellow-400 to-orange-500",
   },
   {
-    title: "Nature Hiking",
+    title: "Farm Tour",
     description:
-      "Discover scenic trails and breathtaking viewpoints around Pawana Lake",
+      "Enjoy a peaceful farm walk surrounded by nature, fresh air, and countryside charm.",
     icon: "🥾",
     duration: "2-3 hours",
-    category: "Adventure",
+    category: "Experience",
     price: "Included",
     color: "from-green-500 to-emerald-600",
+  },
+  {
+    title: "Stargazing",
+    description: "Marvel at the brilliant night sky away from city lights",
+    icon: "✨",
+    duration: "Night Activity",
+    category: "Relaxation",
+    price: "Included",
+    color: "from-indigo-500 to-purple-600",
   },
 ];
 
 const categories = [
   "All",
   "Relaxation",
-  "Adventure",
+  "Experience",
   "Entertainment",
   "Fun",
   "Leisure",
@@ -89,7 +90,7 @@ const Experiences = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16 animate-slide-up">
           <h2 className="text-4xl  lg:text-6xl font-playfair font-bold text-stone mb-4 sm:mb-6">
-            Adventures That Awaken Your Soul
+            Activities That Awaken Your Soul
           </h2>
           <p className="text-lg sm:text-xl text-stone/80 max-w-3xl mx-auto font-poppins">
             Immerse yourself in curated experiences that connect you with
@@ -165,7 +166,7 @@ const Experiences = () => {
                         ?.scrollIntoView({ behavior: "smooth" })
                     }
                   >
-                    Book Experience
+                    Check Availability
                   </Button>
                 </div>
               </CardContent>
@@ -208,10 +209,10 @@ const Experiences = () => {
             {/* Bhosari / PCMC Nature Spots */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold text-coral mb-2">
-                20–25 min
+                18–20 min
               </div>
               <div className="font-poppins text-sm sm:text-base">
-                Durga Tekdi / PCMC Nature Trails
+                Tulapur (Sambhaji Maharaj Samadhi)
               </div>
             </div>
           </div>
