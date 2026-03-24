@@ -12,7 +12,7 @@ export default function ArticleCard({
 }: ArticleCardProps) {
   return (
     <article className="group">
-      <Link href={`/blog/${article.slug}`} className="block">
+      <Link href={article.slug} className="block">
         <div
           className={`overflow-hidden rounded-xl ${featured ? "aspect-[16/9]" : "aspect-[16/10]"}`}
         >
@@ -27,7 +27,7 @@ export default function ArticleCard({
           <div className="flex items-center gap-3 mb-2">
             <div
               onClick={(e) => e.stopPropagation()}
-              className="text-xs font-semibold uppercase tracking-wider text-green-500 hover:text-green-500/80 transition-colors"
+              className="text-xs font-semibold uppercase tracking-wider  transition-colors"
             >
               {article.category.replace("-", " ")}
             </div>

@@ -11,7 +11,7 @@ const Article = () => {
     <section id="blogs" className="container mx-auto px-4 py-16">
       <div className="text-center mb-12 sm:mb-16 animate-slide-up">
         <h2 className="text-4xl lg:text-6xl font-playfair font-bold text-stone mb-4 sm:mb-6">
-          Featured Articles
+          Featured In Articles
         </h2>
         <p className="text-lg sm:text-xl text-stone/80 font-poppins">
           Camping tips, outdoor inspiration, and guides for your next adventure.

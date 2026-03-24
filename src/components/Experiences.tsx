@@ -176,41 +176,42 @@ const Experiences = () => {
         {/* Nearby Attractions */}
         <div className="mt-16 sm:mt-20 bg-gradient-to-r from-stone-800 to-stone-800/90 rounded-3xl p-6 sm:p-8 text-white text-center">
           <h3 className="text-2xl sm:text-3xl font-playfair font-bold mb-3 sm:mb-4">
-            Explore Beyond the Camp
+            Explore Around The Triangle
           </h3>
           <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto font-poppins opacity-90">
-            Pawna Camps is perfectly surrounded by scenic hills, historic forts
-            like Lohagad and Tikona, and close to nearby adventure and trekking
-            hotspots.
+            The Triangle Glamping is located near Alandi & Pimpri-Chinchwad,
+            offering a mix of spiritual landmarks, riverside serenity, and quick
+            nature escapes just a short drive away.
           </p>
+
           <div className="grid sm:grid-cols-3 gap-4 sm:gap-8 text-center">
-            {/* Tiger Point */}
+            {/* Alandi Temple */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold text-coral mb-2">
-                20 min
+                10 min
               </div>
               <div className="font-poppins text-sm sm:text-base">
-                Tiger Point (Sunset View)
+                Alandi Temple (Sant Dnyaneshwar Samadhi)
               </div>
             </div>
 
-            {/* Lohagad Fort */}
+            {/* Indrayani River */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold text-coral mb-2">
-                25 min
+                5–10 min
               </div>
               <div className="font-poppins text-sm sm:text-base">
-                Lohagad Fort Trek
+                Indrayani River Riverside Walk
               </div>
             </div>
 
-            {/* Bhushi Dam */}
+            {/* Bhosari / PCMC Nature Spots */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold text-coral mb-2">
-                30 min
+                20–25 min
               </div>
               <div className="font-poppins text-sm sm:text-base">
-                Bhushi Dam & Waterfalls
+                Durga Tekdi / PCMC Nature Trails
               </div>
             </div>
           </div>

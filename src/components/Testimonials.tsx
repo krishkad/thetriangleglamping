@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Star,
@@ -13,31 +13,29 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Arjun & Priya",
+    name: "GANESH GAIKWAD",
     location: "Mumbai",
-    text: "Pawna Camps exceeded every expectation! The sunrise yoga, luxury tent comfort, and stargazing experience created the most romantic weekend of our lives. Can't wait to return!",
+    text: "Amazing experience! Beautiful room setup, delicious food, and very supportive staff. They helped me plan a birthday surprise and made it truly special. Highly recommended for couples.",
+    image: "/images/testimonials/pawna-lake-camping-testimonials-2.webp",
     rating: 5,
-    image:
-      "/images/testimonials/pawna-lake-camping-testimonials-1.webp",
-    category: "Couple",
+
+    category: "Holiday ❘ Couple",
   },
   {
-    name: "The Sharma Family",
+    name: "Samruddhi Bogawat",
     location: "Pune",
-    text: "Our kids are still talking about the night forest walk and campfire stories. The perfect blend of adventure and comfort for families. Every detail was thoughtfully planned!",
+    text: "We have been there for Bride to be celebration of my sister. We enjoyed so much. The place is awesome and service was exactly as we want. The property is clean and well maintained, even the food super delicious. Thank you teamTriangle for making our stay.",
     rating: 5,
-    image:
-      "/images/testimonials/pawna-lake-camping-testimonials-2.webp",
+    image: "/images/testimonials/pawna-lake-camping-testimonials-1.webp",
+    category: "Bride To Be Celebration",
+  },
+  {
+    name: "Pravin Tikekar",
+    location: "Pune",
+    text: "Our stay at Triangle Glamping was wonderful. The tents were cozy, and we were especially impressed with the private dining and private bon fire. The location is perfect for couple & families, and the hosts were incredibly accommodating, even helping us with kid-friendly food options.",
+    rating: 5,
+    image: "/images/testimonials/pawna-lake-camping-testimonials-3.webp",
     category: "Family",
-  },
-  {
-    name: "Maya, Solo Traveler",
-    location: "Pune",
-    text: "As a solo female traveler, I felt completely safe and welcomed. The guided waterfall trek was incredible, and I made lifelong friends around the campfire!",
-    rating: 5,
-    image:
-       "/images/testimonials/pawna-lake-camping-testimonials-3.webp",
-    category: "Solo",
   },
 ];
 
@@ -116,7 +114,7 @@ const Testimonials = () => {
   const prevImage = () => {
     if (selectedImage !== null) {
       setSelectedImage(
-        selectedImage === 0 ? images.length - 1 : selectedImage - 1
+        selectedImage === 0 ? images.length - 1 : selectedImage - 1,
       );
     }
   };
@@ -145,11 +143,11 @@ const Testimonials = () => {
                 {/* Category Badge */}
                 <div
                   className={`px-4 sm:px-6 py-3 sm:py-4 text-center font-bold text-white ${
-                    testimonial.category === "Couple"
+                    testimonial.category === "Bride To Be Celebration"
                       ? "bg-gradient-to-r from-[#ff6b6b] to-pink-500"
                       : testimonial.category === "Family"
-                      ? "bg-gradient-to-r from-[#4caf50] to-green-600"
-                      : "bg-gradient-to-r from-blue-400 to-blue-500"
+                        ? "bg-gradient-to-r from-[#4caf50] to-green-600"
+                        : "bg-gradient-to-r from-blue-400 to-blue-500"
                   }`}
                 >
                   {testimonial.category === "Couple" && (
@@ -168,6 +166,13 @@ const Testimonials = () => {
 
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-3 sm:mb-4">
+                    <Image
+                      src={"/google-svg.svg"}
+                      width={0}
+                      height={0}
+                      className="w-6 h-6 shrink-0 mr-3"
+                      alt="google icon"
+                    />
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
@@ -242,8 +247,8 @@ const Testimonials = () => {
                 #TheTriangleGlamping
               </span>
               <span className="w-max bg-gradient-to-r from-[#ff6b6b] to-pink-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
-              @thetriangleglamping
-            </span>
+                @thetriangleglamping
+              </span>
             </div>
           </div>
         </div>

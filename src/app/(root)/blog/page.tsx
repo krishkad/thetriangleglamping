@@ -1,10 +1,10 @@
 "use client";
 import ArticleCard from "@/components/ArticleCard";
-import { getFeaturedArticles } from "@/constant/data";
+import { articles, getFeaturedArticles } from "@/constant/data";
 import React from "react";
 
 const AllBlogsPage = () => {
-  const featured = getFeaturedArticles();
+  const featured = articles;
   return (
     <div className="container mx-auto pb-20 pt-28">
       <div className="text-center mb-12 sm:mb-16 animate-slide-up">
@@ -17,7 +17,7 @@ const AllBlogsPage = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {featured.slice(0, 3).map((article) => (
+        {featured.map((article) => (
           <ArticleCard key={article.slug} article={article} featured />
         ))}
       </div>

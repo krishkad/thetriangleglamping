@@ -28,8 +28,8 @@ const BookingSection = ({ camps }: any) => {
     <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max py-0">
       {/* HEADER */}
       <CardHeader className="text-center pb-4 pt-6">
-        <CardTitle className="text-2xl font-playfair font-bold text-stone">
-          Reserve Your Escape
+        <CardTitle className="text-lg sm:text-2xl font-playfair font-bold text-stone">
+          Reserve Your {camps.name}
         </CardTitle>
         <p className="text-sm text-stone/70">
           Book now & we’ll confirm within minutes
