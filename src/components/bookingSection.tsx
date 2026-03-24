@@ -33,6 +33,8 @@ const BookingSection = ({
 
   const [guests, setGuests] = useState(2);
   const [kids, setKids] = useState(0);
+  const [kids5To12, setKids5to12] = useState(0);
+  const [kidsAbove12, setKidsAbove12] = useState(0);
 
   const send_whatsapp = async () => {
     try {
@@ -237,7 +239,7 @@ Capacity: ${camps.capacity}
           <div className="flex items-center gap-2">
             <Users className="h-4 w-4 text-moss shrink-0" />
             <span className="font-medium">
-              {kids} Kids{" "}
+              {kids5To12} Kids{" "}
               <span className="text-xs text-gray-500">5 - 12 yrs</span>
             </span>
           </div>
@@ -247,7 +249,7 @@ Capacity: ${camps.capacity}
               size="sm"
               variant="outline"
               className="rounded-full w-10 h-10"
-              onClick={() => setKids(Math.max(0, kids - 1))}
+              onClick={() => setKids5to12(Math.max(0, kids5To12 - 1))}
             >
               -
             </Button>
@@ -255,7 +257,7 @@ Capacity: ${camps.capacity}
               size="sm"
               variant="outline"
               className="rounded-full w-10 h-10"
-              onClick={() => setKids(kids + 1)}
+              onClick={() => setKids5to12(kids5To12 + 1)}
             >
               +
             </Button>
@@ -265,7 +267,7 @@ Capacity: ${camps.capacity}
           <div className="flex items-center gap-2">
             <Users className="h-4 w-4 text-moss shrink-0" />
             <span className="font-medium">
-              {kids} Kids{" "}
+              {kidsAbove12} Kids{" "}
               <span className="text-xs text-gray-500">above 12 yrs</span>
             </span>
           </div>
@@ -275,7 +277,7 @@ Capacity: ${camps.capacity}
               size="sm"
               variant="outline"
               className="rounded-full w-10 h-10"
-              onClick={() => setKids(Math.max(0, kids - 1))}
+              onClick={() => setKidsAbove12(Math.max(0, kidsAbove12 - 1))}
             >
               -
             </Button>
@@ -283,7 +285,7 @@ Capacity: ${camps.capacity}
               size="sm"
               variant="outline"
               className="rounded-full w-10 h-10"
-              onClick={() => setKids(kids + 1)}
+              onClick={() => setKidsAbove12(kidsAbove12 + 1)}
             >
               +
             </Button>
