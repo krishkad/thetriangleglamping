@@ -59,21 +59,45 @@ Every tent undergoes a rigorous inspection post-cleaning before it is assigned t
     category: "Preparation",
   },
   {
-    question: "What things should I carry?",
+    question: "Is there any age restriction for couples?",
     answer:
-      "Please carry a valid government ID proof, booking confirmation, personal essentials, necessary medications, and mosquito repellent such as Odomos, as this is an outdoor stay.",
-    category: "Preparation",
-  },
-  {
-    question: "Is early check-in or early check-out available?",
-    answer:
-      "Early check-in is not available before 3 PM. Early check-out is subject to availability.",
+      "Yes. If a couple is booking a tent, both guests must be 18 years or older. A valid government ID proof is mandatory at check-in.",
     category: "Booking",
   },
   {
-    question: "Minimum age for couples to book a tent",
-    answer: "The minimum age is 18.",
-    category: "Policies",
+    question: "Is mobile network and WiFi available?",
+    answer:
+      "Yes. Almost all major mobile network providers have strong network coverage at our site. We also provide WiFi access in common areas for guests who wish to work remotely.",
+    category: "Facilities",
+  },
+  {
+    question: "What things should we carry?",
+    answer:
+      "Please carry personal toiletries (towel, toothbrush, toothpaste, soap, etc.), mosquito repellent (Odomos recommended) as this is an outdoor stay experience, and during monsoon season, bring an umbrella and suitable footwear.",
+    category: "Preparation",
+  },
+  {
+    question: "Is early check-in or late checkout available?",
+    answer:
+      "Early check-in is not available. However, if you arrive early, you may book our private theatre (subject to availability). Late checkout is allowed until 12:00 PM.",
+    category: "Booking",
+  },
+  {
+    question: "Can we book without staying overnight (day stay)?",
+    answer:
+      "Yes. Depending on availability, you can book a day stay (morning to night) instead of an overnight stay.",
+    category: "Booking",
+  },
+  {
+    question: "Do Swiggy or Zomato deliver food to your location?",
+    answer: "Yes, both Swiggy and Zomato deliver food to our site.",
+    category: "Food",
+  },
+  {
+    question: "Do Ola and Uber provide pickup and drop at your location?",
+    answer:
+      "Yes. Both Ola and Uber provide pickup and drop services at our location.",
+    category: "Transport",
   },
 ];
 
