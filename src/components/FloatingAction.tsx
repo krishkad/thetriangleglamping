@@ -23,10 +23,10 @@ const FloatingActions = () => {
   // if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-5 inset-x-0 z-50 flex justify-center px-4">
+    <div className="fixed bottom-5 inset-x-0 z-50 flex justify-center px-1">
       <div className="backdrop-blur-xl bg-white/80 border border-white/20 shadow-xl rounded-full px-4 py-2 flex items-center space-x-3 pr-2">
         {/* Tagline */}
-        <span className="text-xs font-medium text-gray-700 block">
+        <span className="text-xs font-medium text-gray-700 block whitespace-nowrap">
           Call our friendly team 10am - 7pm
         </span>
 
