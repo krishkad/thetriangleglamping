@@ -2,7 +2,7 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Badge } from "./ui/badge";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +10,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import Link from "next/link";
 
 const accommodations = [
   {
