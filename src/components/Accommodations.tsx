@@ -57,6 +57,14 @@ const accommodations = [
         url: "/triangle-tent/triangle-tent-17.webp",
         imageClassName: "object-[58%_68%]",
       },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
     ],
     price: 3500,
     beforePrice: 4250,
@@ -155,6 +163,14 @@ const accommodations = [
         url: "/triangle-tent-with-mini-pool/IMG_3775.JPG.jpeg",
         imageClassName: "object-cover",
       },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
     ],
     price: 4000,
     beforePrice: 4750,
@@ -248,6 +264,14 @@ const accommodations = [
       },
       {
         url: "/triangle-cooler-cabin/IMG_7572.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
         imageClassName: "object-contain",
       },
     ],
@@ -344,6 +368,14 @@ const accommodations = [
       },
       {
         url: "/triangle-ac-cabin/IMG_7569.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
         imageClassName: "object-contain",
       },
     ],
@@ -443,6 +475,10 @@ const accommodations = [
         imageClassName: "object-contain",
       },
       {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
         url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
         imageClassName: "object-contain",
       },
@@ -534,15 +570,19 @@ const accommodations = [
         imageClassName: "object-[30%_40%]",
       },
       {
-        url: "/cocoon-ac-tent/IMG_1930.JPG.jpeg",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_1930.JPG.jpeg",
         imageClassName: "object-contain",
       },
       {
-        url: "/cocoon-ac-tent/IMG_4065.JPG.jpeg",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_6615.JPG.jpeg",
         imageClassName: "object-contain",
       },
       {
-        url: "/cocoon-ac-tent/IMG_0455.JPG.jpeg",
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_0455.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
         imageClassName: "object-contain",
       },
     ],
@@ -632,10 +672,10 @@ const accommodations = [
         url: "/cocoon-ac-tent-with-mini-pool/IMG_5677.JPG.jpeg",
         imageClassName: "object-center",
       },
-      {
-        url: "/cocoon-ac-tent-with-mini-pool/IMG_1920.JPG.jpeg",
-        imageClassName: "object-center",
-      },
+      // {
+      //   url: "/cocoon-ac-tent-with-mini-pool/IMG_1920.JPG.jpeg",
+      //   imageClassName: "object-center",
+      // },
       {
         url: "/cocoon-ac-tent-with-mini-pool/IMG_3849.JPG.jpeg",
         imageClassName: "object-center",
@@ -650,6 +690,23 @@ const accommodations = [
       },
       {
         url: "/cocoon-ac-tent-with-mini-pool/IMG_5236.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_1930.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_6615.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_0455.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
         imageClassName: "object-center",
       },
     ],
@@ -759,6 +816,10 @@ const accommodations = [
         url: "/ac-pod-with-outdoor-jacuzzi/IMG_5236.JPG.jpeg",
         imageClassName: "object-center",
       },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
     ],
     price: 7000,
     beforePrice: 8000,
@@ -772,9 +833,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Private washroom 🚿 • Private 2-seater outdoor jacuzzi • Wooden wall
-            fencing • Private hammock • Private bonfire • Private dining area •
-            Private BBQ setup • Private garden • AC
+            Private washroom 🚿 • Private 2-seater outdoor jacuzzi 🛁 • Wooden
+            wall fencing 🪵 • Private hammock 🪢 • Private bonfire 🔥 • Private
+            dining area 🍽️ • Private BBQ setup 🍖
           </p>
         </div>
 
@@ -859,8 +920,20 @@ const accommodations = [
         imageClassName: "object-center",
       },
       {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_1930.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_6615.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
         url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_0455.JPG.jpeg",
-        imageClassName: "object-center",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-contain",
       },
     ],
     price: 8000,
@@ -875,9 +948,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Private mini pool • Private Outdoor Jacuzzi • Private washroom •
-            Jacuzzi & mini pool • Private Swing • Bonfire • Dining & BBQ • Large
-            garden • AC
+            Private Mini Pool 🏊‍♂️ • Private washroom 🚿 • Private 2-seater
+            outdoor jacuzzi 🛁 • Wooden wall fencing 🪵 • Private hammock 🪢 •
+            Private bonfire 🔥 • Private dining area 🍽️ • Private BBQ setup 🍖
           </p>
         </div>
 
@@ -920,8 +993,7 @@ const accommodations = [
       </div>
     ),
 
-    description:
-      "Ultra-luxury cocoon AC tent with private jacuzzi, mini pool, and premium amenities for an exclusive stay.",
+    description: "Ultra-luxury AC cocoon tent with jacuzzi & mini pool.",
   },
 ];
 

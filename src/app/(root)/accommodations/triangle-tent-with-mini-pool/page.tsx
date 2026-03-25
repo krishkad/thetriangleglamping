@@ -63,6 +63,14 @@ const TriangleTentWithMiniPoolPage = () => {
         imageClassName: "object-cover",
       },
       {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
         url: "/videos/triangle-ac-cabin-mini-pool.mp4",
         imageClassName: "object-cover",
       },

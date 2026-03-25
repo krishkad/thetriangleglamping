@@ -63,8 +63,17 @@ const BookingSection = ({
         ? camps.price.saturday
         : camps.price.weekdays;
 
+  const extraGuestPrice =
+    camps.name === "Triangle Tent" ||
+    camps.name === "Triangle Tent with Mini Pool"
+      ? 1750
+      : 2000;
+
   const total_guest_price =
-    adults_amount + kids5To12 * 1000 + kidsAbove12 * 1750;
+    adults_amount +
+    kids5To12 * 1000 +
+    kidsAbove12 * 1750 +
+    (guests - 2) * extraGuestPrice;
 
   const price =
     total_guest_price +
@@ -108,10 +117,12 @@ ${kids5To12 ? `Kids (5-12): ₹${kids5To12 * 1000}` : ""}
 ${kidsAbove12 ? `Kids (above 12): ₹${kidsAbove12 * 1750}` : ""}
 
 ✨ Add-ons / Decorations
+${!meal ? `• No Meal: -₹${candleLightDinnerAmount}` : ""}
 ${candleLightDinner ? `• Candle Light Dinner: ₹${candleLightDinnerAmount}` : ""}
 ${inSideTentDecoration ? `• Inside Tent Decoration: ₹${inSideTentDecorationAmount}` : ""}
 ${outDoorTentDecoration ? `• Outdoor Tent Decoration: ₹${outDoorTentDecorationAmount}` : ""}
 ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorationAmount}` : ""}
+${theatre ? `• Private Theatre 2hrs for 2 Person: ₹${700}` : ""}
 
 💰 Total Amount
 ₹${price}

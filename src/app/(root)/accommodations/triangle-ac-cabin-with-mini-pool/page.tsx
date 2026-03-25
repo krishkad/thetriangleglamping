@@ -62,6 +62,10 @@ Perfect for a romantic escape or a small family treat, this cabin offers a level
         imageClassName: "object-contain",
       },
       {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
         url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
         imageClassName: "object-contain",
       },

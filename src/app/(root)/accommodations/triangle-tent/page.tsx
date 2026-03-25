@@ -28,7 +28,7 @@ const TriangleTentPage = () => {
       "Ideal for couples & celebrations",
       "Homely food experience",
       "Budget-friendly romantic stay",
-       "Free Parking",
+      "Free Parking",
     ],
     images: [
       {
@@ -62,6 +62,14 @@ const TriangleTentPage = () => {
       {
         url: "/triangle-tent/triangle-tent-17.webp",
         imageClassName: "object-[58%_68%]",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
         url: "/videos/triangle-tent.mp4",

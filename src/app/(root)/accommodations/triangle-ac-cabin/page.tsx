@@ -31,10 +31,10 @@ Set against a serene riverside backdrop, this premium cabin offers a cool, peace
       "Ideal for couples & celebrations",
       "Homely food experience",
       "Budget-friendly romantic stay",
-       "Free Parking",
+      "Free Parking",
     ],
     images: [
-     {
+      {
         url: "/triangle-ac-cabin/IMG_3345.jpg",
         imageClassName: "object-contain",
       },
@@ -58,8 +58,17 @@ Set against a serene riverside backdrop, this premium cabin offers a cool, peace
         url: "/triangle-ac-cabin/IMG_9238.JPG.jpeg",
         imageClassName: "object-contain",
       },
+
       {
         url: "/triangle-ac-cabin/IMG_7569.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
         imageClassName: "object-contain",
       },
     ],

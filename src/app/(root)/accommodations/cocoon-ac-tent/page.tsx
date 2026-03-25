@@ -36,10 +36,7 @@ const CocconACTent = () => {
         url: "/cocoon-ac-tent/IMG_6329.PNG",
         imageClassName: "object-center",
       },
-      {
-        url: "/cocoon-ac-tent/IMG_4517.HEIC",
-        imageClassName: "object-center",
-      },
+
       {
         url: "/cocoon-ac-tent/IMG_4312.JPG.jpeg",
         imageClassName: "object-[20%_30%]",
@@ -52,17 +49,22 @@ const CocconACTent = () => {
         url: "/cocoon-ac-tent/IMG_3840.JPG.jpeg",
         imageClassName: "object-[30%_40%]",
       },
+
       {
-        url: "/cocoon-ac-tent/IMG_1930.JPG.jpeg",
-        imageClassName: "object-contain",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_1930.JPG.jpeg",
+        imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent/IMG_4065.JPG.jpeg",
-        imageClassName: "object-contain",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_6615.JPG.jpeg",
+        imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent/IMG_0455.JPG.jpeg",
-        imageClassName: "object-contain",
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_0455.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
       },
       {
         url: "/videos/cocoon-ac-tent.mp4",

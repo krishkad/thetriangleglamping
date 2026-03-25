@@ -79,6 +79,10 @@ Designed for couples and special celebrations, this stay offers privacy, relaxat
         imageClassName: "object-center",
       },
       {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
         url: "/videos/ac-pod-outdoor-jacuzzi.mp4",
         imageClassName: "object-center",
       },

@@ -64,6 +64,14 @@ const TriangleCoolerCabinPage = () => {
         imageClassName: "object-contain",
       },
       {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
         url: "/videos/triangle-cooler-cabin.mp4",
         imageClassName: "object-contain",
       },

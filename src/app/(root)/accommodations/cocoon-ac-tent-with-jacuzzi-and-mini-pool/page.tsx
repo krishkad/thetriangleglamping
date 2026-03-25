@@ -42,10 +42,7 @@ The Cocoon AC Tent combines a private outdoor Jacuzzi, exclusive mini pool, and 
         url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5114.JPG.jpeg",
         imageClassName: "object-center",
       },
-      {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5308.HEIC",
-        imageClassName: "object-center",
-      },
+
       {
         url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5127.JPG.jpeg",
         imageClassName: "object-center",
@@ -71,7 +68,19 @@ The Cocoon AC Tent combines a private outdoor Jacuzzi, exclusive mini pool, and 
         imageClassName: "object-center",
       },
       {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_1930.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_6615.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
         url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_0455.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3735.JPG.jpeg",
         imageClassName: "object-center",
       },
     ],

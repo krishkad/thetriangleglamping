@@ -192,8 +192,17 @@ const BookingWidget = () => {
         ? selectedPackage.saturday_amount
         : selectedPackage.amount;
 
+  const extraGuestPrice =
+    selectedPackage.name === "Triangle Tent" ||
+    selectedPackage.name === "Triangle Tent with Mini Pool"
+      ? 1750
+      : 2000;
+
   const total_guest_price =
-    adults_amount + kids5To12 * 1000 + kidsAbove12 * 1750;
+    adults_amount +
+    kids5To12 * 1000 +
+    kidsAbove12 * 1750 +
+    (guests - 2) * extraGuestPrice;
 
   const price =
     total_guest_price +
@@ -233,14 +242,17 @@ Capacity: ${selectedPackage.capacity}
 💸 Price Breakdown
 Base Price: ₹${total_guest_price}
 
+
 ${kids5To12 ? `Kids (5-12): ₹${kids5To12 * 1000}` : ""}
 ${kidsAbove12 ? `Kids (above 12): ₹${kidsAbove12 * 1750}` : ""}
 
 ✨ Add-ons / Decorations
+${!meal ? `• No Meal: -₹${candleLightDinnerAmount}` : ""}
 ${candleLightDinner ? `• Candle Light Dinner: ₹${candleLightDinnerAmount}` : ""}
 ${inSideTentDecoration ? `• Inside Tent Decoration: ₹${inSideTentDecorationAmount}` : ""}
 ${outDoorTentDecoration ? `• Outdoor Tent Decoration: ₹${outDoorTentDecorationAmount}` : ""}
 ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorationAmount}` : ""}
+${theatre ? `• Private Theatre 2hrs for 2 Person: ₹${700}` : ""}
 
 💰 Total Amount
 ₹${price}
@@ -826,8 +838,6 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                 <span className="font-semibold">Total</span>
                 <span className="text-2xl font-bold text-moss">₹{price}</span>
               </div>
-
-             
             </div>
 
             {/* CTA */}
