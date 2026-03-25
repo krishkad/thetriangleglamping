@@ -5,7 +5,7 @@ const ACPodWithOutdoorJacuzzi = () => {
   const triangleCamps = {
     name: "AC Pod with Outdoor Jacuzzi",
     tag: "Couple Favorite",
-    guests: 2,
+    guests: "2–4 Guests • Riverside Stay",
     price: {
       weekdays: 7000,
       saturday: 8000,
@@ -15,6 +15,7 @@ const ACPodWithOutdoorJacuzzi = () => {
 
 Designed for couples and special celebrations, this stay offers privacy, relaxation, and a premium glamping experience under the open sky.`,
     stayIncludes: [
+      "Outdoor 2-Seater Private Jacuzzi",
       "Air-Conditioned Pod Room",
       "Comfortable Bedding",
       "Sofa cum Bed",
@@ -26,7 +27,6 @@ Designed for couples and special celebrations, this stay offers privacy, relaxat
       "Private Bonfire & BBQ Area",
       "Private Bluetooth Speaker",
       "Private Hammock",
-      "Dedicated Caretaker at your service",
     ],
     whyChoose: [
       "Private outdoor jacuzzi",
@@ -35,7 +35,7 @@ Designed for couples and special celebrations, this stay offers privacy, relaxat
       "Complete privacy",
       "Ideal for celebrations & proposals",
       "Luxury upgrade from tents",
-       "Free Parking",
+      "Free Parking",
     ],
     images: [
       {

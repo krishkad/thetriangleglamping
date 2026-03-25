@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 const defaultCamp = {
   name: "Triangle Tent",
   tag: "Couple Favorite",
-  guests: 2,
+  guests: "2–3 Guests • Riverside Stay",
   price: {
     weekdays: 3500,
     saturday: 4000,
@@ -69,7 +69,7 @@ export default function CampDetail({ camp = defaultCamp }) {
               <h1 className="text-3xl font-bold">{camp.name}</h1>
               <Badge className="bg-moss/10 text-moss">{camp.tag}</Badge>
             </div>
-            <p className="text-gray-500 mt-1">👥 2–3 Guests • Riverside Stay</p>
+            <p className="text-gray-500 mt-1">👥 {camp.guests}</p>
           </div>
 
           <div className="text-right md:mr-48">
@@ -240,8 +240,19 @@ export default function CampDetail({ camp = defaultCamp }) {
               <p className="font-semibold text-yellow-700">₹1000</p>
             </div>
             <div className="p-4 rounded-xl border bg-blue-50 text-center">
-              <p className="text-sm text-gray-500">Above 12 yrs</p>
+              <p className="text-sm text-gray-500">12 - 18 yrs</p>
               <p className="font-semibold text-blue-700">₹1750 (with meals)</p>
+            </div>
+            <div className="p-4 rounded-xl border bg-blue-50 text-center">
+              <p className="text-sm text-gray-500">Above 18 yrs</p>
+              <p className="font-semibold text-blue-700">
+                ₹
+                {camp.name === "Triangle Tent" ||
+                camp.name === "Triangle Tent with Mini Pool"
+                  ? "1750"
+                  : "2000"}{" "}
+                (with meals)
+              </p>
             </div>
           </div>
         </section>

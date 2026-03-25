@@ -5,7 +5,7 @@ const CocconACTent = () => {
   const triangleCamps = {
     name: "Cocoon AC Tent",
     tag: "Couple Favorite",
-    guests: 2,
+    guests: "2–4 Guests • Riverside Stay",
     price: {
       weekdays: 6000,
       saturday: 7000,
@@ -20,7 +20,6 @@ const CocconACTent = () => {
       "Private Lawn & Dining Area",
       "Private Bonfire & BBQ Area",
       "High-End Bedding & Plush Interiors",
-      "Dedicated Caretaker for your convenience",
       "Ambient Lighting & Charging Points",
       "Private Bluetooth Speaker",
     ],
@@ -29,7 +28,7 @@ const CocconACTent = () => {
       "Private pool, lawn & dining",
       "High hygiene standards",
       "Modern Instagrammable design",
-       "Free Parking",
+      "Free Parking",
     ],
     images: [
       {

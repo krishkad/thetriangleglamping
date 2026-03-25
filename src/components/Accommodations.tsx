@@ -72,9 +72,9 @@ const accommodations = [
 
           <div className="text-xs text-slate-600 space-y-1 leading-relaxed">
             <p className="text-xs text-slate-600 leading-relaxed">
-              Triangle Tent • Private bonfire 🔥 • Private dining area 🍽️ •
-              Private BBQ setup 🍖 • Private lawn 🌿 • Private bench 🪑 •
-              Private washroom at Walkable Distance 🚿 ✨
+              Private bonfire 🔥 • Private dining area 🍽️ • Private BBQ setup 🍖
+              • Private lawn 🌿 • Private bench 🪑 • Private Washroom at
+              walkable distance 🚿 ✨
             </p>
           </div>
         </div>
@@ -170,7 +170,7 @@ const accommodations = [
           <p className="text-xs text-slate-600 leading-relaxed">
             Private mini pool 🏊‍♂️ • Private bonfire 🔥 • Private dining area 🍽️ •
             Private BBQ setup 🍖 • Fan 🌀 • Private lawn 🌿 • Private bench 🪑 •
-            Private washroom At Walkable Distance 🚿 ✨
+            Private Washroom at walkable distance 🚿 ✨
           </p>
         </div>
 
@@ -202,9 +202,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -265,9 +263,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Triangle Cabin • Air cooler ❄️ • Private washroom 🚿 • Private
-            hammock 🪢 • Private bonfire 🔥 • Private dining area 🍽️ • Private
-            BBQ setup 🍖 • Private lawn 🌿 • Private bench 🪑 ✨
+            Air cooler ❄️ • Private washroom 🚿 • Private hammock 🪢 • Private
+            bonfire 🔥 • Private dining area 🍽️ • Private BBQ setup 🍖 • Private
+            lawn 🌿 • Private bench 🪑 ✨
           </p>
         </div>
 
@@ -299,9 +297,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -363,9 +359,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            AC Cabin ❄️ • Private washroom 🚿 • Private hammock 🪢 • Private
-            bonfire 🔥 • Private dining area 🍽️ • Private BBQ setup 🍖 • Private
-            lawn 🌿 • Private bench 🪑 ✨
+            Private washroom 🚿 • Private hammock 🪢 • Private bonfire 🔥 •
+            Private dining area 🍽️ • Private BBQ setup 🍖 • Private lawn 🌿 •
+            Private bench 🪑 ✨
           </p>
         </div>
 
@@ -397,9 +393,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -465,9 +459,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            AC Cabin •Private washroom 🚿 • Private mini pool 🏊‍♂️ • Wooden wall
-            fencing • Private hammock • Private bonfire 🔥 • Private dining area
-            🍽️ • Private BBQ setup 🍖 • Private lawn 🌿 • AC ❄️ ✨
+            Private washroom 🚿 • Private mini pool 🏊‍♂️ • Wooden wall fencing •
+            Private hammock • Private bonfire 🔥 • Private dining area 🍽️ •
+            Private BBQ setup 🍖 • Private lawn 🌿 • AC ❄️ ✨
           </p>
         </div>
 
@@ -499,9 +493,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -566,9 +558,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Cocoon AC Tent • Private washroom 🚿 • Wooden wall fencing 🪵 •
-            Private hammock 🪢 • Private bonfire 🔥 • Private dining area 🍽️ •
-            Private BBQ setup 🍖 • Private space 🌿 • AC ❄️ ✨
+            Private washroom 🚿 • Wooden wall fencing 🪵 • Private hammock 🪢 •
+            Private bonfire 🔥 • Private dining area 🍽️ • Private BBQ setup 🍖 •
+            Private space 🌿 • AC ❄️ ✨
           </p>
         </div>
 
@@ -600,9 +592,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -675,9 +665,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Cocoon AC Tent • Private washroom • Private mini pool • Wooden wall
-            fencing • Private hammock • Private bonfire 🔥 • Private dining area
-            • Private BBQ setup • Private garden • AC
+            Private washroom • Private mini pool • Wooden wall fencing • Private
+            hammock • Private bonfire 🔥 • Private dining area • Private BBQ
+            setup • Private garden • AC
           </p>
         </div>
 
@@ -709,9 +699,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -784,9 +772,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            AC Pod • Private washroom 🚿 • Private 2-seater outdoor jacuzzi •
-            Wooden wall fencing • Private hammock • Private bonfire • Private
-            dining area • Private BBQ setup • Private garden • AC
+            Private washroom 🚿 • Private 2-seater outdoor jacuzzi • Wooden wall
+            fencing • Private hammock • Private bonfire • Private dining area •
+            Private BBQ setup • Private garden • AC
           </p>
         </div>
 
@@ -818,9 +806,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-             {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -889,8 +875,9 @@ const accommodations = [
             🏕 Stay Includes
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Cocoon AC Tent • Cocoon AC Tent • Private washroom • Jacuzzi & mini
-            pool • Swing • Bonfire • Dining & BBQ • Large garden • AC
+            Private mini pool • Private Outdoor Jacuzzi • Private washroom •
+            Jacuzzi & mini pool • Private Swing • Bonfire • Dining & BBQ • Large garden
+            • AC
           </p>
         </div>
 
@@ -922,9 +909,7 @@ const accommodations = [
           <h4 className="text-sm font-semibold text-forest-700 mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            {activities}
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}

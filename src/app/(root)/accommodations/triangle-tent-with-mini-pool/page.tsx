@@ -5,7 +5,7 @@ const TriangleTentWithMiniPoolPage = () => {
   const triangleCamps = {
     name: "Triangle Tent with Mini Pool",
     tag: "Couple Favorite",
-    guests: 2,
+    guests: "2–3 Guests • Riverside Stay",
     price: {
       weekdays: 4000,
       saturday: 4750,
@@ -60,6 +60,10 @@ const TriangleTentWithMiniPoolPage = () => {
       },
       {
         url: "/triangle-tent-with-mini-pool/IMG_3775.JPG.jpeg",
+        imageClassName: "object-cover",
+      },
+      {
+        url: "/videos/triangle-ac-cabin-mini-pool.mp4",
         imageClassName: "object-cover",
       },
     ],

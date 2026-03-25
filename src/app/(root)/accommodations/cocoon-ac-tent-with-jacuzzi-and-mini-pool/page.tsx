@@ -5,7 +5,7 @@ const CocoonACTentWithJacuzziAndMiniPoolPage = () => {
   const triangleCamps = {
     name: "Cocoon AC Tent with Jacuzzi & Mini Pool",
     tag: "Couple Favorite",
-    guests: 2,
+    guests: "2–4 Guests • Riverside Stay",
     price: {
       weekdays: 8000,
       saturday: 9000,
@@ -17,14 +17,14 @@ The Cocoon AC Tent combines a private outdoor Jacuzzi, exclusive mini pool, and 
     stayIncludes: [
       "Outdoor 2-Seater Private Jacuzzi",
       "Private Mini Pool (Exclusive Use)",
-      "Fully Air-Conditioned Tent",
-      "Comfortable Premium Bedding",
-      "Private Washroom",
-      "Private Garden Area",
       "Private Swing Seating",
+      "Private Garden Area",
       "Private Dining Space",
       "Private Bonfire & BBQ Area",
+      "Private Washroom",
       "Private Bluetooth Speaker",
+      "Fully Air-Conditioned Tent",
+      "Comfortable Premium Bedding",
       "Ambient Lighting & Charging Points",
       "Remote Operational curtains",
     ],

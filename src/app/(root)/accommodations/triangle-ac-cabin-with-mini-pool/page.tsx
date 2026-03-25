@@ -5,7 +5,7 @@ const TriangleACCabinWithMiniPoolPage = () => {
   const triangleCamps = {
     name: "Triangle AC Cabin with Mini Pool",
     tag: "Couple Favorite",
-    guests: 2,
+    guests: "2–3 Guests • Riverside Stay",
     price: {
       weekdays: 6000,
       saturday: 6750,
@@ -23,7 +23,6 @@ Perfect for a romantic escape or a small family treat, this cabin offers a level
       "Private Bonfire & BBQ Area",
       "High-Quality Bedding & Linens",
       "Ambient Lighting & Charging Points",
-      "Dedicated Caretaker for personalized service",
     ],
     whyChoose: [
       "Peaceful riverside atmosphere",

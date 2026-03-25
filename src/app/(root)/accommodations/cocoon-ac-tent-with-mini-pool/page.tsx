@@ -5,7 +5,8 @@ const CocoonACTentWithMiniPool = () => {
   const triangleCamps = {
     name: "Cocoon AC Tent with Mini Pool",
     tag: "Couple Favorite",
-    guests: 2,
+    guests: "2–3 Guests • Riverside Stay",
+
     price: {
       weekdays: 6500,
       saturday: 7500,
@@ -20,7 +21,6 @@ const CocoonACTentWithMiniPool = () => {
       "Private Lawn & Dining Area",
       "Private Bonfire & BBQ Setup",
       "Premium Bedding & Fresh In-house Laundry",
-      "Dedicated Caretaker for your convenience",
       "Ambient Lighting & Multiple Charging Points",
       "Private Bluetooth Speaker",
     ],
@@ -29,7 +29,7 @@ const CocoonACTentWithMiniPool = () => {
       "Private pool, lawn & dining",
       "High hygiene standards",
       "Modern Instagrammable design",
-       "Free Parking",
+      "Free Parking",
     ],
     images: [
       {
