@@ -66,7 +66,7 @@ const packages: PackageGroup[] = [
         saturday_amount: 4750,
         sunday_amount: 4500,
         savings: "₹801",
-        capacity: 4,
+        capacity: 2,
         tag: "Best Seller",
       },
       {
@@ -109,7 +109,7 @@ const packages: PackageGroup[] = [
         amount: 6000,
         saturday_amount: 7000,
         sunday_amount: 6500,
-        capacity: 3,
+        capacity: 2,
         tag: "Luxury",
       },
       {
@@ -118,7 +118,7 @@ const packages: PackageGroup[] = [
         amount: 6500,
         saturday_amount: 7500,
         sunday_amount: 7000,
-        capacity: 4,
+        capacity: 2,
         tag: "Luxury",
       },
       {
@@ -347,13 +347,6 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                             starting price
                           </p>
                         </div>
-
-                        {/* Savings */}
-                        {camp.savings && (
-                          <span className="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-md">
-                            Save {camp.savings}
-                          </span>
-                        )}
                       </div>
 
                       {/* Selected State */}

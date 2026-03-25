@@ -14,6 +14,10 @@ import {
 const food =
   "Tea/coffee & Goni Manchurian (Per Plate Basis) • BBQ (Paneer / Chicken – Limited) 🍢 • Unlimited Dinner (Veg & Non-Veg Buffet) 🍱 • Morning Tea 🍵 & Breakfast 🥗 • Mineral Water 💧";
 
+const activities = `Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
+            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
+            charges) • Self guided Farm Tour`;
+
 const accommodations = [
   {
     id: 1,
@@ -102,11 +106,7 @@ const accommodations = [
           <h4 className="font-semibold text-forest-700 text-sm mb-1">
             🎉 Activities
           </h4>
-          <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
-          </p>
+          <p className="text-xs text-slate-600">{activities}</p>
         </div>
 
         {/* Meta */}
@@ -203,9 +203,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+            {activities}
           </p>
         </div>
 
@@ -302,9 +300,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+            {activities}
           </p>
         </div>
 
@@ -402,9 +398,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+            {activities}
           </p>
         </div>
 
@@ -506,9 +500,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+            {activities}
           </p>
         </div>
 
@@ -609,9 +601,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+            {activities}
           </p>
         </div>
 
@@ -720,9 +710,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+            {activities}
           </p>
         </div>
 
@@ -831,9 +819,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+             {activities}
           </p>
         </div>
 
@@ -937,9 +923,7 @@ const accommodations = [
             🎉 Activities
           </h4>
           <p className="text-xs text-slate-600">
-            Private Bonfire • Table Tennis • Cricket • Badminton • Chess & more
-            Indoor & Outdoor Games • Romantic Music • Private Theatre (extra
-            charges)
+            {activities}
           </p>
         </div>
 
