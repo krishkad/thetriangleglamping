@@ -108,7 +108,6 @@ Kids (above 12): ${kidsAbove12}
 
 🏕️ Selected Package
 Camp: ${camps.name}
-Capacity: ${camps.capacity}
 
 💸 Price Breakdown
 Base Price: ₹${total_guest_price}
