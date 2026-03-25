@@ -88,6 +88,29 @@ const BookingSection = ({
 
   const send_whatsapp = async () => {
     try {
+      const priceBreakdown = [
+        `Base Price: ₹${total_guest_price}`,
+        kids5To12 && `Kids (5-12): ₹${kids5To12 * 1000}`,
+        kidsAbove12 && `Kids (above 12): ₹${kidsAbove12 * 1750}`,
+      ]
+        .filter(Boolean)
+        .join("\n");
+
+      const addOns = [
+        !meal && `• No Meal: -₹${candleLightDinnerAmount}`,
+        candleLightDinner &&
+          `• Candle Light Dinner: ₹${candleLightDinnerAmount}`,
+        inSideTentDecoration &&
+          `• Inside Tent Decoration: ₹${inSideTentDecorationAmount}`,
+        outDoorTentDecoration &&
+          `• Outdoor Frame Decoration: ₹${outDoorTentDecorationAmount}`,
+        outDoorRingDecoration &&
+          `• Outdoor Ring Decoration: ₹${outDoorRingDecorationAmount}`,
+        theatre && `• Private Theatre 2hrs for 2 Person: ₹700`,
+      ]
+        .filter(Boolean)
+        .join("\n");
+
       const message_text = `
 🌿 Availability Request - The Triangle Glamping
 
@@ -107,24 +130,15 @@ Kids (5-12): ${kids5To12}
 Kids (above 12): ${kidsAbove12}
 
 🏕️ Selected Package
-Camp: ${camps.name}
+Accommodations: ${camps.name}
 
 💸 Price Breakdown
-Base Price: ₹${total_guest_price}
-
-${kids5To12 ? `Kids (5-12): ₹${kids5To12 * 1000}` : ""}
-${kidsAbove12 ? `Kids (above 12): ₹${kidsAbove12 * 1750}` : ""}
+${priceBreakdown}
 
 ✨ Add-ons / Decorations
-${!meal ? `• No Meal: -₹${candleLightDinnerAmount}` : ""}
-${candleLightDinner ? `• Candle Light Dinner: ₹${candleLightDinnerAmount}` : ""}
-${inSideTentDecoration ? `• Inside Tent Decoration: ₹${inSideTentDecorationAmount}` : ""}
-${outDoorTentDecoration ? `• Outdoor Tent Decoration: ₹${outDoorTentDecorationAmount}` : ""}
-${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorationAmount}` : ""}
-${theatre ? `• Private Theatre 2hrs for 2 Person: ₹${700}` : ""}
+${addOns || "None"}
 
-💰 Total Amount
-₹${price}
+💰 Total Amount: ₹${price}
 
 ✨ Looking forward to hosting you!
 `;
