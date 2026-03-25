@@ -20,6 +20,7 @@ const CocconACTent = () => {
       "Private Lawn & Dining Area",
       "Private Bonfire & BBQ Area",
       "High-End Bedding & Plush Interiors",
+      "",
       "Ambient Lighting & Charging Points",
       "Private Bluetooth Speaker",
     ],

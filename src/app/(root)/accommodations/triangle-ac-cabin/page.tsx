@@ -5,7 +5,7 @@ const TriangleACCabinPage = () => {
   const triangleCamps = {
     name: "Triangle AC Cabin",
     tag: "Couple Favorite",
-    guests: 2,
+    guests: "2–3 Guests • Riverside Stay",
     price: {
       weekdays: 4750,
       saturday: 5750,

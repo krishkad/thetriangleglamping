@@ -876,8 +876,8 @@ const accommodations = [
           </h4>
           <p className="text-xs text-slate-600 leading-relaxed">
             Private mini pool • Private Outdoor Jacuzzi • Private washroom •
-            Jacuzzi & mini pool • Private Swing • Bonfire • Dining & BBQ • Large garden
-            • AC
+            Jacuzzi & mini pool • Private Swing • Bonfire • Dining & BBQ • Large
+            garden • AC
           </p>
         </div>
 
@@ -1035,73 +1035,6 @@ const Accommodations = () => {
                 <p className="text-[var(--forest-600)] mb-4 text-sm">
                   {accommodation.description}
                 </p>
-
-                {/* Amenities */}
-                {/* <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {accommodation.amenities.slice(0, 3).map((amenity) => (
-                      <Badge
-                        key={amenity}
-                        variant="secondary"
-                        className="text-xs "
-                      >
-                        {amenity}
-                      </Badge>
-                    ))}
-                    {accommodation.amenities.length > 3 && (
-                      <Badge variant="secondary" className="text-xs ">
-                        +{accommodation.amenities.length - 3} more
-                      </Badge>
-                    )}
-                  </div>
-                </div> */}
-                {/* <div className="grid sm:grid-cols-2 gap-3 mb-6">
-                  {accommodation.amenities.map((amenity, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center space-x-2 text-sm text-slate-600"
-                    >
-                      <amenity.icon className="w-4 h-4 text-emerald-600" />
-                      <span>{amenity.label}</span>
-                    </div>
-                  ))}
-                </div> */}
-
-                {/* <div className="mb-6 space-y-3">
-                  <div className="bg-emerald-50/60 p-3 rounded-xl">
-                    <h4 className="font-semibold text-forest-700 mb-1 text-sm">
-                      🏕 Stay Includes
-                    </h4>
-                    <p className="text-xs text-slate-600">
-                      Cozy Dome Tent • Foam Mattress • Blanket
-                    </p>
-                  </div>
-
-                  <div className="bg-amber-50/60 p-3 rounded-xl">
-                    <h4 className="font-semibold text-forest-700 mb-1 text-sm">
-                      🍽 Food Menu
-                    </h4>
-                    <p className="text-xs text-slate-600">
-                      Tea & Pakoda/Misal • BBQ (Paneer/Chicken) • Dinner
-                      (Veg/Non-Veg) • Breakfast • Mineral Water
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50/60 p-3 rounded-xl">
-                    <h4 className="font-semibold text-forest-700 mb-1 text-sm">
-                      🎉 Activities
-                    </h4>
-                    <p className="text-xs text-slate-600">
-                      DJ Music • Indoor & Outdoor Games • Bonfire •
-                      Boating/Kayaking (Extra) • Live Music (Sat) • Free Parking
-                    </p>
-                  </div>
-
-                  <div className="text-xs text-slate-700 space-y-1 pl-1">
-                    <p>✅ Tasty Homely Food</p>
-                    <p>✅ Peaceful Lakeside Vibes</p>
-                  </div>
-                </div> */}
 
                 <>{accommodation.amenitiesHtml}</>
 

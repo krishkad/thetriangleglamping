@@ -14,8 +14,8 @@ const Article = () => {
           Featured In News Articles
         </h2>
         <p className="text-lg sm:text-xl text-stone/80 font-poppins">
-          Glamping tips, outdoor inspiration, and guides for your next experience.
-          🏕️
+          Glamping tips, outdoor inspiration, and guides for your next
+          experience. 🏕️
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -28,7 +28,7 @@ const Article = () => {
           href={"/blog"}
           className={cn(
             buttonVariants(),
-            "hidden md:flex bg-moss hover:bg-moss/90 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-2xl font-semibold shadow-lg text-sm sm:text-base cursor-pointer",
+            "bg-moss hover:bg-moss/90 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-2xl font-semibold shadow-lg text-sm sm:text-base cursor-pointer",
           )}
         >
           Read More
