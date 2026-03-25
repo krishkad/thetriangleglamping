@@ -1,25 +1,54 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { ShieldIcon, Star, UserIcon } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTextVisible, setIsTextVisible] = useState(false);
+
+  const heroImages = [
+    "/cocoon-ac-tent/cocoon-ac-tent-1.webp",
+    "/hero/IMG_5308.jpg",
+    "/hero/IMG_3119.png",
+    "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp",
+  ];
+
+  useEffect(() => {
+    const textTimer = setTimeout(() => setIsTextVisible(true), 400);
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+
+    return () => {
+      clearTimeout(textTimer);
+      clearInterval(interval);
+    };
+  }, []);
   return (
     <section
       id="hero"
       className="relative min-h-svh flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-[5%_15%]"
-        style={{
-          // backgroundImage:
-          // "url('/hero/IMG_5308.jpg')",
-          // "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
-          backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50  to-black/30 sm:to-black/50"></div>
-      </div>
+      {heroImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-cover bg-no-repeat bg-center transition-opacity duration-[3000ms] ${
+            index === currentImageIndex ? "opacity-100" : "opacity-0"
+          } ${image === heroImages[3] ? "sm:bg-[10%_25%]" : image === heroImages[2] ? "sm:bg-center" : " sm:bg-[5%_15%]"}`}
+          style={{
+            // backgroundImage:
+            // "url('/hero/IMG_5308.jpg')",
+            // "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
+            // backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
+            backgroundImage: `url(${image})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50  to-black/30 sm:to-black/50"></div>
+        </div>
+      ))}
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto animate-fade-in">
