@@ -99,6 +99,31 @@ Every tent undergoes a rigorous inspection post-cleaning before it is assigned t
       "Yes. Both Ola and Uber provide pickup and drop services at our location.",
     category: "Transport",
   },
+  {
+    question:
+      "Do you have an à la carte menu for items outside the fixed menu?",
+    answer:
+      "Our in-house à la carte selection is limited to 2–3 snack items. However, we are happy to offer flexibility; if you would like something else, you are welcome to order via Swiggy or Zomato and enjoy it at our premises.",
+    category: "Food",
+  },
+  {
+    question: "Do you provide chips, cold drinks, and mineral water at MRP?",
+    answer:
+      "Yes. We provide chips, cold drinks, and Oxyrich mineral water at MRP (Maximum Retail Price), subject to current stock availability.",
+    category: "Food",
+  },
+  {
+    question: "Do you have a separate kitchen for pure vegetarian food?",
+    answer:
+      "Yes, we maintain a dedicated, separate kitchen for all pure vegetarian preparations to ensure complete segregation and culinary purity.",
+    category: "Dietary",
+  },
+  {
+    question: "Do you serve Jain food?",
+    answer:
+      "Absolutely. We offer Jain-friendly meals prepared strictly without onion, garlic, or root vegetables. Please inform our team of your requirements when placing your order.",
+    category: "Dietary",
+  },
 ];
 
 const FAQ = () => {

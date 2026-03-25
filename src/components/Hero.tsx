@@ -1,6 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ShieldIcon, Star, UserIcon } from "lucide-react";
+import {
+  LocateIcon,
+  LocationEdit,
+  MapIcon,
+  ShieldIcon,
+  Star,
+  UserIcon,
+} from "lucide-react";
 
 const Hero = () => {
   return (
@@ -13,6 +20,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-[15%_25%]"
         style={{
           backgroundImage:
+            // "url('/cocoon-ac-tent/IMG_4517.jpg')",
             "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
           // backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
         }}
@@ -37,20 +45,28 @@ const Hero = () => {
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 text-white">
             <ShieldIcon className="w-4 sm:w-5 h-4 sm:h-5 text-green-300 fill-green-400" />
             <span className="font-medium text-xs sm:text-sm">
-              Safe & Secure Campsite
+              Safe • Private • Couple Friendly
             </span>
           </div>
+          {/* <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 text-white">
+            <LocateIcon className="w-3 sm:w-5 h-3 sm:h-5 text-red-300" />
+            <span className="font-medium text-[10px] sm:text-sm">
+              Just 30–45 mins from Pune
+            </span>
+          </div> */}
         </div>
 
-        <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight">
-          A Peaceful Escape for <br className="hidden" />
-          <span className="text-yellow-300">Couples</span>
+        <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight">
+          Escape the City. Experience
+          <br className="hidden" /> Private
+          <span className="text-yellow-300"> Luxury in Nature.</span>
           <br />
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
-          Discover premium glamping at luxury tents, private bonfire, Private
-          Dining & unmatched privacy for couples.
+        <p className="text-md text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
+          Luxury glamping near Pune & Mumbai with 100% private spaces, bonfire
+          evenings, romantic dining & unforgettable stays for couples and
+          families.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">

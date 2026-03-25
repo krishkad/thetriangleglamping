@@ -176,6 +176,11 @@ const BookingWidget = () => {
     packages[0].camps[0],
   );
 
+  const [vegFood, setVegFood] = useState(false);
+  const [pureVegFood, setPureVegFood] = useState(false);
+  const [jainFood, setJainFood] = useState(false);
+  const [nonVegFood, setNonVegFood] = useState(false);
+
   // const calculatedAmount = selectedPackage.amount;
 
   /* ================= SUBMIT ================= */
@@ -241,6 +246,15 @@ const BookingWidget = () => {
         .filter(Boolean)
         .join("\n");
 
+      const foodPreferences = [
+        vegFood && "• Veg Food",
+        pureVegFood && "• Pure Veg Food",
+        jainFood && "• Jain Food",
+        nonVegFood && "• Non-Veg Food",
+      ]
+        .filter(Boolean)
+        .join("\n");
+
       const message_text = `
 🌿 Availability Request - The Triangle Glamping
 
@@ -249,7 +263,7 @@ Name: ${name} ${lname}
 Phone: ${phone}
 Email: ${email}
 
-📅 Stay Details
+📅 Stay Dates
 Check-in: ${checkIn ? format(checkIn, "dd MMM yyyy") : "-"}
 Check-out: ${checkOut ? format(checkOut, "dd MMM yyyy") : "-"}
 
@@ -258,6 +272,9 @@ Adults: ${guests}
 Kids (below 5): ${kids}
 Kids (5-12): ${kids5To12}
 Kids (above 12): ${kidsAbove12}
+
+🍽️ Food Preference
+${foodPreferences || "Not specified"}
 
 🏕️ Selected Package
 Accommodations: ${selectedPackage.name}
@@ -290,6 +307,12 @@ ${addOns || "None"}
       console.log(err);
     }
   };
+
+  const maxCapacity =
+    selectedPackage.name === "AC Pod with Outdoor Jacuzzi" ||
+    selectedPackage.name === "Cocoon AC Tent with Jacuzzi & Mini Pool"
+      ? 4
+      : 3;
   return (
     <section className="py-20 px-6 bg-secondary" id="bookings">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">
@@ -451,7 +474,7 @@ ${addOns || "None"}
                     {checkIn ? format(checkIn, "MMM dd yyyy") : "Check-in *"}
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className="p-0">
+                <PopoverContent className="p-0 w-max">
                   <Calendar
                     mode="single"
                     selected={checkIn}
@@ -471,7 +494,7 @@ ${addOns || "None"}
                     {checkOut ? format(checkOut, "MMM dd yyyy") : "Check-out *"}
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className="p-0">
+                <PopoverContent className="p-0 w-max">
                   <Calendar
                     mode="single"
                     selected={checkOut}
@@ -506,7 +529,7 @@ ${addOns || "None"}
                     size="sm"
                     variant="outline"
                     className="rounded-full w-10 h-10"
-                    onClick={() => setGuests(guests + 1)}
+                    onClick={() => setGuests(Math.min(maxCapacity, guests + 1))}
                   >
                     +
                   </Button>
@@ -594,6 +617,66 @@ ${addOns || "None"}
                   >
                     +
                   </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Food Preference */}
+            <div className="w-full space-y-3">
+              <Label htmlFor={`${id}-veg`}>Food Preference</Label>
+
+              <div className="w-full flex items-center justify-start gap-3">
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id={`${id}-veg`}
+                    checked={vegFood}
+                    onCheckedChange={(checked) => setVegFood(!!checked)}
+                    className="
+                data-[state=checked]:bg-[#4caf50]
+                data-[state=checked]:border-[#4caf50]
+                data-[state=checked]:text-white
+              "
+                  />
+                  <Label htmlFor={`${id}-veg`}>Veg Food</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id={`${id}-pure-veg`}
+                    checked={pureVegFood}
+                    onCheckedChange={(checked) => setPureVegFood(!!checked)}
+                    className="
+                data-[state=checked]:bg-[#4caf50]
+                data-[state=checked]:border-[#4caf50]
+                data-[state=checked]:text-white
+              "
+                  />
+                  <Label htmlFor={`${id}-pure-veg`}>Pure Veg</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id={`${id}-jain-veg`}
+                    checked={jainFood}
+                    onCheckedChange={(checked) => setJainFood(!!checked)}
+                    className="
+                data-[state=checked]:bg-[#4caf50]
+                data-[state=checked]:border-[#4caf50]
+                data-[state=checked]:text-white
+              "
+                  />
+                  <Label htmlFor={`${id}-jain-veg`}>Jain Food</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id={`${id}-non-veg`}
+                    checked={nonVegFood}
+                    onCheckedChange={(checked) => setNonVegFood(!!checked)}
+                    className="
+                data-[state=checked]:bg-[#4caf50]
+                data-[state=checked]:border-[#4caf50]
+                data-[state=checked]:text-white
+              "
+                  />
+                  <Label htmlFor={`${id}-non-veg`}>Non Veg</Label>
                 </div>
               </div>
             </div>
