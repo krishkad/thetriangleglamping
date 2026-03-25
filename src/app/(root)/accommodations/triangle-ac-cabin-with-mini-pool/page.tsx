@@ -25,6 +25,13 @@ Perfect for a romantic escape or a small family treat, this cabin offers a level
       "Ambient Lighting & Charging Points",
       "Dedicated Caretaker for personalized service",
     ],
+    whyChoose: [
+      "Peaceful riverside atmosphere",
+      "Private spaces no crowd disturbance",
+      "Ideal for couples & celebrations",
+      "Homely food experience",
+      "Budget-friendly romantic stay",
+    ],
     images: [
        {
         url: "/triangle-tent-with-mini-pool/IMG_4604.JPG.jpeg",
