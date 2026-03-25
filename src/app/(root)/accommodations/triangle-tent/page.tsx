@@ -1,7 +1,5 @@
 import CampDetail from "@/components/CampDetails";
-import React from "react";
 
-import type { Metadata } from "next";
 
 const triangleCamps = {
   name: "Triangle Tent",
