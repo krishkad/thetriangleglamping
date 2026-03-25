@@ -418,7 +418,8 @@ ${addOns || "None"}
         </div>
 
         {/* RIGHT - FORM */}
-        <Card className="rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max sm:sticky sm:top-24 py-0">
+        <Card className="relative rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max sm:sticky sm:top-24 py-0">
+          <Badge className="absolute top-6 right-6 bg-yellow-600">Fixed Rates</Badge>
           {/* HEADER */}
           <CardHeader className="text-center pb-4 pt-6">
             <CardTitle className="text-2xl font-playfair font-bold text-stone">

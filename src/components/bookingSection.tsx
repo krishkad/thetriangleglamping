@@ -20,6 +20,7 @@ import {
   outDoorRingDecorationAmount,
   outDoorTentDecorationAmount,
 } from "@/constant/data";
+import { Badge } from "./ui/badge";
 
 const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
 
@@ -189,6 +190,7 @@ ${addOns || "None"}
         className,
       )}
     >
+      
       {/* HEADER */}
       <CardHeader className="text-center pb-4 pt-6">
         <CardTitle className="text-lg sm:text-2xl font-playfair font-bold text-stone">
@@ -199,7 +201,10 @@ ${addOns || "None"}
         </p>
       </CardHeader>
 
-      <CardContent className="p-6 pt-2 space-y-6">
+      <CardContent className="relative p-6 pt-2 space-y-6">
+        <Badge className="absolute -top-6 right-6 bg-yellow-600">
+        Fixed Rates
+      </Badge>
         {/* NAME FIELDS */}
         <div className="grid grid-cols-2 gap-4">
           <input

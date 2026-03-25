@@ -1,12 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import {
-  LocateIcon,
-  LocationEdit,
-  MapIcon,
   ShieldIcon,
   Star,
-  UserIcon,
+  UserIcon
 } from "lucide-react";
 
 const Hero = () => {
@@ -20,7 +17,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-[15%_25%]"
         style={{
           backgroundImage:
-            // "url('/cocoon-ac-tent/IMG_4517.jpg')",
+            // "url('/hero/IMG_5308.jpg')",
             "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
           // backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
         }}
@@ -91,7 +88,7 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            View Tents
+            Explore Tents
           </Button>
         </div>
       </div>
