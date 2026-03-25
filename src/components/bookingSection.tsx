@@ -588,19 +588,12 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
           {theatre && (
             <div className="flex justify-between">
               <span className="font-medium">
-                Private Theatre <span className="text-xs">for 2 Person (2 hrs)</span>
+                Private Theatre{" "}
+                <span className="text-xs">for 2 Person (2 hrs)</span>
               </span>
               <span className="font-semibold text-moss">₹{700}</span>
             </div>
           )}
-          {/* {selectedPackage.savings && (
-                <div className="flex justify-between text-sm">
-                  <span>You Save</span>
-                  <span className="text-green-600 font-semibold">
-                    {selectedPackage.savings} / person
-                  </span>
-                </div>
-              )} */}
 
           <div className="border-t pt-3 flex justify-between items-center">
             <span className="font-semibold">Total</span>
@@ -608,14 +601,6 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
               ₹{price ? price : "3000"}
             </span>
           </div>
-
-          {/* SAVINGS BANNER */}
-          {/* {selectedPackage.savings && (
-                <div className="bg-green-100 text-green-700 text-xs text-center p-2 rounded-md font-semibold">
-                  🎉 You saved ₹
-                  {parseInt(selectedPackage.savings.replace("₹", "")) * guests}
-                </div>
-              )} */}
         </div>
 
         {/* CTA */}

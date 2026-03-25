@@ -175,7 +175,7 @@ export default function CampDetail({ camp = defaultCamp }) {
                   "Bonfire & BBQ Evenings",
                   "Indoor & Outdoor Games",
                   "Romantic Music",
-                  "Self guided Fram Tour",
+                  "Self guided Farm Tour",
                   "Private Theatre (extra)",
                   "Relax, celebrate, and enjoy peaceful riverside evenings",
                 ].map((item, i) => (

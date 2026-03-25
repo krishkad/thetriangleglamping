@@ -822,27 +822,12 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                 </div>
               )}
 
-              {selectedPackage.savings && (
-                <div className="flex justify-between text-sm">
-                  <span>You Save</span>
-                  <span className="text-green-600 font-semibold">
-                    {selectedPackage.savings}
-                  </span>
-                </div>
-              )}
-
               <div className="border-t pt-3 flex justify-between items-center">
                 <span className="font-semibold">Total</span>
                 <span className="text-2xl font-bold text-moss">₹{price}</span>
               </div>
 
-              {/* SAVINGS BANNER */}
-              {selectedPackage.savings && (
-                <div className="bg-green-100 text-green-700 text-xs text-center p-2 rounded-md font-semibold">
-                  🎉 You saved ₹
-                  {parseInt(selectedPackage.savings.replace("₹", ""))}
-                </div>
-              )}
+             
             </div>
 
             {/* CTA */}
