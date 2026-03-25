@@ -248,7 +248,8 @@ export default function CampDetail({ camp = defaultCamp }) {
               <p className="font-semibold text-blue-700">
                 ₹
                 {camp.name === "Triangle Tent" ||
-                camp.name === "Triangle Tent with Mini Pool"
+                camp.name === "Triangle Tent with Mini Pool" ||
+                camp.name === "Triangle Cooler Cabin"
                   ? "1750"
                   : "2000"}{" "}
                 (with meals)

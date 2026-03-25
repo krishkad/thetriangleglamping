@@ -65,7 +65,8 @@ const BookingSection = ({
 
   const extraGuestPrice =
     camps.name === "Triangle Tent" ||
-    camps.name === "Triangle Tent with Mini Pool"
+    camps.name === "Triangle Tent with Mini Pool" ||
+    camps.name === "Triangle Cooler Cabin"
       ? 1750
       : 2000;
 

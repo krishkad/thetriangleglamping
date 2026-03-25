@@ -5,18 +5,16 @@ import { cn } from "@/lib/utils";
 
 const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
 const FloatingActions = () => {
-
-
   const handleCall = () => {
     window.open(`tel:+${phoneNumber}`, "_self");
   };
 
   const handleWhatsApp = () => {
     const message =
-      "Hi! I'm interested in Triangle Glamping. Could you please help me with booking?";
+      "Hi! I'm interested in Triangle Glamping. Could you please help me with details?";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
+      "_blank",
     );
   };
 

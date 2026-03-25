@@ -194,7 +194,8 @@ const BookingWidget = () => {
 
   const extraGuestPrice =
     selectedPackage.name === "Triangle Tent" ||
-    selectedPackage.name === "Triangle Tent with Mini Pool"
+    selectedPackage.name === "Triangle Tent with Mini Pool" ||
+    selectedPackage.name === "Triangle Cooler Cabin"
       ? 1750
       : 2000;
 
