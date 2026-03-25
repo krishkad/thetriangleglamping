@@ -1,13 +1,11 @@
 "use client";
 
-import BookingSection from "@/components/bookingSection";
-import { Badge } from "@/components/ui/badge";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 

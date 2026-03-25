@@ -175,7 +175,7 @@ const BookingWidget = () => {
     packages[0].camps[0],
   );
 
-  const calculatedAmount = selectedPackage.amount;
+  // const calculatedAmount = selectedPackage.amount;
 
   /* ================= SUBMIT ================= */
 
