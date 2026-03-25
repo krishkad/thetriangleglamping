@@ -321,6 +321,18 @@ export default function CampDetail({ camp = defaultCamp }) {
             ))}
           </div>
         </section>
+
+        {/* ❌ Note */}
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Note</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {["We only have 1 unit of this accommodation."].map((item, i) => (
+              <div key={i} className="p-4 border rounded-xl bg-white shadow-sm">
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
       <section className="w-full py-20 bg-secondary">
         <div className="max-w-2xl px-4 mx-auto">
