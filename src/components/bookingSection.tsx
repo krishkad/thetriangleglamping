@@ -186,11 +186,13 @@ ${addOns || "None"}
   return (
     <Card
       className={cn(
-        "rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max py-0",
+        "relative rounded-3xl shadow-2xl border-0 bg-white overflow-hidden h-max py-0",
         className,
       )}
     >
-      
+      <Badge className="absolute top-1.5 right-6 bg-yellow-600">
+        Fixed Rates
+      </Badge>
       {/* HEADER */}
       <CardHeader className="text-center pb-4 pt-6">
         <CardTitle className="text-lg sm:text-2xl font-playfair font-bold text-stone">
@@ -201,10 +203,8 @@ ${addOns || "None"}
         </p>
       </CardHeader>
 
-      <CardContent className="relative p-6 pt-2 space-y-6">
-        <Badge className="absolute -top-6 right-6 bg-yellow-600">
-        Fixed Rates
-      </Badge>
+      <CardContent className=" p-6 pt-2 space-y-6">
+        
         {/* NAME FIELDS */}
         <div className="grid grid-cols-2 gap-4">
           <input

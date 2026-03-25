@@ -14,12 +14,12 @@ const Hero = () => {
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-[15%_25%]"
+        className="absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-[5%_15%]"
         style={{
-          backgroundImage:
+          // backgroundImage:
             // "url('/hero/IMG_5308.jpg')",
-            "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
-          // backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
+            // "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
+          backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 sm:via-transparent to-black/30 sm:to-black/50"></div>

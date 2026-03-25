@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 const defaultCamp = {
   name: "Triangle Tent",
@@ -84,8 +85,19 @@ const defaultCamp = {
   ],
 };
 
+const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
+
 export default function ACTheatre({ camp = defaultCamp }) {
   //   const [activeImage, setActiveImage] = useState(0);
+
+  const handleWhatsApp = () => {
+    const message =
+      "Hi! I'm interested in Triangle Glamping Private Theatre Experience. Could you please help me with details?";
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+      "_blank",
+    );
+  };
 
   return (
     <>
@@ -176,12 +188,12 @@ export default function ACTheatre({ camp = defaultCamp }) {
               </p>
             </div>
 
-            <a
-              href="tel:7507507546"
-              className="bg-moss text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-moss/90 transition"
+            <Button
+              onClick={handleWhatsApp}
+              className="bg-moss text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-moss/90 transition cursor-pointer"
             >
-              📞 Book Now – 7507507546
-            </a>
+              Enquire Now
+            </Button>
           </div>
         </section>
       </div>
