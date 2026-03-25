@@ -7,9 +7,9 @@ const CocoonACTentWithJacuzziAndMiniPoolPage = () => {
     tag: "Couple Favorite",
     guests: 2,
     price: {
-      weekdays: 6000,
-      saturday: 6750,
-      sunday: 6500,
+      weekdays: 8000,
+      saturday: 9000,
+      sunday: 8500,
     },
     description: `Experience the most premium stay at our glampsite, designed for guests who want complete privacy, luxury comfort, and unforgettable celebration moments.
 
@@ -26,6 +26,7 @@ The Cocoon AC Tent combines a private outdoor Jacuzzi, exclusive mini pool, and 
       "Private Bonfire & BBQ Area",
       "Private Bluetooth Speaker",
       "Ambient Lighting & Charging Points",
+      "Remote Operational curtains",
     ],
     whyChoose: [
       "Most premium stay",
@@ -34,6 +35,7 @@ The Cocoon AC Tent combines a private outdoor Jacuzzi, exclusive mini pool, and 
       "Perfect for celebrations & proposals",
       "Private garden & full privacy",
       "Ideal for couples & small families",
+      "Free Parking",
     ],
     images: [
       {

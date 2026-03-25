@@ -29,6 +29,7 @@ const CocconACTent = () => {
       "Private pool, lawn & dining",
       "High hygiene standards",
       "Modern Instagrammable design",
+       "Free Parking",
     ],
     images: [
       {

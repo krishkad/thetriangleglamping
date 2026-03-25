@@ -16,7 +16,7 @@ const ACPodWithOutdoorJacuzzi = () => {
 Designed for couples and special celebrations, this stay offers privacy, relaxation, and a premium glamping experience under the open sky.`,
     stayIncludes: [
       "Air-Conditioned Pod Room",
-      "Comfortable Bed with Premium Bedding",
+      "Comfortable Bedding",
       "Sofa cum Bed",
       "Attached Washroom",
       "Ambient Lighting",
@@ -35,6 +35,7 @@ Designed for couples and special celebrations, this stay offers privacy, relaxat
       "Complete privacy",
       "Ideal for celebrations & proposals",
       "Luxury upgrade from tents",
+       "Free Parking",
     ],
     images: [
       {

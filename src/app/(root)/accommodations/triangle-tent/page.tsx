@@ -28,6 +28,7 @@ const TriangleTentPage = () => {
       "Ideal for couples & celebrations",
       "Homely food experience",
       "Budget-friendly romantic stay",
+       "Free Parking",
     ],
     images: [
       {

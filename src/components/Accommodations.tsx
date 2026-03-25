@@ -427,32 +427,36 @@ const accommodations = [
     slug: "triangle-ac-cabin-with-mini-pool",
     images: [
       {
-        url: "/triangle-tent-with-mini-pool/IMG_4604.JPG.jpeg",
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_8239.JPG.jpeg",
         imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-tent-with-mini-pool/IMG_4648.JPG.jpeg",
-        imageClassName: "object-[30%_40%]",
-      },
-      {
-        url: "/triangle-tent-with-mini-pool/IMG_4590.JPG.jpeg",
-        imageClassName: "object-contain",
-      },
-      {
-        url: "/triangle-tent-with-mini-pool/IMG_9202.JPG.jpeg",
-        imageClassName: "object-contain",
-      },
-      {
-        url: "/triangle-tent-with-mini-pool/IMG_9196.JPG.jpeg",
-        imageClassName: "object-contain",
-      },
-      {
-        url: "/triangle-tent-with-mini-pool/IMG_9205.JPG.jpeg",
-        imageClassName: "object-contain",
-      },
-      {
-        url: "/triangle-tent-with-mini-pool/IMG_3775.JPG.jpeg",
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_1967.JPG.jpeg",
         imageClassName: "object-cover",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_1966.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_1968.JPG.jpeg",
+        imageClassName: "object-cover",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_1965.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_2835.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3348.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin-with-mini-pool/IMG_3946.JPG.jpeg",
+        imageClassName: "object-contain",
       },
     ],
     price: 8000,

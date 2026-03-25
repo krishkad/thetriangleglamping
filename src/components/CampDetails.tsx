@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const defaultCamp = {
   name: "Triangle Tent",
@@ -73,7 +74,9 @@ export default function CampDetail({ camp = defaultCamp }) {
 
           <div className="text-right md:mr-48">
             <p className="text-sm text-gray-500">Starting from</p>
-            <p className="text-2xl font-bold text-moss">₹3500</p>
+            <p className="text-2xl font-bold text-moss">
+              ₹{camp.price.weekdays}
+            </p>
           </div>
         </div>
 
@@ -103,6 +106,9 @@ export default function CampDetail({ camp = defaultCamp }) {
                     {item}
                   </div>
                 ))}
+                <div className="p-4 border rounded-xl bg-white shadow-sm">
+                  Dedicate Caretaker for your service
+                </div>
               </div>
             </section>
 
@@ -169,9 +175,8 @@ export default function CampDetail({ camp = defaultCamp }) {
                   "Bonfire & BBQ Evenings",
                   "Indoor & Outdoor Games",
                   "Romantic Music",
-                  "Farm Exploration",
+                  "Self guided Fram Tour",
                   "Private Theatre (extra)",
-                  "Free Parking",
                   "Relax, celebrate, and enjoy peaceful riverside evenings",
                 ].map((item, i) => (
                   <div
@@ -228,7 +233,7 @@ export default function CampDetail({ camp = defaultCamp }) {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 rounded-xl border bg-green-50 text-center">
               <p className="text-sm text-gray-500">Below 5 yrs</p>
-              <p className="font-semibold text-green-700">Free</p>
+              <p className="font-semibold text-green-700">Free Stay</p>
             </div>
             <div className="p-4 rounded-xl border bg-yellow-50 text-center">
               <p className="text-sm text-gray-500">5 – 12 yrs</p>
@@ -255,7 +260,14 @@ export default function CampDetail({ camp = defaultCamp }) {
                 <li>Dolby Atmos Sound</li>
               </ul>
               <div className="text-sm font-medium text-moss">
-                ₹400 / hour (2 people)
+                ₹400 / hour (2 people) <br />
+                <span className="text-gray-600">
+                  ₹700 for 2 hours (2 people)
+                </span>
+                <br />
+                <span className="text-gray-600">
+                  ₹1000 for 3 hours (2 people)
+                </span>
               </div>
               <p className="text-xs text-gray-500">
                 Extra: ₹100/person • Max 4
@@ -270,8 +282,8 @@ export default function CampDetail({ camp = defaultCamp }) {
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>Inside Tent: ₹500</li>
-                <li>Outdoor: ₹1000</li>
-                <li>Premium Ring: ₹1500</li>
+                <li>Outdoor Frame: ₹1000</li>
+                <li>Outdoor Ring: ₹1500</li>
                 <li>Candle Dinner: ₹300</li>
               </ul>
               <p className="text-xs text-gray-500">
@@ -309,12 +321,36 @@ export default function CampDetail({ camp = defaultCamp }) {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function CampGallery({ camp }: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [api, setApi] = useState<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const isVideo = (url: string) => /\.(mp4|webm|ogg)$/i.test(url);
+
+  // Sync active index with carousel
+  useEffect(() => {
+    if (!api) return;
+
+    const onSelect = () => {
+      setActiveIndex(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
+  // Scroll to slide when thumbnail clicked
+  const scrollTo = (index: number) => {
+    if (api) api.scrollTo(index);
+  };
 
   return (
     <div className="w-full space-y-4">
       {/* MAIN CAROUSEL */}
-      <Carousel className="w-full">
+      <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
           {camp.images.map(
             (img: { url: string; imageClassName: string }, idx: number) => (
@@ -323,7 +359,9 @@ function CampGallery({ camp }: any) {
                   {isVideo(img.url) ? (
                     <video
                       src={img.url}
-                      className={`w-full h-full object-contain ${img.imageClassName || ""}`}
+                      className={`w-full h-full object-contain ${
+                        img.imageClassName || ""
+                      }`}
                       controls
                       playsInline
                     />
@@ -332,7 +370,9 @@ function CampGallery({ camp }: any) {
                       src={img.url}
                       alt={camp.name}
                       fill
-                      className={`object-contain transition duration-500 hover:scale-105 object-center ${img.imageClassName || ""}`}
+                      className={`object-contain transition duration-500 hover:scale-105 object-center ${
+                        img.imageClassName || ""
+                      }`}
                     />
                   )}
                 </div>
@@ -341,17 +381,20 @@ function CampGallery({ camp }: any) {
           )}
         </CarouselContent>
 
-        {/* NAV BUTTONS */}
         <CarouselPrevious className="left-4" />
         <CarouselNext className="right-4" />
       </Carousel>
 
       {/* THUMBNAILS */}
       <div className="flex gap-3 overflow-x-auto pb-2">
-        {camp.images.map((img: { url: string }, idx: number) => (
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        {camp.images.map((img: any, idx: number) => (
           <div
             key={idx}
-            className="relative min-w-[100px] h-[70px] rounded-xl overflow-hidden cursor-pointer group border"
+            onClick={() => scrollTo(idx)}
+            className={`relative min-w-[100px] h-[70px] rounded-xl overflow-hidden cursor-pointer group border ${
+              activeIndex === idx ? "ring-2 ring-white" : ""
+            }`}
           >
             {isVideo(img.url) ? (
               <>
@@ -364,7 +407,7 @@ function CampGallery({ camp }: any) {
                   onMouseEnter={(e) => e.currentTarget.play()}
                   onMouseLeave={(e) => e.currentTarget.pause()}
                 />
-                {/* Play icon overlay */}
+                {/* Play icon */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                   <div className="w-6 h-6 border-l-8 border-l-white border-y-6 border-y-transparent ml-1" />
                 </div>

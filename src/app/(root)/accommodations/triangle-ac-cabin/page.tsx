@@ -31,6 +31,7 @@ Set against a serene riverside backdrop, this premium cabin offers a cool, peace
       "Ideal for couples & celebrations",
       "Homely food experience",
       "Budget-friendly romantic stay",
+       "Free Parking",
     ],
     images: [
      {

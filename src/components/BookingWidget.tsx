@@ -167,6 +167,7 @@ const BookingWidget = () => {
 
   const [candleLightDinner, setCandleLightDinner] = useState(false);
   const [meal, setMeal] = useState(true);
+  const [theatre, setTheatre] = useState(true);
   const [inSideTentDecoration, setInSideTentDecoration] = useState(false);
   const [outDoorTentDecoration, setOutDoorTentDecoration] = useState(false);
   const [outDoorRingDecoration, setOutDoorRingDecoration] = useState(false);
@@ -200,7 +201,8 @@ const BookingWidget = () => {
     (outDoorTentDecoration ? outDoorTentDecorationAmount : 0) +
     (outDoorRingDecoration ? outDoorRingDecorationAmount : 0) +
     (candleLightDinner ? candleLightDinnerAmount : 0) -
-    (!meal ? 1000 : 0);
+    (!meal ? 1000 : 0) +
+    (theatre ? 700 : 0);
 
   const disabled = !name || !lname || !email || !phone || !checkIn || !checkOut;
 
@@ -391,12 +393,12 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
             {/* NAME FIELDS */}
             <div className="grid grid-cols-2 gap-4">
               <input
-                placeholder="First Name"
+                placeholder="First Name (required)"
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
                 onChange={(e) => setName(e.target.value)}
               />
               <input
-                placeholder="Last Name"
+                placeholder="Last Name (required)"
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
                 onChange={(e) => setLname(e.target.value)}
               />
@@ -405,13 +407,13 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
             {/* CONTACT */}
             <div className="grid grid-cols-2 gap-4">
               <input
-                placeholder="Email"
+                placeholder="Email (required)"
                 type="email"
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
-                placeholder="Phone"
+                placeholder="Phone (required)"
                 type="tel"
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-moss transition"
                 onChange={(e) => setPhone(e.target.value)}
@@ -428,7 +430,7 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                     className="w-full justify-start rounded-2xl h-12 border-2 hover:border-moss"
                   >
                     <CalendarDays className="mr-2 h-4 w-4 text-moss" />
-                    {checkIn ? format(checkIn, "MMM dd yyyy") : "Check-in"}
+                    {checkIn ? format(checkIn, "MMM dd yyyy") : "Check-in *"}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="p-0">
@@ -448,7 +450,7 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                     className="w-full justify-start rounded-2xl h-12 border-2 hover:border-moss"
                   >
                     <CalendarDays className="mr-2 h-4 w-4 text-moss" />
-                    {checkOut ? format(checkOut, "MMM dd yyyy") : "Check-out"}
+                    {checkOut ? format(checkOut, "MMM dd yyyy") : "Check-out *"}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="p-0">
@@ -463,7 +465,9 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
 
             {/* GUESTS */}
             <div className="space-y-3">
-              <label className="text-sm font-semibold text-stone">Guests</label>
+              <label className="text-sm font-semibold text-stone">
+                Guests *
+              </label>
 
               <div className="flex items-center justify-between border-2 border-gray-200 rounded-2xl px-4 py-2">
                 <div className="flex items-center gap-2">
@@ -591,9 +595,7 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                   <Checkbox
                     id={`${id}-meal`}
                     checked={meal}
-                    onCheckedChange={(checked) =>
-                      setMeal(!!checked)
-                    }
+                    onCheckedChange={(checked) => setMeal(!!checked)}
                     className="
     data-[state=checked]:bg-[#4caf50]
     data-[state=checked]:border-[#4caf50]
@@ -718,6 +720,33 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                   </Label>
                 </div>
               </div>
+
+              {/* Theature */}
+              <div
+                onClick={() => setTheatre((prev) => !prev)}
+                className={cn(
+                  "flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer transition",
+                  theatre
+                    ? "border-moss bg-moss/10"
+                    : "border-gray-200 hover:border-moss/50",
+                )}
+              >
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    id={`${id}-ring`}
+                    checked={theatre}
+                    onCheckedChange={(checked) => setTheatre(!!checked)}
+                    className="
+    data-[state=checked]:bg-[#4caf50]
+    data-[state=checked]:border-[#4caf50]
+    data-[state=checked]:text-white
+  "
+                  />
+                  <Label htmlFor={`${id}-ring`}>
+                    Private Theatre 2hrs for 2 Person (₹700)
+                  </Label>
+                </div>
+              </div>
             </div>
 
             {/* PRICE SUMMARY */}
@@ -772,7 +801,7 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
               {/* Outdoor Tent Decoration */}
               {!!outDoorTentDecoration && (
                 <div className="flex justify-between">
-                  <span className="font-medium">Outdoor Tent Decoration</span>
+                  <span className="font-medium">Outdoor Frame Decoration</span>
                   <span className="font-semibold text-moss">
                     ₹{outDoorTentDecorationAmount}
                   </span>
@@ -786,6 +815,17 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
                   <span className="font-semibold text-moss">
                     ₹{outDoorRingDecorationAmount}
                   </span>
+                </div>
+              )}
+
+              {/* Private theature */}
+              {theatre && (
+                <div className="flex justify-between">
+                  <span className="font-medium">
+                    Private Theatre{" "}
+                    <span className="text-xs">for 2 Person (2 hrs)</span>
+                  </span>
+                  <span className="font-semibold text-moss">₹{700}</span>
                 </div>
               )}
 
@@ -823,7 +863,7 @@ ${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorati
 
             <div className="w-full space-y-2">
               <p className="text-xs text-center text-stone/60">
-                We’ll respond you within 30 minutes or
+                We’ll try to respond you within 30 minutes
               </p>
             </div>
           </CardContent>

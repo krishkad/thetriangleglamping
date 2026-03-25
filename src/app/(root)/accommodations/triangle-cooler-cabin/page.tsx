@@ -15,7 +15,7 @@ const TriangleCoolerCabinPage = () => {
       "Enjoy a peaceful nature escape in our Triangle Wooden Cooler Cabin, designed for guests who want the charm of glamping with added comfort and privacy. Surrounded by serene riverside vibes, this cabin offers a cozy wooden stay experience perfect for relaxing day and celebrations.",
 
     stayIncludes: [
-      "Comfortable Bed with Bedding",
+      "Comfortable Bedding",
       "Air Cooler for Added Comfort",
       "Private Washroom",
       "Private Lawn Area",
@@ -32,7 +32,7 @@ const TriangleCoolerCabinPage = () => {
       "Comfort meets nature",
       "Great for couples & families",
       "Budget-friendly upgrade",
-      "Free parking",
+      "Free Parking",
     ],
     images: [
       {

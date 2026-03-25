@@ -238,6 +238,22 @@ export const articles: Article[] = [
     featured: false,
     tags: ["Growth", "SaaS", "User Acquisition"],
   },
+  {
+    slug: "https://www.travelandleisureasia.com/in/hotels/india-hotels/best-8-glamping-destinations-near-pune-to-enjoy-the-long-weekend-on-new-year/",
+    title:
+      "Brainstorming Ideas For The Long Weekend? These 8 Glamping Destinations Near Pune Could Be The Perfect Match",
+    excerpt:
+      "Featuring luxury camps and blessed with only good vibes, these 8 glamping destinations near Pune must be on every Punekar's wish list.",
+    content: articleContent,
+    featuredImage:
+      "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2021/12/20173403/shutterstock_1239418114.jpg?tr=w-1366,f-jpg,pr-true",
+    category: "Traveland Leisureasia",
+    author: authors.sarah,
+    publishDate: "2025-01-20",
+    readTime: 11,
+    featured: false,
+    tags: ["Growth", "SaaS", "User Acquisition"],
+  },
 ];
 
 export function getArticlesByCategory(categorySlug: string): Article[] {
