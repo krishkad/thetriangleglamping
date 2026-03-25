@@ -3,7 +3,7 @@ const path = require("path");
 const sharp = require("sharp");
 
 // Allowed image extensions
-const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".webp", ".png", ".gif", ".avif"];
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif", ".avif"];
 
 let imageCounter = 1; // 👈 global counter
 
@@ -11,7 +11,8 @@ async function convertImageToWebp(filePath) {
   const dir = path.dirname(filePath);
 
   // 👇 new filename format
-  const newFileName = `triangle-tent-${imageCounter}.webp`;
+  // const newFileName = `triangle-tent-${imageCounter}.webp`;
+  const newFileName = `$triangle-tent-21.webp`;
   const outputPath = path.join(dir, newFileName);
 
   try {
