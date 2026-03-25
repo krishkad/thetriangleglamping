@@ -858,10 +858,10 @@ const accommodations = [
         url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5114.JPG.jpeg",
         imageClassName: "object-center",
       },
-      {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5308.HEIC",
-        imageClassName: "object-center",
-      },
+      // {
+      //   url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5308.HEIC",
+      //   imageClassName: "object-center",
+      // },
       {
         url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5127.JPG.jpeg",
         imageClassName: "object-center",
