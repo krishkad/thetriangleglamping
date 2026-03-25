@@ -22,7 +22,7 @@ const Hero = () => {
           backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 sm:via-transparent to-black/30 sm:to-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50  to-black/30 sm:to-black/50"></div>
       </div>
 
       {/* Hero Content */}
@@ -60,7 +60,7 @@ const Hero = () => {
           <br />
         </h1>
 
-        <p className="text-md text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
+        <p className="text-base sm:text-md text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
           Luxury glamping near Pune & Mumbai with 100% private spaces, romantic dining & unforgettable stays for couples and
           families.
         </p>
