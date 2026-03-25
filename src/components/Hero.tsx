@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isTextVisible, setIsTextVisible] = useState(false);
 
   const heroImages = [
     "/cocoon-ac-tent/cocoon-ac-tent-1.webp",
@@ -15,7 +14,7 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    const textTimer = setTimeout(() => setIsTextVisible(true), 400);
+    const textTimer = setTimeout(() => {}, 400);
 
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
