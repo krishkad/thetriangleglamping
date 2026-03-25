@@ -1,10 +1,8 @@
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import "./globals.css";
 
 const base = process.env.NEXT_PUBLIC_BASE_URL as string;
 
@@ -28,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(base),
 
   title: {
-    default: "The Triangle Glamping | Luxury Camping in Alandi, Pune",
+    default: "The Triangle Glamping | Luxury Glamping in Alandi, Pune",
     template: "%s | The Triangle Glamping",
   },
 
@@ -37,13 +35,17 @@ export const metadata: Metadata = {
 
   keywords: [
     "Triangle Glamping Pune",
-    "Camping near Alandi",
+    "Glamping near Alandi",
     "Glamping Pimpri Chinchwad",
-    "Luxury Camping Pune",
-    "Couple Camping Pune",
+    "Luxury Glamping Pune",
+    "Couple Glamping Pune",
     "Weekend Getaway Pune",
-    "Camping near PCMC",
-    "Private Cabin Camping Pune",
+    "Luxury Glamping Mumbai",
+    "Couple Glamping Mumbai",
+    "Weekend Getaway Mumbai",
+    "Glamping near PCMC",
+    "Private Cabin Glamping Pune",
+    "Private Cabin Glamping Mumbai",
   ],
 
   openGraph: {
@@ -100,42 +102,28 @@ export default function RootLayout({
         <meta
           name="image"
           content={cn(
-            `${process.env.NEXT_PUBLIC_BASE_URL}/images/accommodations/delux/delux-1.webp`,
+            `${process.env.NEXT_PUBLIC_BASE_URL}/cocoon-ac-tent/cocoon-ac-tent-1.webp`,
           )}
         />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5B0KYG8D08"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-5B0KYG8D08');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
         {children}
-        <Analytics />
-        <SpeedInsights />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17767702220"
-          strategy="afterInteractive"
-        />
-
-        <Script id="google-ads-script" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17767702220');
-          `}
-        </Script>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17776658067"
-          strategy="afterInteractive"
-        />
-
-        <Script id="google-ads-gtag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17776658067');
-          `}
-        </Script>
       </body>
     </html>
   );
