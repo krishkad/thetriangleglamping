@@ -38,6 +38,7 @@ const Navbar = () => {
     { href: "/accommodations", label: "Stays" },
     { href: "/#timeline", label: "Your Day" },
     { href: "/#experiences", label: "Activities" },
+    { href: "/private-ac-theatre", label: "Private Theatre" },
     { href: "/#contact", label: "Contact" },
     { href: "/#blogs", label: "Blogs" },
   ];

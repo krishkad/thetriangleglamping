@@ -12,31 +12,60 @@ const TriangleCoolerCabinPage = () => {
       sunday: 5000,
     },
     description:
-      "Escape into a stylish triangle tent overlooking a peaceful river, designed especially for couples seeking comfort, privacy, and a cozy nature experience.",
+      "Enjoy a peaceful nature escape in our Triangle Wooden Cooler Cabin, designed for guests who want the charm of glamping with added comfort and privacy. Surrounded by serene riverside vibes, this cabin offers a cozy wooden stay experience perfect for relaxing day and celebrations.",
+
+    stayIncludes: [
+      "Comfortable Bed with Bedding",
+      "Air Cooler for Added Comfort",
+      "Private Washroom",
+      "Private Lawn Area",
+      "Private Dining Space",
+      "Private Hammock",
+      "Private Bonfire & BBQ Area",
+      "Private Riverside Sitting Bench",
+      "Ambient Lighting & Charging Points",
+    ],
+    whyChoose: [
+      "Cozy wooden cabin stay",
+      "Private washroom & space",
+      "Peaceful riverside setting",
+      "Comfort meets nature",
+      "Great for couples & families",
+      "Budget-friendly upgrade",
+      "Free parking",
+    ],
     images: [
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-4.webp",
+        url: "/triangle-cooler-cabin/IMG_3346.jpg",
         imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-5.webp",
+        url: "/triangle-cooler-cabin/IMG_7891.JPG.jpeg",
         imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-1.webp",
+        url: "/triangle-cooler-cabin/IMG_8263.JPG.jpeg",
         imageClassName: "object-contain",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-2.webp",
-        imageClassName: "object-center",
+        url: "/triangle-cooler-cabin/IMG_7139.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-3.webp",
-        imageClassName: "object-center",
+        url: "/triangle-cooler-cabin/IMG_9203.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-6.webp",
-        imageClassName: "object-center",
+        url: "/triangle-cooler-cabin/IMG_9238.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-cooler-cabin/IMG_7572.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/videos/triangle-cooler-cabin.mp4",
+        imageClassName: "object-contain",
       },
     ],
   };

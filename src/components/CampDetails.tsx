@@ -22,6 +22,28 @@ const defaultCamp = {
   },
   description:
     "Escape into a stylish triangle tent overlooking a peaceful river, designed especially for couples seeking comfort, privacy, and a cozy nature experience.",
+  stayIncludes: [
+    "Outdoor 2-Seater Private Jacuzzi",
+    "Private Mini Pool (Exclusive Use)",
+    "Fully Air-Conditioned Tent",
+    "Comfortable Premium Bedding",
+    "Private Washroom",
+    "Private Garden Area",
+    "Private Swing Seating",
+    "Private Dining Space",
+    "Private Bonfire & BBQ Area",
+    "Private Bluetooth Speaker",
+    "Ambient Lighting & Charging Points",
+  ],
+  whyChoose: [
+    "Cozy wooden cabin stay",
+    "Private washroom & space",
+    "Peaceful riverside setting",
+    "Comfort meets nature",
+    "Great for couples & families",
+    "Budget-friendly upgrade",
+    "Free parking",
+  ],
   images: [
     { url: "/triangle-tent/triangle-tent-16.webp" },
     { url: "/triangle-tent/triangle-tent-11.webp" },
@@ -73,21 +95,7 @@ export default function CampDetail({ camp = defaultCamp }) {
                 🏕 Your Stay Includes
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
-                {[
-                  "Comfortable Mattress & Bedding",
-                  "Fresh Blanket & Pillows",
-                  "Fan, Lights & Charging",
-                  "Table Fan & Lighting",
-                  "Mobile Charging Point",
-                  "Private Lawn & Riverside Bench",
-                  "Private Lawn Area",
-                  "Riverside Sitting Bench",
-                  "Private Bonfire & BBQ",
-                  "Private Bonfire & BBQ Setup",
-                  "Dining Area",
-                  "Private Dining Area",
-                  "Enjoy complete privacy with beautiful riverside vibes",
-                ].map((item, i) => (
+                {camp.stayIncludes.map((item, i) => (
                   <div
                     key={i}
                     className="p-4 border rounded-xl bg-white shadow-sm"
@@ -182,13 +190,7 @@ export default function CampDetail({ camp = defaultCamp }) {
                 🌿 Why Choose {camp.name}
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
-                {[
-                  "Peaceful riverside atmosphere",
-                  "Private spaces (no crowd disturbance)",
-                  "Ideal for couples & celebrations",
-                  "Homely food experience",
-                  "Budget-friendly romantic stay",
-                ].map((item, i) => (
+                {camp.whyChoose.map((item, i) => (
                   <div
                     key={i}
                     className="p-4 border rounded-xl bg-white shadow-sm"
@@ -307,6 +309,8 @@ export default function CampDetail({ camp = defaultCamp }) {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function CampGallery({ camp }: any) {
+  const isVideo = (url: string) => /\.(mp4|webm|ogg)$/i.test(url);
+
   return (
     <div className="w-full space-y-4">
       {/* MAIN CAROUSEL */}
@@ -316,12 +320,21 @@ function CampGallery({ camp }: any) {
             (img: { url: string; imageClassName: string }, idx: number) => (
               <CarouselItem key={idx}>
                 <div className="relative h-[520px] w-full rounded-3xl overflow-hidden">
-                  <Image
-                    src={img.url}
-                    alt={camp.name}
-                    fill
-                    className={`object-contain transition duration-500 hover:scale-105 object-center ${img.imageClassName || ""}`}
-                  />
+                  {isVideo(img.url) ? (
+                    <video
+                      src={img.url}
+                      className={`w-full h-full object-contain ${img.imageClassName || ""}`}
+                      controls
+                      playsInline
+                    />
+                  ) : (
+                    <Image
+                      src={img.url}
+                      alt={camp.name}
+                      fill
+                      className={`object-contain transition duration-500 hover:scale-105 object-center ${img.imageClassName || ""}`}
+                    />
+                  )}
                 </div>
               </CarouselItem>
             ),
@@ -340,12 +353,30 @@ function CampGallery({ camp }: any) {
             key={idx}
             className="relative min-w-[100px] h-[70px] rounded-xl overflow-hidden cursor-pointer group border"
           >
-            <Image
-              src={img.url}
-              alt=""
-              fill
-              className="object-cover group-hover:scale-110 transition"
-            />
+            {isVideo(img.url) ? (
+              <>
+                <video
+                  src={img.url}
+                  className="w-full h-full object-cover group-hover:scale-110 transition"
+                  muted
+                  loop
+                  playsInline
+                  onMouseEnter={(e) => e.currentTarget.play()}
+                  onMouseLeave={(e) => e.currentTarget.pause()}
+                />
+                {/* Play icon overlay */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                  <div className="w-6 h-6 border-l-8 border-l-white border-y-6 border-y-transparent ml-1" />
+                </div>
+              </>
+            ) : (
+              <Image
+                src={img.url}
+                alt=""
+                fill
+                className="object-cover group-hover:scale-110 transition"
+              />
+            )}
           </div>
         ))}
       </div>

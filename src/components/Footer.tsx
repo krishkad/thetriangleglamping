@@ -99,6 +99,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#experiences"
+                  className="hover:text-coral transition-colors font-poppins hover:underline"
+                >
+                  Private Theatre
+                </a>
+              </li>
+              <li>
+                <a
                   href="#timeline"
                   className="hover:text-coral transition-colors font-poppins hover:underline"
                 >

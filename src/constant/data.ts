@@ -263,3 +263,8 @@ export function formatDate(dateString: string): string {
     day: "numeric",
   });
 }
+
+export const candleLightDinnerAmount = 300;
+export const inSideTentDecorationAmount = 500;
+export const outDoorTentDecorationAmount = 1000;
+export const outDoorRingDecorationAmount = 1500;

@@ -13,6 +13,16 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Badge } from "./ui/badge";
+import {
+  candleLightDinnerAmount,
+  inSideTentDecorationAmount,
+  outDoorRingDecorationAmount,
+  outDoorTentDecorationAmount,
+} from "@/constant/data";
+import { Checkbox } from "./ui/checkbox";
+import { Label } from "./ui/label";
+import { useId } from "react";
+import { cn } from "@/lib/utils";
 
 const phoneNumber = process.env.NEXT_PUBLIC_CALL_PHONE_NO;
 
@@ -141,6 +151,7 @@ const packages: PackageGroup[] = [
 /* ================= COMPONENT ================= */
 
 const BookingWidget = () => {
+  const id = useId();
   const [name, setName] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -154,6 +165,12 @@ const BookingWidget = () => {
   const [kids5To12, setKids5to12] = useState(0);
   const [kidsAbove12, setKidsAbove12] = useState(0);
 
+  const [candleLightDinner, setCandleLightDinner] = useState(false);
+  const [meal, setMeal] = useState(true);
+  const [inSideTentDecoration, setInSideTentDecoration] = useState(false);
+  const [outDoorTentDecoration, setOutDoorTentDecoration] = useState(false);
+  const [outDoorRingDecoration, setOutDoorRingDecoration] = useState(false);
+
   const [selectedPackage, setSelectedPackage] = useState<Camp>(
     packages[0].camps[0],
   );
@@ -161,6 +178,31 @@ const BookingWidget = () => {
   const calculatedAmount = selectedPackage.amount;
 
   /* ================= SUBMIT ================= */
+
+  /* ================= UI ================= */
+
+  const day = checkIn ? format(checkIn, "EEEE") : null;
+
+  const adults_amount = !day
+    ? selectedPackage.amount
+    : day === "Sunday"
+      ? selectedPackage.sunday_amount
+      : day === "Saturday"
+        ? selectedPackage.saturday_amount
+        : selectedPackage.amount;
+
+  const total_guest_price =
+    adults_amount + kids5To12 * 1000 + kidsAbove12 * 1750;
+
+  const price =
+    total_guest_price +
+    (inSideTentDecoration ? inSideTentDecorationAmount : 0) +
+    (outDoorTentDecoration ? outDoorTentDecorationAmount : 0) +
+    (outDoorRingDecoration ? outDoorRingDecorationAmount : 0) +
+    (candleLightDinner ? candleLightDinnerAmount : 0) -
+    (!meal ? 1000 : 0);
+
+  const disabled = !name || !lname || !email || !phone || !checkIn || !checkOut;
 
   const send_whatsapp = async () => {
     try {
@@ -173,19 +215,33 @@ Phone: ${phone}
 Email: ${email}
 
 📅 Stay Details
-Check-in: ${checkIn}
-Check-out: ${checkOut}
+Check-in: ${checkIn ? format(checkIn, "dd MMM yyyy") : "-"}
+Check-out: ${checkOut ? format(checkOut, "dd MMM yyyy") : "-"}
 
 👨‍👩‍👧 Guests
 Adults: ${guests}
-Kids: ${kids}
+Kids (below 5): ${kids}
+Kids (5-12): ${kids5To12}
+Kids (above 12): ${kidsAbove12}
 
 🏕️ Selected Package
 Camp: ${selectedPackage.name}
 Capacity: ${selectedPackage.capacity}
 
+💸 Price Breakdown
+Base Price: ₹${total_guest_price}
+
+${kids5To12 ? `Kids (5-12): ₹${kids5To12 * 1000}` : ""}
+${kidsAbove12 ? `Kids (above 12): ₹${kidsAbove12 * 1750}` : ""}
+
+✨ Add-ons / Decorations
+${candleLightDinner ? `• Candle Light Dinner: ₹${candleLightDinnerAmount}` : ""}
+${inSideTentDecoration ? `• Inside Tent Decoration: ₹${inSideTentDecorationAmount}` : ""}
+${outDoorTentDecoration ? `• Outdoor Tent Decoration: ₹${outDoorTentDecorationAmount}` : ""}
+${outDoorRingDecoration ? `• Outdoor Ring Decoration: ₹${outDoorRingDecorationAmount}` : ""}
+
 💰 Total Amount
-₹${calculatedAmount}
+₹${price}
 
 ✨ Looking forward to hosting you!
 `;
@@ -207,22 +263,6 @@ Capacity: ${selectedPackage.capacity}
       console.log(err);
     }
   };
-
-  /* ================= UI ================= */
-
-  const day = checkIn ? format(checkIn, "EEEE") : null;
-
-  const adults_amount = !day
-    ? selectedPackage.amount
-    : day === "Sunday"
-      ? selectedPackage.sunday_amount
-      : day === "Saturday"
-        ? selectedPackage.saturday_amount
-        : selectedPackage.amount;
-
-  const price = adults_amount + kids5To12 * 1000 + kidsAbove12 * 1750;
-
-  const disabled = !name || !lname || !email || !phone || !checkIn || !checkOut;
   return (
     <section className="py-20 px-6 bg-secondary" id="bookings">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">
@@ -536,6 +576,150 @@ Capacity: ${selectedPackage.capacity}
               </div>
             </div>
 
+            <div className="space-y-4">
+              {/* Meal */}
+              <div
+                onClick={() => setMeal((prev) => !prev)}
+                className={cn(
+                  "flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer transition",
+                  meal
+                    ? "border-moss bg-moss/10"
+                    : "border-gray-200 hover:border-moss/50",
+                )}
+              >
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    id={`${id}-meal`}
+                    checked={meal}
+                    onCheckedChange={(checked) =>
+                      setMeal(!!checked)
+                    }
+                    className="
+    data-[state=checked]:bg-[#4caf50]
+    data-[state=checked]:border-[#4caf50]
+    data-[state=checked]:text-white
+  "
+                  />
+                  <Label htmlFor={`${id}-candle`}>Meal (Included)</Label>
+                </div>
+              </div>
+              {/* Candle */}
+              <div
+                onClick={() => setCandleLightDinner((prev) => !prev)}
+                className={cn(
+                  "flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer transition",
+                  candleLightDinner
+                    ? "border-moss bg-moss/10"
+                    : "border-gray-200 hover:border-moss/50",
+                )}
+              >
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    id={`${id}-candle`}
+                    checked={candleLightDinner}
+                    onCheckedChange={(checked) =>
+                      setCandleLightDinner(!!checked)
+                    }
+                    className="
+    data-[state=checked]:bg-[#4caf50]
+    data-[state=checked]:border-[#4caf50]
+    data-[state=checked]:text-white
+  "
+                  />
+                  <Label htmlFor={`${id}-candle`}>
+                    Candle Light Dinner (₹300)
+                  </Label>
+                </div>
+              </div>
+
+              {/* Inside Tent */}
+              <div
+                onClick={() => setInSideTentDecoration((prev) => !prev)}
+                className={cn(
+                  "flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer transition",
+                  inSideTentDecoration
+                    ? "border-moss bg-moss/10"
+                    : "border-gray-200 hover:border-moss/50",
+                )}
+              >
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    id={`${id}-inside`}
+                    checked={inSideTentDecoration}
+                    onCheckedChange={(checked) =>
+                      setInSideTentDecoration(!!checked)
+                    }
+                    className="
+    data-[state=checked]:bg-[#4caf50]
+    data-[state=checked]:border-[#4caf50]
+    data-[state=checked]:text-white
+  "
+                  />
+                  <Label htmlFor={`${id}-inside`}>
+                    Inside Tent Decoration (₹500)
+                  </Label>
+                </div>
+              </div>
+
+              {/* Outdoor Tent */}
+              <div
+                onClick={() => setOutDoorTentDecoration((prev) => !prev)}
+                className={cn(
+                  "flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer transition",
+                  outDoorTentDecoration
+                    ? "border-moss bg-moss/10"
+                    : "border-gray-200 hover:border-moss/50",
+                )}
+              >
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    id={`${id}-outdoorTent`}
+                    checked={outDoorTentDecoration}
+                    onCheckedChange={(checked) =>
+                      setOutDoorTentDecoration(!!checked)
+                    }
+                    className="
+    data-[state=checked]:bg-[#4caf50]
+    data-[state=checked]:border-[#4caf50]
+    data-[state=checked]:text-white
+  "
+                  />
+                  <Label htmlFor={`${id}-outdoorTent`}>
+                    Outdoor Tent Decoration (₹1000)
+                  </Label>
+                </div>
+              </div>
+
+              {/* Ring */}
+              <div
+                onClick={() => setOutDoorRingDecoration((prev) => !prev)}
+                className={cn(
+                  "flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer transition",
+                  outDoorRingDecoration
+                    ? "border-moss bg-moss/10"
+                    : "border-gray-200 hover:border-moss/50",
+                )}
+              >
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    id={`${id}-ring`}
+                    checked={outDoorRingDecoration}
+                    onCheckedChange={(checked) =>
+                      setOutDoorRingDecoration(!!checked)
+                    }
+                    className="
+    data-[state=checked]:bg-[#4caf50]
+    data-[state=checked]:border-[#4caf50]
+    data-[state=checked]:text-white
+  "
+                  />
+                  <Label htmlFor={`${id}-ring`}>
+                    Outdoor Ring Decoration (₹1500)
+                  </Label>
+                </div>
+              </div>
+            </div>
+
             {/* PRICE SUMMARY */}
             <div className="bg-gradient-to-r from-moss/10 to-skyblue/10 rounded-2xl p-5 space-y-3">
               <div className="flex justify-between">
@@ -561,6 +745,46 @@ Capacity: ${selectedPackage.capacity}
                   </span>
                   <span className="font-semibold text-moss">
                     ₹{kidsAbove12 * 1750}
+                  </span>
+                </div>
+              )}
+
+              {/* Candle Light Dinner */}
+              {!!candleLightDinner && (
+                <div className="flex justify-between">
+                  <span className="font-medium">Candle Light Dinner</span>
+                  <span className="font-semibold text-moss">
+                    ₹{candleLightDinnerAmount}
+                  </span>
+                </div>
+              )}
+
+              {/* Inside Tent Decoration */}
+              {!!inSideTentDecoration && (
+                <div className="flex justify-between">
+                  <span className="font-medium">Inside Tent Decoration</span>
+                  <span className="font-semibold text-moss">
+                    ₹{inSideTentDecorationAmount}
+                  </span>
+                </div>
+              )}
+
+              {/* Outdoor Tent Decoration */}
+              {!!outDoorTentDecoration && (
+                <div className="flex justify-between">
+                  <span className="font-medium">Outdoor Tent Decoration</span>
+                  <span className="font-semibold text-moss">
+                    ₹{outDoorTentDecorationAmount}
+                  </span>
+                </div>
+              )}
+
+              {/* Outdoor Ring Decoration */}
+              {!!outDoorRingDecoration && (
+                <div className="flex justify-between">
+                  <span className="font-medium">Outdoor Ring Decoration</span>
+                  <span className="font-semibold text-moss">
+                    ₹{outDoorRingDecorationAmount}
                   </span>
                 </div>
               )}

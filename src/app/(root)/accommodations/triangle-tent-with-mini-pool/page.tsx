@@ -12,14 +12,53 @@ const TriangleTentWithMiniPoolPage = () => {
       sunday: 4500,
     },
     description:
-      "Escape into a stylish triangle tent overlooking a peaceful river, designed especially for couples seeking comfort, privacy, and a cozy nature experience.",
+      "Upgrade your getaway with a stylish triangle tent featuring your own private mini pool, offering the perfect mix of nature, comfort, and luxury. Wake up to serene river views, relax in your personal pool, and enjoy a romantic stay designed for unforgettable moments.",
+    stayIncludes: [
+      "Comfortable Mattress, Fresh Blanket & Pillows",
+      "Table Fan & Lighting",
+      "Mobile Charging Point",
+      "Private Mini Pool",
+      "Private Lawn Area",
+      "Private Bonfire & BBQ Setup",
+      "Private Dining Area",
+      "Riverside Sitting Bench",
+      "Private Washroom at walkable distance",
+      "Enjoy complete privacy with beautiful riverside vibes.",
+    ],
+    whyChoose: [
+      "Peaceful riverside atmosphere",
+      "Private spaces no crowd disturbance",
+      "Ideal for couples & celebrations",
+      "Homely food experience",
+      "Budget-friendly romantic stay",
+    ],
     images: [
       {
-        url: "/triangle-tent-with-mini-pool/triangle-tent-1.webp",
-        imageClassName: "object-cover",
+        url: "/triangle-tent-with-mini-pool/IMG_4604.JPG.jpeg",
+        imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-tent-with-mini-pool/triangle-tent-2.webp",
+        url: "/triangle-tent-with-mini-pool/IMG_4648.JPG.jpeg",
+        imageClassName: "object-[30%_40%]",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_4590.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9202.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9196.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9205.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_3775.JPG.jpeg",
         imageClassName: "object-cover",
       },
     ],

@@ -26,16 +26,32 @@ const accommodations = [
         imageClassName: "object-center",
       },
       {
+        url: "/triangle-tent/triangle-tent-3.webp",
+        imageClassName: "object-[28%_38%]",
+      },
+      {
+        url: "/triangle-tent/triangle-tent-12.webp",
+        imageClassName: "object-cover object-[20%_30%]",
+      },
+      {
         url: "/triangle-tent/triangle-tent-11.webp",
-        imageClassName: "object-[68%_78%]",
+        imageClassName: "object-[58%_68%]",
       },
       {
-        url: "/triangle-tent/triangle-tent-10.webp",
-        imageClassName: "object-cover object-[60%_70%]",
+        url: "/triangle-tent/IMG_9202.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-tent/triangle-tent-9.webp",
-        imageClassName: "object-[68%_78%]",
+        url: "/triangle-tent/triangle-tent-21.webp",
+        imageClassName: "object-[38%_48%]",
+      },
+      {
+        url: "/triangle-tent/IMG_9205.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent/triangle-tent-17.webp",
+        imageClassName: "object-[58%_68%]",
       },
     ],
     price: 3500,
@@ -112,11 +128,31 @@ const accommodations = [
     slug: "triangle-tent-with-mini-pool",
     images: [
       {
-        url: "/triangle-tent-with-mini-pool/triangle-tent-1.webp",
-        imageClassName: "object-cover",
+        url: "/triangle-tent-with-mini-pool/IMG_4604.JPG.jpeg",
+        imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-tent-with-mini-pool/triangle-tent-2.webp",
+        url: "/triangle-tent-with-mini-pool/IMG_4648.JPG.jpeg",
+        imageClassName: "object-[30%_40%]",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_4590.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9202.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9196.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9205.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_3775.JPG.jpeg",
         imageClassName: "object-cover",
       },
     ],
@@ -191,28 +227,32 @@ const accommodations = [
     slug: "triangle-cooler-cabin",
     images: [
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-4.webp",
+        url: "/triangle-cooler-cabin/IMG_3346.jpg",
         imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-5.webp",
+        url: "/triangle-cooler-cabin/IMG_7891.JPG.jpeg",
         imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-1.webp",
+        url: "/triangle-cooler-cabin/IMG_8263.JPG.jpeg",
         imageClassName: "object-contain",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-2.webp",
-        imageClassName: "object-center",
+        url: "/triangle-cooler-cabin/IMG_7139.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-3.webp",
-        imageClassName: "object-center",
+        url: "/triangle-cooler-cabin/IMG_9203.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-cooler-cabin/triangle-cooler-cabin-6.webp",
-        imageClassName: "object-center",
+        url: "/triangle-cooler-cabin/IMG_9238.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-cooler-cabin/IMG_7572.JPG.jpeg",
+        imageClassName: "object-contain",
       },
     ],
     price: 4500,
@@ -287,20 +327,32 @@ const accommodations = [
     slug: "triangle-ac-cabin",
     images: [
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-1.webp",
-        imageClassName: "object-center",
+        url: "/triangle-ac-cabin/IMG_3345.jpg",
+        imageClassName: "object-cover",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-2.webp",
-        imageClassName: "object-center",
+        url: "/triangle-ac-cabin/IMG_8263.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-6.webp",
-        imageClassName: "object-center",
+        url: "/triangle-ac-cabin/IMG_3346.jpg",
+        imageClassName: "object-cover",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-7.webp",
-        imageClassName: "object-center",
+        url: "/triangle-ac-cabin/IMG_7139.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin/IMG_9203.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin/IMG_9238.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin/IMG_7569.JPG.jpeg",
+        imageClassName: "object-contain",
       },
     ],
     price: 4750,
@@ -375,20 +427,32 @@ const accommodations = [
     slug: "triangle-ac-cabin-with-mini-pool",
     images: [
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-6.webp",
-        imageClassName: "object-center",
+        url: "/triangle-tent-with-mini-pool/IMG_4604.JPG.jpeg",
+        imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-5.webp",
-        imageClassName: "object-[10%_30%]",
+        url: "/triangle-tent-with-mini-pool/IMG_4648.JPG.jpeg",
+        imageClassName: "object-[30%_40%]",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-7.webp",
-        imageClassName: "object-[20%_40%]",
+        url: "/triangle-tent-with-mini-pool/IMG_4590.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-2.webp",
-        imageClassName: "object-[60%_70%]",
+        url: "/triangle-tent-with-mini-pool/IMG_9202.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9196.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_9205.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-tent-with-mini-pool/IMG_3775.JPG.jpeg",
+        imageClassName: "object-cover",
       },
     ],
     price: 8000,
@@ -462,27 +526,35 @@ const accommodations = [
     slug: "cocoon-ac-tent",
     images: [
       {
-        url: "/cocoon-ac-tent/cocoon-ac-tent-1.webp",
+        url: "/cocoon-ac-tent/IMG_6329.PNG",
         imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent/cocoon-ac-tent-2.webp",
-        imageClassName: "object-center",
+        url: "/cocoon-ac-tent/IMG_4517.jpg",
+        imageClassName: "object-[10%_20%]",
       },
       {
-        url: "/cocoon-ac-tent/cocoon-ac-tent-4.webp",
+        url: "/cocoon-ac-tent/IMG_4312.JPG.jpeg",
         imageClassName: "object-[20%_30%]",
       },
       {
-        url: "/cocoon-ac-tent/cocoon-ac-tent-5.webp",
+        url: "/cocoon-ac-tent/IMG_3849.JPG.jpeg",
         imageClassName: "object-[30%_40%]",
       },
       {
-        url: "/cocoon-ac-tent/cocoon-ac-tent-6.webp",
+        url: "/cocoon-ac-tent/IMG_3840.JPG.jpeg",
         imageClassName: "object-[30%_40%]",
       },
       {
-        url: "/cocoon-ac-tent/cocoon-ac-tent-7.webp",
+        url: "/cocoon-ac-tent/IMG_1930.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent/IMG_4065.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/cocoon-ac-tent/IMG_0455.JPG.jpeg",
         imageClassName: "object-contain",
       },
     ],
@@ -557,32 +629,44 @@ const accommodations = [
     slug: "cocoon-ac-tent-with-mini-pool",
     images: [
       {
-        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-9.webp",
-        imageClassName: "object-center",
-      },
-      // {
-      //   url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-2.webp",
-      //   imageClassName: "object-center",
-      // },
-      {
-        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-4.webp",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3119.PNG",
         imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-5.webp",
-        imageClassName: "object-contain",
-      },
-      {
-        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-6.webp",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_4652.PNG",
         imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp",
-        imageClassName: "object-[10%_20%]",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_4653.PNG",
+        imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-8.webp",
-        imageClassName: "object-contain",
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_4110.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_5677.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_1920.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3849.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_3837.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_1926.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-mini-pool/IMG_5236.JPG.jpeg",
+        imageClassName: "object-center",
       },
     ],
     price: 6500,
@@ -656,24 +740,44 @@ const accommodations = [
     slug: "ac-pod-with-outdoor-jacuzzi",
     images: [
       {
-        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-1.webp",
-        imageClassName: "object-[0%_10%]",
-      },
-      {
-        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-2.webp",
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_9902.JPG.jpeg",
         imageClassName: "object-center",
       },
       {
-        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-3.webp",
-        imageClassName: "object-[10%_20%]",
-      },
-      {
-        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-5.webp",
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_9893.JPG.jpeg",
         imageClassName: "object-center",
       },
       {
-        url: "/ac-pod-with-outdoor-jacuzzi/ac-pod-with-outdoor-jacuzzi-4.webp",
-        imageClassName: "object-[60%_70%]",
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_9884.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_4111.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_4112.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_1035.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_6612.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_6603.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_0455.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/ac-pod-with-outdoor-jacuzzi/IMG_5236.JPG.jpeg",
+        imageClassName: "object-center",
       },
     ],
     price: 7000,
@@ -747,20 +851,40 @@ const accommodations = [
     slug: "cocoon-ac-tent-with-jacuzzi-and-mini-pool",
     images: [
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-6.webp",
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5114.JPG.jpeg",
         imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-8.webp",
-        imageClassName: "object-[10%_30%]",
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5308.HEIC",
+        imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-7.webp",
-        imageClassName: "object-[20%_40%]",
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5127.JPG.jpeg",
+        imageClassName: "object-center",
       },
       {
-        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/cocoon-ac-tent-with-jacuzzi-mini-pool-2.webp",
-        imageClassName: "object-[60%_70%]",
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5332.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_5330.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_3161.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_3210.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_4491.JPG.jpeg",
+        imageClassName: "object-center",
+      },
+      {
+        url: "/cocoon-ac-tent-with-jacuzzi-mini-pool/IMG_0455.JPG.jpeg",
+        imageClassName: "object-center",
       },
     ],
     price: 8000,

@@ -11,24 +11,55 @@ const TriangleACCabinPage = () => {
       saturday: 5750,
       sunday: 5250,
     },
-    description:
-      "Escape into a stylish triangle tent overlooking a peaceful river, designed especially for couples seeking comfort, privacy, and a cozy nature experience.",
+    description: `Stay Experience the perfect blend of rustic nature and modern luxury in our Triangle Wooden AC Cabin. Designed for guests who seek the ultimate glamping experience without compromising on climate-controlled comfort.
+
+Set against a serene riverside backdrop, this premium cabin offers a cool, peaceful sanctuary perfect for escaping the heat while enjoying the great outdoors.`,
+    stayIncludes: [
+      "Fully Air-Conditioned Interior",
+      "Comfortable Bedding",
+      "Private Washroom next to the cabin",
+      "Private Landscaped Lawn",
+      "Exclusive Private Dining Area",
+      "Dedicated Personal Caretaker",
+      "Private Bonfire & BBQ Zone",
+      "Riverside Sitting Bench",
+      "Ambient Mood Lighting & Multiple Charging Points",
+    ],
+    whyChoose: [
+      "Peaceful riverside atmosphere",
+      "Private spaces no crowd disturbance",
+      "Ideal for couples & celebrations",
+      "Homely food experience",
+      "Budget-friendly romantic stay",
+    ],
     images: [
-      {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-1.webp",
-        imageClassName: "object-center",
+     {
+        url: "/triangle-ac-cabin/IMG_3345.jpg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-2.webp",
-        imageClassName: "object-center",
+        url: "/triangle-ac-cabin/IMG_8263.JPG.jpeg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-6.webp",
-        imageClassName: "object-center",
+        url: "/triangle-ac-cabin/IMG_3346.jpg",
+        imageClassName: "object-contain",
       },
       {
-        url: "/triangle-ac-cabin-with-mini-pool/triangle-ac-cabin-with-mini-pool-7.webp",
-        imageClassName: "object-center",
+        url: "/triangle-ac-cabin/IMG_7139.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin/IMG_9203.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin/IMG_9238.JPG.jpeg",
+        imageClassName: "object-contain",
+      },
+      {
+        url: "/triangle-ac-cabin/IMG_7569.JPG.jpeg",
+        imageClassName: "object-contain",
       },
     ],
   };
