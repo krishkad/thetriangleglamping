@@ -47,7 +47,7 @@ const BookingSection = ({
   const [kidsAbove12, setKidsAbove12] = useState(0);
 
   const [meal, setMeal] = useState(true);
-  const [theatre, setTheatre] = useState(true);
+  const [theatre, setTheatre] = useState(false);
   const [candleLightDinner, setCandleLightDinner] = useState(false);
   const [inSideTentDecoration, setInSideTentDecoration] = useState(false);
   const [outDoorTentDecoration, setOutDoorTentDecoration] = useState(false);

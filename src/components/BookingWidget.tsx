@@ -167,7 +167,7 @@ const BookingWidget = () => {
 
   const [candleLightDinner, setCandleLightDinner] = useState(false);
   const [meal, setMeal] = useState(true);
-  const [theatre, setTheatre] = useState(true);
+  const [theatre, setTheatre] = useState(false);
   const [inSideTentDecoration, setInSideTentDecoration] = useState(false);
   const [outDoorTentDecoration, setOutDoorTentDecoration] = useState(false);
   const [outDoorRingDecoration, setOutDoorRingDecoration] = useState(false);
