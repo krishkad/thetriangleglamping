@@ -55,14 +55,13 @@ const Hero = () => {
 
         <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight">
           Escape the City. Experience
-          <br className="hidden" /> Private
+          <br className="hidden" /> Pvt
           <span className="text-yellow-300"> Luxury in Nature.</span>
           <br />
         </h1>
 
         <p className="text-md text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
-          Luxury glamping near Pune & Mumbai with 100% private spaces, bonfire
-          evenings, romantic dining & unforgettable stays for couples and
+          Luxury glamping near Pune & Mumbai with 100% private spaces, romantic dining & unforgettable stays for couples and
           families.
         </p>
 
