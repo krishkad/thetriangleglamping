@@ -135,7 +135,7 @@ export default function CampDetail({ camp = defaultCamp }) {
 
             {/* PRICING */}
             <section className="space-y-4">
-              <h2 className="text-xl font-semibold">💰 Pricing</h2>
+              <h2 className="text-xl font-semibold">💰 Pricing for 2 Person</h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {/* Weekdays */}
