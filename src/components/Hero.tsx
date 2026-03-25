@@ -1,10 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import {
-  ShieldIcon,
-  Star,
-  UserIcon
-} from "lucide-react";
+import { ShieldIcon, Star, UserIcon } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -17,8 +13,8 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-[5%_15%]"
         style={{
           // backgroundImage:
-            // "url('/hero/IMG_5308.jpg')",
-            // "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
+          // "url('/hero/IMG_5308.jpg')",
+          // "url('/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp')",
           backgroundImage: "url('/cocoon-ac-tent/cocoon-ac-tent-1.webp')",
         }}
       >
@@ -55,14 +51,14 @@ const Hero = () => {
 
         <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight">
           Escape the City. Experience
-          <br className="hidden" /> Pvt
+          <br className="max-sm:hidden" />
           <span className="text-yellow-300"> Luxury in Nature.</span>
           <br />
         </h1>
 
         <p className="text-base sm:text-md text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 sm:mb-10 max-w-3xl mx-auto font-poppins">
-          Luxury glamping near Pune & Mumbai with 100% private spaces, romantic dining & unforgettable stays for couples and
-          families.
+          Luxury glamping near Pune & Mumbai with 100% private spaces, romantic
+          dining & unforgettable stays for couples and families.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
