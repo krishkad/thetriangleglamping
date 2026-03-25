@@ -90,6 +90,27 @@ export const images = [
   // { src: "/gallery/gallery-48.webp", alt: "Image 48" },
   // { src: "/gallery/gallery-49.webp", alt: "Image 49" },
   // { src: "/gallery/gallery-50.webp", alt: "Image 50" },
+  { src: "/gallery/IMG_6095.PNG", alt: "Image 1" },
+  { src: "/gallery/IMG_6097.PNG", alt: "Image 2" },
+  { src: "/gallery/IMG_6098.PNG", alt: "Image 3" },
+  { src: "/gallery/IMG_6099.PNG", alt: "Image 4" },
+  { src: "/gallery/IMG_6100.PNG", alt: "Image 5" },
+  { src: "/gallery/IMG_6102.PNG", alt: "Image 6" },
+  { src: "/gallery/IMG_6101.PNG", alt: "Image 7" },
+  { src: "/gallery/IMG_6103.PNG", alt: "Image 8" },
+  { src: "/gallery/IMG_6104.PNG", alt: "Image 9" },
+  { src: "/gallery/IMG_6105.PNG", alt: "Image 10" },
+  { src: "/gallery/IMG_6106.PNG", alt: "Image 11" },
+  { src: "/gallery/IMG_6107.PNG", alt: "Image 12" },
+  { src: "/gallery/IMG_6108.PNG", alt: "Image 13" },
+  { src: "/gallery/IMG_6109.PNG", alt: "Image 14" },
+  { src: "/gallery/IMG_6110.PNG", alt: "Image 15" },
+  { src: "/gallery/IMG_6111.PNG", alt: "Image 16" },
+  { src: "/gallery/IMG_6112.PNG", alt: "Image 17" },
+  { src: "/gallery/IMG_6113.PNG", alt: "Image 18" },
+  { src: "/gallery/IMG_0455.JPG.jpeg", alt: "Image 19" },
+  { src: "/gallery/IMG_9196.JPG.jpeg", alt: "Image 20" },
+  { src: "/gallery/IMG_9202.JPG.jpeg", alt: "Image 21" },
 ];
 
 const Testimonials = () => {
@@ -128,8 +149,8 @@ const Testimonials = () => {
               Stories from Fellow Glampers
             </h2>
             <p className="text-lg sm:text-xl text-stone/80 max-w-3xl mx-auto font-poppins">
-              Real experiences from couples, families, and glampers who
-              found their perfect escape at Triangle Glamping.
+              Real experiences from couples, families, and glampers who found
+              their perfect escape at Triangle Glamping.
             </p>
           </div>
 
@@ -160,7 +181,7 @@ const Testimonials = () => {
                     <Camera className="w-4 sm:w-5 h-4 sm:h-5 inline mr-2" />
                   )}
                   <span className="text-sm sm:text-base">
-                    {testimonial.category} 
+                    {testimonial.category}
                   </span>
                 </div>
 

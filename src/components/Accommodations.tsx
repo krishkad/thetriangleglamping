@@ -74,7 +74,7 @@ const accommodations = [
             <p className="text-xs text-slate-600 leading-relaxed">
               Triangle Tent • Private bonfire 🔥 • Private dining area 🍽️ •
               Private BBQ setup 🍖 • Private lawn 🌿 • Private bench 🪑 •
-              Private washroom 🚿 ✨
+              Private washroom at Walkable Distance 🚿 ✨
             </p>
           </div>
         </div>
@@ -170,7 +170,7 @@ const accommodations = [
           <p className="text-xs text-slate-600 leading-relaxed">
             Private mini pool 🏊‍♂️ • Private bonfire 🔥 • Private dining area 🍽️ •
             Private BBQ setup 🍖 • Fan 🌀 • Private lawn 🌿 • Private bench 🪑 •
-            Private washroom 🚿 ✨
+            Private washroom At Walkable Distance 🚿 ✨
           </p>
         </div>
 
