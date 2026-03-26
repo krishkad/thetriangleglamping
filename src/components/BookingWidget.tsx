@@ -395,6 +395,20 @@ ${addOns || "None"}
                             starting price
                           </p>
                         </div>
+
+                        {/* Highlight Price */}
+                        <div>
+                          <span className="text-xs text-gray-700">
+                            {camp.name === "Triangle Tent" ||
+                            camp.name === "Triangle Tent with Mini Pool" ||
+                            camp.name === "Triangle Cooler Cabin"
+                              ? "4 PM - 11 AM"
+                              : "3 PM - 11 AM"}
+                          </span>
+                          {/* <p className="text-xs text-gray-400">
+                            starting price
+                          </p> */}
+                        </div>
                       </div>
 
                       {/* Selected State */}

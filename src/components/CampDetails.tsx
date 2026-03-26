@@ -133,6 +133,20 @@ export default function CampDetail({ camp = defaultCamp }) {
               </div>
             </section>
 
+            {/* Timing */}
+            <section>
+              <h2 className="text-xl font-semibold mb-4">🕒 Timing</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="p-4 border rounded-xl bg-white shadow-sm">
+                  {camp.name === "Triangle Tent" ||
+                  camp.name === "Triangle Tent with Mini Pool" ||
+                  camp.name === "Triangle Cooler Cabin"
+                    ? "4 PM - 11 AM"
+                    : "3 PM - 11 AM"}
+                </div>
+              </div>
+            </section>
+
             {/* PRICING */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold">💰 Pricing for 2 Person</h2>
