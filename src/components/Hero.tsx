@@ -9,7 +9,7 @@ const Hero = () => {
   const heroImages = [
     "/cocoon-ac-tent/cocoon-ac-tent-1.webp",
     "/hero/IMG_5308.jpg",
-    "/hero/IMG_3119.png",
+    // "/hero/IMG_3119.png",
     "/cocoon-ac-tent-with-mini-pool/cocoon-ac-tent-with-mini-pool-7.webp",
   ];
 
@@ -36,7 +36,7 @@ const Hero = () => {
           key={index}
           className={`absolute inset-0 bg-cover bg-no-repeat bg-center transition-opacity duration-[3000ms] ${
             index === currentImageIndex ? "opacity-100" : "opacity-0"
-          } ${image === heroImages[3] ? "sm:bg-[10%_25%]" : image === heroImages[2] ? "sm:bg-center" : " sm:bg-[5%_15%]"}`}
+          } ${image === heroImages[2] ? "sm:bg-[10%_25%]" : image === heroImages[2] ? "sm:bg-center" : " sm:bg-[5%_15%]"}`}
           style={{
             // backgroundImage:
             // "url('/hero/IMG_5308.jpg')",
