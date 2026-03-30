@@ -203,7 +203,7 @@ ${addOns || "None"}
         </p>
       </CardHeader>
 
-      <CardContent className=" p-6 pt-2 space-y-6">
+      <CardContent className=" p-6 pt-2 space-y-6 w-max">
         {/* NAME FIELDS */}
         <div className="grid grid-cols-2 gap-4">
           <input
@@ -256,6 +256,7 @@ ${addOns || "None"}
                 mode="single"
                 selected={checkIn}
                 onSelect={setCheckIn}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 disabled={(date: any) => {
                   const today = new Date();
                   today.setHours(0, 0, 0, 0); // set to start of today
@@ -281,6 +282,7 @@ ${addOns || "None"}
                 mode="single"
                 selected={checkOut}
                 onSelect={setCheckOut}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 disabled={(date: any) => {
                   const today = new Date();
                   today.setHours(0, 0, 0, 0); // set to start of today
