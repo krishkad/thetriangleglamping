@@ -204,7 +204,6 @@ ${addOns || "None"}
       </CardHeader>
 
       <CardContent className=" p-6 pt-2 space-y-6">
-        
         {/* NAME FIELDS */}
         <div className="grid grid-cols-2 gap-4">
           <input
@@ -257,6 +256,11 @@ ${addOns || "None"}
                 mode="single"
                 selected={checkIn}
                 onSelect={setCheckIn}
+                disabled={(date: any) => {
+                  const today = new Date();
+                  today.setHours(0, 0, 0, 0); // set to start of today
+                  return date < today;
+                }}
               />
             </PopoverContent>
           </Popover>
@@ -277,6 +281,11 @@ ${addOns || "None"}
                 mode="single"
                 selected={checkOut}
                 onSelect={setCheckOut}
+                disabled={(date: any) => {
+                  const today = new Date();
+                  today.setHours(0, 0, 0, 0); // set to start of today
+                  return date < today;
+                }}
               />
             </PopoverContent>
           </Popover>
